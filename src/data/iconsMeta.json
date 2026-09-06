@@ -1,0 +1,9939 @@
+[
+  {
+    "name": "Ac",
+    "category": "Home",
+    "keywords": [
+      "air conditioner",
+      "climate control",
+      "ac"
+    ]
+  },
+  {
+    "name": "Accumulator",
+    "category": "Parts",
+    "keywords": [
+      "battery",
+      "power source",
+      "accumulator"
+    ]
+  },
+  {
+    "name": "Activity",
+    "category": "General UI",
+    "keywords": [
+      "activity"
+    ]
+  },
+  {
+    "name": "Add",
+    "category": "General UI",
+    "keywords": [
+      "add"
+    ]
+  },
+  {
+    "name": "Additem",
+    "category": "General UI",
+    "keywords": [
+      "additem"
+    ]
+  },
+  {
+    "name": "AddressBook",
+    "category": "General UI",
+    "keywords": [
+      "address",
+      "book",
+      "address-book"
+    ]
+  },
+  {
+    "name": "Airdrop",
+    "category": "General UI",
+    "keywords": [
+      "airdrop"
+    ]
+  },
+  {
+    "name": "Airplane",
+    "category": "General UI",
+    "keywords": [
+      "airplane"
+    ]
+  },
+  {
+    "name": "Airpod",
+    "category": "General UI",
+    "keywords": [
+      "airpod"
+    ]
+  },
+  {
+    "name": "Airpods",
+    "category": "General UI",
+    "keywords": [
+      "airpods"
+    ]
+  },
+  {
+    "name": "Alarm",
+    "category": "Time",
+    "keywords": [
+      "bell alarm",
+      "buzzing clock",
+      "alarm"
+    ]
+  },
+  {
+    "name": "AlarmAdd",
+    "category": "Time",
+    "keywords": [
+      "clock plus",
+      "timer add",
+      "alarm",
+      "add",
+      "alarm-add"
+    ]
+  },
+  {
+    "name": "AlarmCheck",
+    "category": "Time",
+    "keywords": [
+      "alarm",
+      "check",
+      "alarm-check"
+    ]
+  },
+  {
+    "name": "AlarmClock",
+    "category": "Time",
+    "keywords": [
+      "alarm",
+      "clock",
+      "alarm-clock"
+    ]
+  },
+  {
+    "name": "AlarmClockOff",
+    "category": "Time",
+    "keywords": [
+      "alarm",
+      "clock",
+      "off",
+      "alarm-clock-off"
+    ]
+  },
+  {
+    "name": "AlarmMinus",
+    "category": "Time",
+    "keywords": [
+      "alarm",
+      "minus",
+      "alarm-minus"
+    ]
+  },
+  {
+    "name": "AlarmOff",
+    "category": "Time",
+    "keywords": [
+      "alarm-cancel",
+      "clock-off",
+      "timer-stop",
+      "alarm",
+      "off",
+      "alarm-off"
+    ]
+  },
+  {
+    "name": "AlarmPause",
+    "category": "Time",
+    "keywords": [
+      "pause alarm",
+      "stop clock",
+      "timer pause",
+      "alarm",
+      "pause",
+      "alarm-pause"
+    ]
+  },
+  {
+    "name": "AlarmPlay",
+    "category": "Time",
+    "keywords": [
+      "play",
+      "clock",
+      "timer",
+      "alarm",
+      "alarm-play"
+    ]
+  },
+  {
+    "name": "Album",
+    "category": "Video",
+    "keywords": [
+      "photograph",
+      "picture",
+      "image",
+      "album"
+    ]
+  },
+  {
+    "name": "AlertTriangle",
+    "category": "General UI",
+    "keywords": [
+      "warning triangle",
+      "exclamation mark triangle"
+    ]
+  },
+  {
+    "name": "AlignBottom",
+    "category": "Tools",
+    "keywords": [
+      "bottom align",
+      "icon-align-bottom",
+      "align",
+      "bottom",
+      "align-bottom"
+    ]
+  },
+  {
+    "name": "AlignHorizontally",
+    "category": "General UI",
+    "keywords": [
+      "align",
+      "horizontally",
+      "align-horizontally"
+    ]
+  },
+  {
+    "name": "AlignLeft",
+    "category": "Tools",
+    "keywords": [
+      "left-align",
+      "text-justification",
+      "align",
+      "left",
+      "align-left"
+    ]
+  },
+  {
+    "name": "AlignRight",
+    "category": "Tools",
+    "keywords": [
+      "alignment",
+      "right-align",
+      "align",
+      "right",
+      "align-right"
+    ]
+  },
+  {
+    "name": "AlignTop",
+    "category": "Tools",
+    "keywords": [
+      "alignment",
+      "top-align",
+      "align",
+      "top",
+      "align-top"
+    ]
+  },
+  {
+    "name": "AlignVertically",
+    "category": "General UI",
+    "keywords": [
+      "align",
+      "vertically",
+      "align-vertically"
+    ]
+  },
+  {
+    "name": "Anchor",
+    "category": "General UI",
+    "keywords": [
+      "anchor"
+    ]
+  },
+  {
+    "name": "Aquarius",
+    "category": "General UI",
+    "keywords": [
+      "aquarius"
+    ]
+  },
+  {
+    "name": "Ar",
+    "category": "General UI",
+    "keywords": [
+      "AR app",
+      "Augmented reality",
+      "ar"
+    ]
+  },
+  {
+    "name": "Archive",
+    "category": "Notes",
+    "keywords": [
+      "storage container",
+      "bin",
+      "archive"
+    ]
+  },
+  {
+    "name": "ArchiveAdd",
+    "category": "General UI",
+    "keywords": [
+      "archive",
+      "add",
+      "archive-add"
+    ]
+  },
+  {
+    "name": "ArchiveDown",
+    "category": "Notes",
+    "keywords": [
+      "download",
+      "file-download",
+      "archive",
+      "down",
+      "archive-down",
+      "archive-down2"
+    ]
+  },
+  {
+    "name": "ArchiveMinus",
+    "category": "General UI",
+    "keywords": [
+      "archive",
+      "minus",
+      "archive-minus"
+    ]
+  },
+  {
+    "name": "ArchiveSlash",
+    "category": "General UI",
+    "keywords": [
+      "archive",
+      "slash",
+      "archive-slash"
+    ]
+  },
+  {
+    "name": "ArchiveTick",
+    "category": "General UI",
+    "keywords": [
+      "archive",
+      "tick"
+    ]
+  },
+  {
+    "name": "ArchiveUp",
+    "category": "Notes",
+    "keywords": [
+      "upload",
+      "file-upload",
+      "archive",
+      "up",
+      "archive-up",
+      "archive-up2"
+    ]
+  },
+  {
+    "name": "Armchair",
+    "category": "Home",
+    "keywords": [
+      "Chair",
+      "Seating",
+      "armchair"
+    ]
+  },
+  {
+    "name": "Armchair2",
+    "category": "Home",
+    "keywords": [
+      "blue armchair",
+      "modern seating"
+    ]
+  },
+  {
+    "name": "Arrow",
+    "category": "General UI",
+    "keywords": [
+      "arrow"
+    ]
+  },
+  {
+    "name": "ArrowDoorIn",
+    "category": "Arrows",
+    "keywords": [
+      "arrow",
+      "door",
+      "in",
+      "arrow-door-in"
+    ]
+  },
+  {
+    "name": "ArrowDoorOut",
+    "category": "Arrows",
+    "keywords": [
+      "arrow",
+      "door",
+      "out",
+      "arrow-door-out"
+    ]
+  },
+  {
+    "name": "ArrowDottedRotateAnticlockwise",
+    "category": "Arrows",
+    "keywords": [
+      "arrow",
+      "dotted",
+      "rotate",
+      "anticlockwise",
+      "arrow-dotted-rotate-anticlockwise"
+    ]
+  },
+  {
+    "name": "ArrowDown",
+    "category": "Arrows",
+    "keywords": [
+      "downward arrow",
+      "decrease sign",
+      "arrow",
+      "down",
+      "arrow-down"
+    ]
+  },
+  {
+    "name": "ArrowLeft",
+    "category": "Arrows",
+    "keywords": [
+      "leftward arrow",
+      "backwards arrow",
+      "arrow",
+      "left",
+      "arrow-left"
+    ]
+  },
+  {
+    "name": "ArrowLeftDown",
+    "category": "Arrows",
+    "keywords": [
+      "leftdown",
+      "downleft",
+      "arrow",
+      "left",
+      "down",
+      "arrow-left-down"
+    ]
+  },
+  {
+    "name": "ArrowLeftUp",
+    "category": "Arrows",
+    "keywords": [
+      "left up arrow",
+      "upward turn left",
+      "arrow",
+      "left",
+      "up",
+      "arrow-left-up"
+    ]
+  },
+  {
+    "name": "ArrowRight",
+    "category": "Arrows",
+    "keywords": [
+      "directional",
+      "navigation",
+      "arrow",
+      "right",
+      "arrow-right"
+    ]
+  },
+  {
+    "name": "ArrowRightDown",
+    "category": "Arrows",
+    "keywords": [
+      "rightwards arrow",
+      "downward-pointing pointer",
+      "arrow",
+      "right",
+      "down",
+      "arrow-right-down"
+    ]
+  },
+  {
+    "name": "ArrowRightUp",
+    "category": "Arrows",
+    "keywords": [
+      "upward arrow",
+      "rightwards arrow",
+      "arrow",
+      "right",
+      "up",
+      "arrow-right-up"
+    ]
+  },
+  {
+    "name": "ArrowToDownLeft",
+    "category": "Arrows-action",
+    "keywords": [
+      "downward arrow",
+      "left-pointing arrow",
+      "arrow",
+      "to",
+      "down",
+      "left",
+      "arrow-to-down-left"
+    ]
+  },
+  {
+    "name": "ArrowToDownRight",
+    "category": "Arrows-action",
+    "keywords": [
+      "downward-pointing arrow",
+      "right-pointing arrow",
+      "arrow",
+      "to",
+      "down",
+      "right",
+      "arrow-to-down-right"
+    ]
+  },
+  {
+    "name": "ArrowToTopLeft",
+    "category": "Arrows-action",
+    "keywords": [
+      "left arrow-up",
+      "up-left arrow",
+      "arrow",
+      "to",
+      "top",
+      "left",
+      "arrow-to-top-left"
+    ]
+  },
+  {
+    "name": "ArrowToTopRight",
+    "category": "Arrows-action",
+    "keywords": [
+      "arrow-up",
+      "top-arrow",
+      "arrow",
+      "to",
+      "top",
+      "right",
+      "arrow-to-top-right"
+    ]
+  },
+  {
+    "name": "ArrowUp",
+    "category": "Arrows",
+    "keywords": [
+      "up arrow",
+      "vertical ascent sign",
+      "arrow",
+      "up",
+      "arrow-up"
+    ]
+  },
+  {
+    "name": "Arrow2",
+    "category": "General UI",
+    "keywords": [
+      "arrow"
+    ]
+  },
+  {
+    "name": "Arrow3",
+    "category": "General UI",
+    "keywords": [
+      "arrow"
+    ]
+  },
+  {
+    "name": "ArrowsRotate",
+    "category": "Arrows",
+    "keywords": []
+  },
+  {
+    "name": "Asteroid",
+    "category": "Astronomy",
+    "keywords": [
+      "planet",
+      "celestial body",
+      "asteroid"
+    ]
+  },
+  {
+    "name": "At",
+    "category": "General UI",
+    "keywords": [
+      "at"
+    ]
+  },
+  {
+    "name": "Atom",
+    "category": "Astronomy",
+    "keywords": [
+      "atomic",
+      "nuclear",
+      "atom"
+    ]
+  },
+  {
+    "name": "AttachCircle",
+    "category": "General UI",
+    "keywords": [
+      "attach",
+      "circle",
+      "attach-circle"
+    ]
+  },
+  {
+    "name": "Autobrightness",
+    "category": "General UI",
+    "keywords": [
+      "autobrightness"
+    ]
+  },
+  {
+    "name": "Award",
+    "category": "Business",
+    "keywords": [
+      "award"
+    ]
+  },
+  {
+    "name": "AwardCertificate",
+    "category": "Business",
+    "keywords": [
+      "award",
+      "certificate",
+      "award-certificate"
+    ]
+  },
+  {
+    "name": "Backpack",
+    "category": "School",
+    "keywords": [
+      "luggage",
+      "travel bag",
+      "backpack"
+    ]
+  },
+  {
+    "name": "Backspace",
+    "category": "Text-formatting",
+    "keywords": [
+      "delete",
+      "close-window",
+      "cancel",
+      "undo"
+    ]
+  },
+  {
+    "name": "Backward",
+    "category": "General UI",
+    "keywords": []
+  },
+  {
+    "name": "Backward10Seconds",
+    "category": "General UI",
+    "keywords": [
+      "backward",
+      "10",
+      "seconds"
+    ]
+  },
+  {
+    "name": "Backward15Seconds",
+    "category": "General UI",
+    "keywords": [
+      "backward",
+      "15",
+      "seconds"
+    ]
+  },
+  {
+    "name": "Backward5Seconds",
+    "category": "General UI",
+    "keywords": [
+      "backward",
+      "seconds"
+    ]
+  },
+  {
+    "name": "BackwardItem",
+    "category": "General UI",
+    "keywords": [
+      "backward",
+      "item"
+    ]
+  },
+  {
+    "name": "Bacteria",
+    "category": "Medicine",
+    "keywords": [
+      "microorganism",
+      "pathogen"
+    ]
+  },
+  {
+    "name": "BadgeDollar",
+    "category": "General UI",
+    "keywords": [
+      "badge",
+      "dollar",
+      "badge-dollar"
+    ]
+  },
+  {
+    "name": "Bag",
+    "category": "Shopping",
+    "keywords": [
+      "purse",
+      "handbag",
+      "bag"
+    ]
+  },
+  {
+    "name": "BagCheck",
+    "category": "Shopping",
+    "keywords": [
+      "tick bag",
+      "checkmark case",
+      "bag",
+      "check",
+      "bag-check"
+    ]
+  },
+  {
+    "name": "BagShopping",
+    "category": "Shopping",
+    "keywords": [
+      "bag",
+      "shopping",
+      "bag-shopping"
+    ]
+  },
+  {
+    "name": "BagSmile",
+    "category": "Shopping",
+    "keywords": [
+      "suitcase",
+      "travel-bag"
+    ]
+  },
+  {
+    "name": "BagX",
+    "category": "Shopping",
+    "keywords": [
+      "purse",
+      "backpack",
+      "handbag",
+      "bag",
+      "bag-x"
+    ]
+  },
+  {
+    "name": "Bag2",
+    "category": "General UI",
+    "keywords": [
+      "bag"
+    ]
+  },
+  {
+    "name": "Bag3",
+    "category": "Shopping",
+    "keywords": [
+      "suitcase",
+      "luggage"
+    ]
+  },
+  {
+    "name": "BallBasket",
+    "category": "Sports",
+    "keywords": [
+      "ball",
+      "basket",
+      "ball-basket"
+    ]
+  },
+  {
+    "name": "Balloon",
+    "category": "General UI",
+    "keywords": [
+      "balloon",
+      "lightbulb"
+    ]
+  },
+  {
+    "name": "Balls",
+    "category": "Sports",
+    "keywords": [
+      "golf ball",
+      "tennis",
+      "balls"
+    ]
+  },
+  {
+    "name": "Ban",
+    "category": "General UI",
+    "keywords": [
+      "ban"
+    ]
+  },
+  {
+    "name": "Bandage",
+    "category": "Medicine",
+    "keywords": [
+      "plaster",
+      "bandage"
+    ]
+  },
+  {
+    "name": "Bandage2",
+    "category": "Medicine",
+    "keywords": [
+      "bandage",
+      "plaster",
+      "first aid patch",
+      "bandage-2",
+      "bandage2"
+    ]
+  },
+  {
+    "name": "Bank",
+    "category": "General UI",
+    "keywords": [
+      "bank"
+    ]
+  },
+  {
+    "name": "Banknote",
+    "category": "Money",
+    "keywords": [
+      "bankroll",
+      "currency",
+      "banknote"
+    ]
+  },
+  {
+    "name": "Banknote2",
+    "category": "Money",
+    "keywords": [
+      "cash",
+      "currency",
+      "banknote",
+      "banknote-2",
+      "banknote2"
+    ]
+  },
+  {
+    "name": "BarStool",
+    "category": "Home",
+    "keywords": [
+      "chair",
+      "stool",
+      "bar",
+      "bar-stool"
+    ]
+  },
+  {
+    "name": "Barcode",
+    "category": "General UI",
+    "keywords": [
+      "barcode"
+    ]
+  },
+  {
+    "name": "Basket",
+    "category": "General UI",
+    "keywords": [
+      "basket"
+    ]
+  },
+  {
+    "name": "BasketShopping",
+    "category": "Shopping",
+    "keywords": [
+      "basket",
+      "shopping",
+      "basket-shopping"
+    ]
+  },
+  {
+    "name": "Basketball",
+    "category": "Sports",
+    "keywords": [
+      "basket",
+      "b-ball",
+      "basketball"
+    ]
+  },
+  {
+    "name": "Bath",
+    "category": "Home",
+    "keywords": [
+      "bathtub",
+      "bathing",
+      "bath"
+    ]
+  },
+  {
+    "name": "Battery",
+    "category": "Devices",
+    "keywords": [
+      "battery"
+    ]
+  },
+  {
+    "name": "Battery3full",
+    "category": "General UI",
+    "keywords": [
+      "battery",
+      "3full",
+      "battery-3full"
+    ]
+  },
+  {
+    "name": "BatteryCharging",
+    "category": "General UI",
+    "keywords": [
+      "battery",
+      "charging"
+    ]
+  },
+  {
+    "name": "BatteryDisable",
+    "category": "General UI",
+    "keywords": [
+      "battery",
+      "disable"
+    ]
+  },
+  {
+    "name": "BatteryEmpty",
+    "category": "General UI",
+    "keywords": [
+      "battery",
+      "empty",
+      "battery-empty"
+    ]
+  },
+  {
+    "name": "BatteryEmpty2",
+    "category": "General UI",
+    "keywords": [
+      "battery",
+      "empty",
+      "battery-empty-2",
+      "battery-empty2"
+    ]
+  },
+  {
+    "name": "BatteryFull",
+    "category": "General UI",
+    "keywords": [
+      "battery",
+      "full",
+      "battery-full",
+      "battery-full4"
+    ]
+  },
+  {
+    "name": "Bed",
+    "category": "Home",
+    "keywords": [
+      "couch",
+      "sofa bed",
+      "bed"
+    ]
+  },
+  {
+    "name": "Bell",
+    "category": "Notifications",
+    "keywords": [
+      "bell",
+      "sound"
+    ]
+  },
+  {
+    "name": "BellAlert",
+    "category": "Notifications",
+    "keywords": [
+      "bell",
+      "alert",
+      "bell-alert"
+    ]
+  },
+  {
+    "name": "BellOff",
+    "category": "Notifications",
+    "keywords": [
+      "off-bell",
+      "silence-icon",
+      "bell",
+      "off",
+      "bell-off"
+    ]
+  },
+  {
+    "name": "BellOff2",
+    "category": "Notifications",
+    "keywords": [
+      "bell",
+      "off",
+      "bell-off-2",
+      "bell-off2"
+    ]
+  },
+  {
+    "name": "BellRing",
+    "category": "Notifications",
+    "keywords": [
+      "notification bell",
+      "bells icon",
+      "alert notification",
+      "bell",
+      "ring",
+      "bell-ring"
+    ]
+  },
+  {
+    "name": "Benzene",
+    "category": "Medicine",
+    "keywords": [
+      "carbon ring",
+      "hexagon atom",
+      "benzene"
+    ]
+  },
+  {
+    "name": "Bezier",
+    "category": "General UI",
+    "keywords": [
+      "bezier"
+    ]
+  },
+  {
+    "name": "Bicycle",
+    "category": "Sports",
+    "keywords": [
+      "bicycle"
+    ]
+  },
+  {
+    "name": "Bill",
+    "category": "Money",
+    "keywords": [
+      "receipt",
+      "purchase order",
+      "bill"
+    ]
+  },
+  {
+    "name": "BillCheck",
+    "category": "Money",
+    "keywords": [
+      "approval",
+      "receipt",
+      "payment confirmation",
+      "bill",
+      "check",
+      "bill-check"
+    ]
+  },
+  {
+    "name": "BillList",
+    "category": "Money",
+    "keywords": [
+      "receipt",
+      "invoice",
+      "bill",
+      "list",
+      "bill-list"
+    ]
+  },
+  {
+    "name": "BillX",
+    "category": "Money",
+    "keywords": [
+      "crossed bill",
+      "bill cancellation"
+    ]
+  },
+  {
+    "name": "Bitcoin",
+    "category": "Money",
+    "keywords": [
+      "bitcoin"
+    ]
+  },
+  {
+    "name": "BitcoinCard",
+    "category": "General UI",
+    "keywords": [
+      "bitcoin",
+      "card",
+      "bitcoin-card"
+    ]
+  },
+  {
+    "name": "BitcoinCircle",
+    "category": "Money",
+    "keywords": [
+      "bitcoin",
+      "circle",
+      "bitcoin-circle"
+    ]
+  },
+  {
+    "name": "BitcoinConvert",
+    "category": "General UI",
+    "keywords": [
+      "bitcoin",
+      "convert",
+      "bitcoin-convert"
+    ]
+  },
+  {
+    "name": "BitcoinRefresh",
+    "category": "General UI",
+    "keywords": [
+      "bitcoin",
+      "refresh",
+      "bitcoin-refresh"
+    ]
+  },
+  {
+    "name": "BlackHole",
+    "category": "Astronomy",
+    "keywords": [
+      "whirlpool",
+      "spiral funnel",
+      "stellar vortex",
+      "black",
+      "hole",
+      "black-hole"
+    ]
+  },
+  {
+    "name": "BlackHole2",
+    "category": "Astronomy",
+    "keywords": [
+      "darkness",
+      "void",
+      "black",
+      "hole",
+      "black-hole-2",
+      "black-hole2"
+    ]
+  },
+  {
+    "name": "BlackHole3",
+    "category": "Astronomy",
+    "keywords": [
+      "spiral",
+      "whirlpool",
+      "black",
+      "hole",
+      "black-hole-3",
+      "black-hole3"
+    ]
+  },
+  {
+    "name": "Blend",
+    "category": "General UI",
+    "keywords": [
+      "blend",
+      "blend2"
+    ]
+  },
+  {
+    "name": "Blend2",
+    "category": "General UI",
+    "keywords": [
+      "blend"
+    ]
+  },
+  {
+    "name": "Bluetooth",
+    "category": "Devices",
+    "keywords": [
+      "Bluetooth",
+      "Icon",
+      "bluetooth"
+    ]
+  },
+  {
+    "name": "BluetoothCircle",
+    "category": "Devices",
+    "keywords": [
+      "Bluetooth",
+      "Blue tooth",
+      "bluetooth",
+      "circle",
+      "bluetooth-circle"
+    ]
+  },
+  {
+    "name": "BluetoothRectangle",
+    "category": "General UI",
+    "keywords": [
+      "bluetooth",
+      "rectangle",
+      "bluetooth-rectangle"
+    ]
+  },
+  {
+    "name": "BluetoothSquare",
+    "category": "Devices",
+    "keywords": [
+      "Bluetooth",
+      "signal",
+      "connectivity",
+      "bluetooth",
+      "square",
+      "bluetooth-square"
+    ]
+  },
+  {
+    "name": "BluetoothWave",
+    "category": "Devices",
+    "keywords": [
+      "Bluetooth",
+      "Wave Signal",
+      "bluetooth",
+      "wave",
+      "bluetooth-wave"
+    ]
+  },
+  {
+    "name": "Bluetooth2",
+    "category": "General UI",
+    "keywords": [
+      "bluetooth"
+    ]
+  },
+  {
+    "name": "Blur",
+    "category": "Tools",
+    "keywords": [
+      "disk",
+      "icon",
+      "blur"
+    ]
+  },
+  {
+    "name": "Blur2",
+    "category": "General UI",
+    "keywords": [
+      "blur"
+    ]
+  },
+  {
+    "name": "Body",
+    "category": "General UI",
+    "keywords": [
+      "shirt silhouette",
+      "clothing outline",
+      "garment shape",
+      "body"
+    ]
+  },
+  {
+    "name": "BodyShape",
+    "category": "Sports",
+    "keywords": [
+      "underwear",
+      "lingerie",
+      "body",
+      "shape",
+      "body-shape",
+      "body-shape2"
+    ]
+  },
+  {
+    "name": "Bold",
+    "category": "Text-formatting",
+    "keywords": [
+      "Bold",
+      "Text",
+      "bold"
+    ]
+  },
+  {
+    "name": "Bolt",
+    "category": "General UI",
+    "keywords": [
+      "electricity",
+      "power",
+      "bolt"
+    ]
+  },
+  {
+    "name": "BoltCircle",
+    "category": "General UI",
+    "keywords": [
+      "electricity",
+      "power",
+      "bolt",
+      "circle",
+      "bolt-circle"
+    ]
+  },
+  {
+    "name": "BoltLightning",
+    "category": "Weather",
+    "keywords": [
+      "bolt",
+      "lightning",
+      "bolt-lightning"
+    ]
+  },
+  {
+    "name": "BoltOff",
+    "category": "Nature",
+    "keywords": [
+      "bolt",
+      "off",
+      "bolt-off"
+    ]
+  },
+  {
+    "name": "BoltSlash",
+    "category": "Nature",
+    "keywords": [
+      "bolt",
+      "slash",
+      "bolt-slash"
+    ]
+  },
+  {
+    "name": "Bomb",
+    "category": "Security",
+    "keywords": [
+      "bomb",
+      "explosion"
+    ]
+  },
+  {
+    "name": "Bomb2",
+    "category": "Security",
+    "keywords": [
+      "explosion",
+      "exploding-bomb"
+    ]
+  },
+  {
+    "name": "Bone",
+    "category": "Medicine",
+    "keywords": [
+      "dog bone",
+      "veterinary symbol",
+      "bone"
+    ]
+  },
+  {
+    "name": "BoneBroken",
+    "category": "Medicine",
+    "keywords": [
+      "Broken bone",
+      "Bone fracture",
+      "bone",
+      "broken",
+      "bone-broken"
+    ]
+  },
+  {
+    "name": "BoneCrack",
+    "category": "Medicine",
+    "keywords": [
+      "cracked bone",
+      "broken bone",
+      "bone",
+      "crack",
+      "bone-crack"
+    ]
+  },
+  {
+    "name": "Bonfire",
+    "category": "Nature",
+    "keywords": [
+      "flame",
+      "fire",
+      "bonfire"
+    ]
+  },
+  {
+    "name": "Book",
+    "category": "School",
+    "keywords": [
+      "textbook",
+      "reading material",
+      "book"
+    ]
+  },
+  {
+    "name": "BookOpen",
+    "category": "School",
+    "keywords": []
+  },
+  {
+    "name": "Bookmark",
+    "category": "General UI",
+    "keywords": [
+      "bookmark",
+      "bookmark3"
+    ]
+  },
+  {
+    "name": "BookmarkAdd",
+    "category": "Like",
+    "keywords": []
+  },
+  {
+    "name": "BookmarkMinus",
+    "category": "Like",
+    "keywords": []
+  },
+  {
+    "name": "BookmarkX",
+    "category": "Like",
+    "keywords": [
+      "bookmark",
+      "bookmark-x"
+    ]
+  },
+  {
+    "name": "Bookmark2",
+    "category": "School",
+    "keywords": [
+      "bookmark",
+      "page",
+      "reading"
+    ]
+  },
+  {
+    "name": "Boombox",
+    "category": "Devices",
+    "keywords": [
+      "luggage",
+      "speaker"
+    ]
+  },
+  {
+    "name": "Bottle",
+    "category": "Food",
+    "keywords": [
+      "plastic bottle",
+      "container",
+      "bottle"
+    ]
+  },
+  {
+    "name": "Bowling",
+    "category": "Sports",
+    "keywords": [
+      "ball",
+      "ringer",
+      "bowling"
+    ]
+  },
+  {
+    "name": "Box",
+    "category": "General UI",
+    "keywords": [
+      "box",
+      "box3"
+    ]
+  },
+  {
+    "name": "BoxAdd",
+    "category": "General UI",
+    "keywords": [
+      "box",
+      "add",
+      "box-add"
+    ]
+  },
+  {
+    "name": "Box2",
+    "category": "General UI",
+    "keywords": [
+      "container",
+      "storage",
+      "box"
+    ]
+  },
+  {
+    "name": "Box3",
+    "category": "General UI",
+    "keywords": [
+      "cube",
+      "prism",
+      "box",
+      "box-2",
+      "box2"
+    ]
+  },
+  {
+    "name": "BranchDown",
+    "category": "Map",
+    "keywords": [
+      "splitting",
+      "diverging",
+      "split arrows"
+    ]
+  },
+  {
+    "name": "BranchUp",
+    "category": "Map",
+    "keywords": [
+      "directional",
+      "pathway"
+    ]
+  },
+  {
+    "name": "Briefcase",
+    "category": "School",
+    "keywords": [
+      "briefcase",
+      "portfolio case"
+    ]
+  },
+  {
+    "name": "BriefcaseDollar",
+    "category": "Business",
+    "keywords": [
+      "briefcase",
+      "dollar",
+      "briefcase-dollar"
+    ]
+  },
+  {
+    "name": "Broom",
+    "category": "General UI",
+    "keywords": [
+      "cleaning tool",
+      "house cleaning",
+      "broom"
+    ]
+  },
+  {
+    "name": "Broom2",
+    "category": "General UI",
+    "keywords": [
+      "broom"
+    ]
+  },
+  {
+    "name": "BrowserCode",
+    "category": "It",
+    "keywords": [
+      "browser",
+      "code",
+      "browser-code"
+    ]
+  },
+  {
+    "name": "BrowserTerminal",
+    "category": "It",
+    "keywords": [
+      "browser",
+      "terminal",
+      "browser-terminal"
+    ]
+  },
+  {
+    "name": "Brush",
+    "category": "General UI",
+    "keywords": [
+      "brush"
+    ]
+  },
+  {
+    "name": "Brush2",
+    "category": "General UI",
+    "keywords": [
+      "brush"
+    ]
+  },
+  {
+    "name": "Bubble",
+    "category": "General UI",
+    "keywords": [
+      "bubble"
+    ]
+  },
+  {
+    "name": "Bucket",
+    "category": "General UI",
+    "keywords": [
+      "bucket"
+    ]
+  },
+  {
+    "name": "Bug",
+    "category": "It",
+    "keywords": [
+      "security",
+      "pest",
+      "insect",
+      "bug"
+    ]
+  },
+  {
+    "name": "BugSlash",
+    "category": "It",
+    "keywords": [
+      "bug",
+      "slash",
+      "bug-slash"
+    ]
+  },
+  {
+    "name": "Building",
+    "category": "General UI",
+    "keywords": [
+      "building",
+      "building3"
+    ]
+  },
+  {
+    "name": "Building2",
+    "category": "General UI",
+    "keywords": [
+      "building",
+      "building-4",
+      "building4"
+    ]
+  },
+  {
+    "name": "Buildings",
+    "category": "General UI",
+    "keywords": [
+      "buildings",
+      "buildings5"
+    ]
+  },
+  {
+    "name": "Buildings2",
+    "category": "General UI",
+    "keywords": [
+      "buildings"
+    ]
+  },
+  {
+    "name": "Bulb",
+    "category": "Devices",
+    "keywords": [
+      "Light bulb",
+      "Idea light",
+      "bulb"
+    ]
+  },
+  {
+    "name": "BulbBolt",
+    "category": "Devices",
+    "keywords": [
+      "thought",
+      "idea",
+      "bulb",
+      "bolt",
+      "bulb-bolt"
+    ]
+  },
+  {
+    "name": "Bullhorn",
+    "category": "General UI",
+    "keywords": [
+      "bullhorn"
+    ]
+  },
+  {
+    "name": "Bullseye",
+    "category": "General UI",
+    "keywords": [
+      "bullseye"
+    ]
+  },
+  {
+    "name": "Bus",
+    "category": "Parts",
+    "keywords": [
+      "public transportation",
+      "urban vehicle",
+      "bus"
+    ]
+  },
+  {
+    "name": "Cake",
+    "category": "General UI",
+    "keywords": [
+      "cake"
+    ]
+  },
+  {
+    "name": "Calculator",
+    "category": "School",
+    "keywords": [
+      "mathematical",
+      "equation",
+      "calculator",
+      "calculator2"
+    ]
+  },
+  {
+    "name": "Calculator2",
+    "category": "General UI",
+    "keywords": [
+      "calculator"
+    ]
+  },
+  {
+    "name": "Calendar",
+    "category": "Time",
+    "keywords": [
+      "datebook",
+      "appointment",
+      " scheduler",
+      "calendar"
+    ]
+  },
+  {
+    "name": "CalendarAdd",
+    "category": "Time",
+    "keywords": [
+      "calendar plus",
+      "date add",
+      "calendar",
+      "add",
+      "calendar-add"
+    ]
+  },
+  {
+    "name": "CalendarSearch",
+    "category": "Time",
+    "keywords": [
+      "Search calendar",
+      "Event finder",
+      "calendar",
+      "search",
+      "calendar-search"
+    ]
+  },
+  {
+    "name": "Call",
+    "category": "General UI",
+    "keywords": [
+      "call"
+    ]
+  },
+  {
+    "name": "CallAdd",
+    "category": "General UI",
+    "keywords": [
+      "call",
+      "add",
+      "call-add"
+    ]
+  },
+  {
+    "name": "CallCalling",
+    "category": "General UI",
+    "keywords": [
+      "call",
+      "calling",
+      "call-calling"
+    ]
+  },
+  {
+    "name": "CallMinus",
+    "category": "General UI",
+    "keywords": [
+      "call",
+      "minus",
+      "call-minus"
+    ]
+  },
+  {
+    "name": "Camera",
+    "category": "Video",
+    "keywords": [
+      "Camera Icon",
+      "Photography Symbol",
+      "camera"
+    ]
+  },
+  {
+    "name": "CameraAdd",
+    "category": "Video",
+    "keywords": [
+      "add-video-camera",
+      "camera-plus",
+      "camera",
+      "add",
+      "camera-add",
+      "camera-add2"
+    ]
+  },
+  {
+    "name": "CameraOff",
+    "category": "Video",
+    "keywords": [
+      "camera",
+      "off",
+      "camera-off"
+    ]
+  },
+  {
+    "name": "CameraRecord",
+    "category": "Video",
+    "keywords": [
+      "camera",
+      "recording device",
+      "record",
+      "camera-record"
+    ]
+  },
+  {
+    "name": "CameraRotate",
+    "category": "Video",
+    "keywords": [
+      "camera",
+      "picture",
+      "rotate",
+      "camera-rotate"
+    ]
+  },
+  {
+    "name": "Camera2",
+    "category": "Video",
+    "keywords": [
+      "camera",
+      "recorder",
+      "camera-3",
+      "camera3"
+    ]
+  },
+  {
+    "name": "Candle",
+    "category": "General UI",
+    "keywords": [
+      "candle"
+    ]
+  },
+  {
+    "name": "Candle2",
+    "category": "General UI",
+    "keywords": [
+      "candle",
+      "candle-2",
+      "candle2"
+    ]
+  },
+  {
+    "name": "Car",
+    "category": "General UI",
+    "keywords": [
+      "car"
+    ]
+  },
+  {
+    "name": "Card",
+    "category": "Money",
+    "keywords": [
+      "payment card",
+      "credit card",
+      "card"
+    ]
+  },
+  {
+    "name": "CardAdd",
+    "category": "General UI",
+    "keywords": [
+      "card",
+      "add",
+      "card-add"
+    ]
+  },
+  {
+    "name": "CardEdit",
+    "category": "General UI",
+    "keywords": [
+      "card",
+      "edit",
+      "card-edit"
+    ]
+  },
+  {
+    "name": "CardRemove",
+    "category": "General UI",
+    "keywords": [
+      "card",
+      "remove",
+      "card-remove",
+      "card-remove2"
+    ]
+  },
+  {
+    "name": "Cards",
+    "category": "General UI",
+    "keywords": [
+      "cards"
+    ]
+  },
+  {
+    "name": "CarouselH",
+    "category": "General UI",
+    "keywords": [
+      "horizontal carousel",
+      "post slider",
+      "carousel view"
+    ]
+  },
+  {
+    "name": "CarouselV",
+    "category": "General UI",
+    "keywords": [
+      "Vertical carousel",
+      "Post carousel"
+    ]
+  },
+  {
+    "name": "CartAdd",
+    "category": "Shopping",
+    "keywords": [
+      "cart",
+      "add",
+      "cart-add",
+      "cart-add2"
+    ]
+  },
+  {
+    "name": "CartCheck",
+    "category": "Shopping",
+    "keywords": [
+      "cart",
+      "check",
+      "cart-check",
+      "cart-check2"
+    ]
+  },
+  {
+    "name": "CartShop",
+    "category": "Shopping",
+    "keywords": [
+      "cart",
+      "shop",
+      "cart-shop"
+    ]
+  },
+  {
+    "name": "CartShopping",
+    "category": "Shopping",
+    "keywords": [
+      "cart",
+      "shopping",
+      "cart-shopping"
+    ]
+  },
+  {
+    "name": "CashOut",
+    "category": "Money",
+    "keywords": [
+      "deposit",
+      "transfer",
+      "cash",
+      "out",
+      "cash-out"
+    ]
+  },
+  {
+    "name": "Cassette",
+    "category": "Devices",
+    "keywords": [
+      "audio",
+      "recorder",
+      "cassette"
+    ]
+  },
+  {
+    "name": "Castle",
+    "category": "General UI",
+    "keywords": [
+      "castle"
+    ]
+  },
+  {
+    "name": "Cat",
+    "category": "General UI",
+    "keywords": [
+      "Cat outline",
+      "Minimalistic feline",
+      "cat"
+    ]
+  },
+  {
+    "name": "Category",
+    "category": "General UI",
+    "keywords": [
+      "category",
+      "category2"
+    ]
+  },
+  {
+    "name": "Cc",
+    "category": "General UI",
+    "keywords": [
+      "Creative Commons",
+      "Copyright",
+      "cc"
+    ]
+  },
+  {
+    "name": "Cd",
+    "category": "General UI",
+    "keywords": [
+      "cd"
+    ]
+  },
+  {
+    "name": "Chair",
+    "category": "Home",
+    "keywords": [
+      "sitting chair",
+      "seating furniture",
+      "chair"
+    ]
+  },
+  {
+    "name": "Chair2",
+    "category": "Home",
+    "keywords": [
+      "chair3",
+      "chair",
+      "chair-3"
+    ]
+  },
+  {
+    "name": "Chalkboard",
+    "category": "General UI",
+    "keywords": [
+      "chalkboard"
+    ]
+  },
+  {
+    "name": "Chandelier",
+    "category": "Home",
+    "keywords": [
+      "lamp",
+      "lighting",
+      "chandelier"
+    ]
+  },
+  {
+    "name": "Chart",
+    "category": "General UI",
+    "keywords": [
+      "chart",
+      "chart6"
+    ]
+  },
+  {
+    "name": "ChartBar",
+    "category": "Business",
+    "keywords": [
+      "chart",
+      "bar",
+      "chart-bar"
+    ]
+  },
+  {
+    "name": "ChartBarTrendUp",
+    "category": "Business",
+    "keywords": [
+      "chart",
+      "bar",
+      "trend",
+      "up",
+      "chart-bar-trend-up"
+    ]
+  },
+  {
+    "name": "ChartLine",
+    "category": "Business",
+    "keywords": [
+      "chart",
+      "line",
+      "chart-line"
+    ]
+  },
+  {
+    "name": "ChartPie",
+    "category": "Business",
+    "keywords": [
+      "chart",
+      "pie",
+      "chart-pie"
+    ]
+  },
+  {
+    "name": "ChartSquare",
+    "category": "Business",
+    "keywords": [
+      "pause",
+      "stop",
+      "chart",
+      "square",
+      "chart-square"
+    ]
+  },
+  {
+    "name": "ChartSuccess",
+    "category": "General UI",
+    "keywords": [
+      "chart",
+      "success",
+      "chart-success"
+    ]
+  },
+  {
+    "name": "ChartTrend",
+    "category": "Business",
+    "keywords": [
+      "chart",
+      "trend",
+      "chart-trend"
+    ]
+  },
+  {
+    "name": "Chart2",
+    "category": "Business",
+    "keywords": [
+      "column_chart",
+      "data_visualization",
+      "chart"
+    ]
+  },
+  {
+    "name": "Chat",
+    "category": "Messages",
+    "keywords": [
+      "chat"
+    ]
+  },
+  {
+    "name": "ChatCheck",
+    "category": "Messages",
+    "keywords": [
+      "chat",
+      "check",
+      "chat-check"
+    ]
+  },
+  {
+    "name": "ChatDots",
+    "category": "Messages",
+    "keywords": [
+      "speech-bubble",
+      "dots",
+      "chat",
+      "chat-dots"
+    ]
+  },
+  {
+    "name": "ChatLine",
+    "category": "Messages",
+    "keywords": [
+      "speech-bubble",
+      "message-bubble",
+      "chat",
+      "line",
+      "chat-line"
+    ]
+  },
+  {
+    "name": "ChatMinus",
+    "category": "Messages",
+    "keywords": [
+      "chat",
+      "minus",
+      "chat-minus"
+    ]
+  },
+  {
+    "name": "ChatPlus",
+    "category": "Messages",
+    "keywords": [
+      "chat",
+      "plus",
+      "chat-plus"
+    ]
+  },
+  {
+    "name": "ChatRound",
+    "category": "Messages",
+    "keywords": [
+      "speech bubble",
+      "round chat",
+      "chat",
+      "round",
+      "chat-round"
+    ]
+  },
+  {
+    "name": "ChatRoundCall",
+    "category": "Messages",
+    "keywords": [
+      "speech bubble pause",
+      "message pause circle",
+      "chat",
+      "round",
+      "call",
+      "chat-round-call"
+    ]
+  },
+  {
+    "name": "ChatRoundCheck",
+    "category": "Messages",
+    "keywords": [
+      "check-mark",
+      "approval-discussion",
+      "verified-speech-bubble",
+      "chat",
+      "round",
+      "check",
+      "chat-round-check"
+    ]
+  },
+  {
+    "name": "ChatRoundDots",
+    "category": "Messages",
+    "keywords": [
+      "speech bubbles",
+      "communication",
+      "dialogue icon",
+      "chat",
+      "round",
+      "dots",
+      "chat-round-dots"
+    ]
+  },
+  {
+    "name": "ChatRoundLike",
+    "category": "Messages",
+    "keywords": [
+      "speech bubble",
+      "message circle",
+      "chat",
+      "round",
+      "like",
+      "chat-round-like"
+    ]
+  },
+  {
+    "name": "ChatRoundLine",
+    "category": "Messages",
+    "keywords": [
+      "speech bubble",
+      "dialogue box",
+      "message balloon",
+      "chat",
+      "round",
+      "line",
+      "chat-round-line"
+    ]
+  },
+  {
+    "name": "ChatRoundMoney",
+    "category": "Messages",
+    "keywords": [
+      "message-speech-bubble",
+      "cash-talk",
+      "chat",
+      "round",
+      "money",
+      "chat-round-money"
+    ]
+  },
+  {
+    "name": "ChatRoundUnread",
+    "category": "Messages",
+    "keywords": [
+      "speech bubble round",
+      "message circle",
+      "chat",
+      "round",
+      "unread",
+      "chat-round-unread"
+    ]
+  },
+  {
+    "name": "ChatRoundVideo",
+    "category": "Messages",
+    "keywords": [
+      "video-chat",
+      "round-discussion",
+      "chat",
+      "round",
+      "video",
+      "chat-round-video"
+    ]
+  },
+  {
+    "name": "ChatSquare",
+    "category": "Messages",
+    "keywords": [
+      "speech bubble",
+      "message icon",
+      "communication symbol",
+      "chat",
+      "square",
+      "chat-square"
+    ]
+  },
+  {
+    "name": "ChatSquareArrow",
+    "category": "Messages",
+    "keywords": [
+      "message-loop",
+      "dialogue-arrow",
+      "chat",
+      "square",
+      "arrow",
+      "chat-square-arrow"
+    ]
+  },
+  {
+    "name": "ChatSquareCall",
+    "category": "Messages",
+    "keywords": [
+      "pause",
+      "mute",
+      "chat",
+      "square",
+      "call",
+      "chat-square-call"
+    ]
+  },
+  {
+    "name": "ChatSquareCheck",
+    "category": "Messages",
+    "keywords": [
+      "checkmark chat bubble",
+      "approval message",
+      "chat",
+      "square",
+      "check",
+      "chat-square-check"
+    ]
+  },
+  {
+    "name": "ChatSquareCode",
+    "category": "Messages",
+    "keywords": [
+      "code-chat-icon",
+      "developer-discussion",
+      "programming-conversation",
+      "chat",
+      "square",
+      "code",
+      "chat-square-code"
+    ]
+  },
+  {
+    "name": "ChatSquareLike",
+    "category": "Messages",
+    "keywords": [
+      "heart",
+      "speech_bubble",
+      "chat",
+      "square",
+      "like",
+      "chat-square-like"
+    ]
+  },
+  {
+    "name": "ChatUnread",
+    "category": "Messages",
+    "keywords": [
+      "speech bubble",
+      "message notification",
+      "chat",
+      "unread",
+      "chat-unread"
+    ]
+  },
+  {
+    "name": "ChatX",
+    "category": "Messages",
+    "keywords": [
+      "chat",
+      "chat-x"
+    ]
+  },
+  {
+    "name": "Check",
+    "category": "General UI",
+    "keywords": [
+      "check"
+    ]
+  },
+  {
+    "name": "CheckList",
+    "category": "Notes",
+    "keywords": [
+      "check",
+      "list",
+      "check-list"
+    ]
+  },
+  {
+    "name": "ChefHat",
+    "category": "Food",
+    "keywords": [
+      "chef hat",
+      "cooking cap",
+      "chef",
+      "hat",
+      "chef-hat",
+      "chef-hat2"
+    ]
+  },
+  {
+    "name": "ChefHat2",
+    "category": "Food",
+    "keywords": [
+      "chef hat",
+      "cooking cap"
+    ]
+  },
+  {
+    "name": "Chrome",
+    "category": "General UI",
+    "keywords": [
+      "chrome"
+    ]
+  },
+  {
+    "name": "CircleHalfDottedCheck",
+    "category": "General UI",
+    "keywords": [
+      "circle",
+      "half",
+      "dotted",
+      "check"
+    ]
+  },
+  {
+    "name": "CircleHashtag",
+    "category": "General UI",
+    "keywords": [
+      "circle",
+      "hashtag",
+      "circle-hashtag"
+    ]
+  },
+  {
+    "name": "CircleInfo",
+    "category": "General UI",
+    "keywords": [
+      "circle",
+      "info",
+      "circle-info"
+    ]
+  },
+  {
+    "name": "City",
+    "category": "Building",
+    "keywords": [
+      "towers",
+      "factory",
+      "city"
+    ]
+  },
+  {
+    "name": "Clapperboard",
+    "category": "Video",
+    "keywords": [
+      "movie clap",
+      "film clapper",
+      "clapperboard"
+    ]
+  },
+  {
+    "name": "ClapperboardEdit",
+    "category": "Video",
+    "keywords": [
+      "clapper",
+      "film slate",
+      "clapperboard",
+      "edit",
+      "clapperboard-edit"
+    ]
+  },
+  {
+    "name": "ClapperboardOpen",
+    "category": "Video",
+    "keywords": [
+      "movie clap",
+      "film clapper",
+      "clapperboard",
+      "open",
+      "clapperboard-open"
+    ]
+  },
+  {
+    "name": "ClapperboardOpenPlay",
+    "category": "Video",
+    "keywords": [
+      "clapper",
+      "play",
+      "cinema",
+      "clapperboard",
+      "open",
+      "clapperboard-open-play"
+    ]
+  },
+  {
+    "name": "ClapperboardPlay",
+    "category": "Video",
+    "keywords": [
+      "play",
+      "cinema"
+    ]
+  },
+  {
+    "name": "Clipboard",
+    "category": "Notes",
+    "keywords": [
+      "clipping",
+      "notepad",
+      "clipboard"
+    ]
+  },
+  {
+    "name": "ClipboardClose",
+    "category": "General UI",
+    "keywords": [
+      "clipboard",
+      "close",
+      "clipboard-close"
+    ]
+  },
+  {
+    "name": "ClipboardText",
+    "category": "General UI",
+    "keywords": [
+      "clipboard",
+      "text",
+      "clipboard-text",
+      "clipboard-text3"
+    ]
+  },
+  {
+    "name": "ClipboardTick",
+    "category": "General UI",
+    "keywords": [
+      "clipboard",
+      "tick",
+      "clipboard-tick"
+    ]
+  },
+  {
+    "name": "Clock",
+    "category": "Time",
+    "keywords": [
+      "clock"
+    ]
+  },
+  {
+    "name": "ClockCircle",
+    "category": "Time",
+    "keywords": [
+      "round clock",
+      "blue circle timer",
+      "clock",
+      "circle",
+      "clock-circle"
+    ]
+  },
+  {
+    "name": "ClockSquare",
+    "category": "Time",
+    "keywords": [
+      "square clock",
+      "clock symbol",
+      "clock",
+      "square",
+      "clock-square"
+    ]
+  },
+  {
+    "name": "Closet",
+    "category": "Home",
+    "keywords": [
+      "cabinet",
+      "wardrobe",
+      "closet",
+      "closet2"
+    ]
+  },
+  {
+    "name": "Cloud",
+    "category": "Weather",
+    "keywords": [
+      "cloudy",
+      "skyline",
+      "cloud"
+    ]
+  },
+  {
+    "name": "CloudAdd",
+    "category": "General UI",
+    "keywords": [
+      "cloud",
+      "add",
+      "cloud-add"
+    ]
+  },
+  {
+    "name": "CloudBolt",
+    "category": "Weather",
+    "keywords": [
+      "cloud",
+      "bolt",
+      "cloud-bolt"
+    ]
+  },
+  {
+    "name": "CloudChange",
+    "category": "General UI",
+    "keywords": [
+      "cloud",
+      "change",
+      "cloud-change"
+    ]
+  },
+  {
+    "name": "CloudCheck",
+    "category": "Weather",
+    "keywords": [
+      "Checkmark Cloud",
+      "Cloud Verification",
+      "cloud",
+      "check",
+      "cloud-check"
+    ]
+  },
+  {
+    "name": "CloudConnect",
+    "category": "Nature",
+    "keywords": [
+      "cloud",
+      "connect",
+      "cloud-connect"
+    ]
+  },
+  {
+    "name": "CloudConnection",
+    "category": "General UI",
+    "keywords": [
+      "cloud",
+      "connection",
+      "cloud-connection"
+    ]
+  },
+  {
+    "name": "CloudCross",
+    "category": "General UI",
+    "keywords": [
+      "cloud",
+      "cross",
+      "cloud-cross"
+    ]
+  },
+  {
+    "name": "CloudDown",
+    "category": "Nature",
+    "keywords": [
+      "cloud",
+      "down",
+      "cloud-down"
+    ]
+  },
+  {
+    "name": "CloudDownload",
+    "category": "Weather",
+    "keywords": [
+      "cloud download",
+      "data transfer",
+      "cloud",
+      "download",
+      "cloud-download"
+    ]
+  },
+  {
+    "name": "CloudDrizzle",
+    "category": "General UI",
+    "keywords": [
+      "cloud",
+      "drizzle",
+      "cloud-drizzle"
+    ]
+  },
+  {
+    "name": "CloudDrop",
+    "category": "Weather",
+    "keywords": [
+      "water cloud",
+      "rain cloud",
+      "cloud",
+      "drop",
+      "cloud-drop"
+    ]
+  },
+  {
+    "name": "CloudDrops",
+    "category": "Weather",
+    "keywords": [
+      "water droplets",
+      "rain cloud",
+      "cloud",
+      "drops",
+      "cloud-drops"
+    ]
+  },
+  {
+    "name": "CloudFile",
+    "category": "Files",
+    "keywords": [
+      "Cloud Document",
+      "File Upload",
+      "cloud",
+      "file",
+      "cloud-file"
+    ]
+  },
+  {
+    "name": "CloudFog",
+    "category": "General UI",
+    "keywords": [
+      "cloud",
+      "fog",
+      "cloud-fog"
+    ]
+  },
+  {
+    "name": "CloudLightning",
+    "category": "General UI",
+    "keywords": [
+      "cloud",
+      "lightning",
+      "cloud-lightning"
+    ]
+  },
+  {
+    "name": "CloudMinus",
+    "category": "Weather",
+    "keywords": [
+      "minus cloud",
+      "decrease temperature",
+      "cloud",
+      "minus",
+      "cloud-minus"
+    ]
+  },
+  {
+    "name": "CloudNotif",
+    "category": "General UI",
+    "keywords": [
+      "cloud",
+      "notif",
+      "cloud-notif"
+    ]
+  },
+  {
+    "name": "CloudPlus",
+    "category": "Weather",
+    "keywords": [
+      "Cloud",
+      "Plus",
+      "Digital Storage",
+      "cloud",
+      "plus",
+      "cloud-plus"
+    ]
+  },
+  {
+    "name": "CloudRain",
+    "category": "Weather",
+    "keywords": [
+      "rain cloud",
+      "droplet clouds",
+      "cloud",
+      "rain",
+      "cloud-rain"
+    ]
+  },
+  {
+    "name": "CloudRemove",
+    "category": "General UI",
+    "keywords": [
+      "cloud",
+      "remove",
+      "cloud-remove"
+    ]
+  },
+  {
+    "name": "CloudSnow",
+    "category": "Weather",
+    "keywords": [
+      "snowflake",
+      "cloudy",
+      "cloud",
+      "snow",
+      "cloud-snow"
+    ]
+  },
+  {
+    "name": "CloudStorage",
+    "category": "Devices",
+    "keywords": [
+      "Cloud storage",
+      "Digital cloud",
+      "cloud",
+      "storage",
+      "cloud-storage"
+    ]
+  },
+  {
+    "name": "CloudStorm",
+    "category": "Weather",
+    "keywords": [
+      "storm cloud",
+      "rainy weather",
+      "cloud",
+      "storm",
+      "cloud-storm"
+    ]
+  },
+  {
+    "name": "CloudSun",
+    "category": "Weather",
+    "keywords": [
+      "Cloudy",
+      "Sky with clouds",
+      "cloud",
+      "sun",
+      "cloud-sun"
+    ]
+  },
+  {
+    "name": "CloudSunny",
+    "category": "General UI",
+    "keywords": [
+      "cloud",
+      "sunny",
+      "cloud-sunny"
+    ]
+  },
+  {
+    "name": "CloudUp",
+    "category": "Nature",
+    "keywords": [
+      "cloud",
+      "up",
+      "cloud-up"
+    ]
+  },
+  {
+    "name": "CloudUpload",
+    "category": "Weather",
+    "keywords": [
+      "upload-cloud",
+      "data-transmission",
+      "cloud",
+      "upload",
+      "cloud-upload"
+    ]
+  },
+  {
+    "name": "CloudX",
+    "category": "Weather",
+    "keywords": [
+      "cloud x",
+      "crossed-out cloud",
+      "cloud",
+      "cloud-x"
+    ]
+  },
+  {
+    "name": "Clouds",
+    "category": "Weather",
+    "keywords": [
+      "Cloud Icon",
+      "Weather Symbol",
+      "clouds"
+    ]
+  },
+  {
+    "name": "Code",
+    "category": "General UI",
+    "keywords": [
+      "code",
+      "code2"
+    ]
+  },
+  {
+    "name": "CodeCircle",
+    "category": "It",
+    "keywords": [
+      "Programming",
+      "Code",
+      "code",
+      "circle",
+      "code-circle"
+    ]
+  },
+  {
+    "name": "CodeFile",
+    "category": "Files",
+    "keywords": [
+      "program file",
+      "computer code",
+      "code",
+      "file",
+      "code-file"
+    ]
+  },
+  {
+    "name": "CodeScan",
+    "category": "Security",
+    "keywords": [
+      "scan",
+      "analysis",
+      "code",
+      "code-scan"
+    ]
+  },
+  {
+    "name": "CodeSquare",
+    "category": "It",
+    "keywords": [
+      "program",
+      "developer",
+      "coding",
+      "code",
+      "square",
+      "code-square"
+    ]
+  },
+  {
+    "name": "Code2",
+    "category": "It",
+    "keywords": [
+      "syntax",
+      "development",
+      "code"
+    ]
+  },
+  {
+    "name": "Code3",
+    "category": "It",
+    "keywords": [
+      "program code",
+      "coding symbol"
+    ]
+  },
+  {
+    "name": "Coffee",
+    "category": "General UI",
+    "keywords": [
+      "coffee"
+    ]
+  },
+  {
+    "name": "Coin",
+    "category": "General UI",
+    "keywords": [
+      "coin"
+    ]
+  },
+  {
+    "name": "Coins",
+    "category": "Money",
+    "keywords": [
+      "coins"
+    ]
+  },
+  {
+    "name": "ColorSwatch",
+    "category": "General UI",
+    "keywords": [
+      "color",
+      "swatch",
+      "color-swatch"
+    ]
+  },
+  {
+    "name": "ColorTuning",
+    "category": "Tools",
+    "keywords": [
+      "equalizer",
+      "audio",
+      "balance",
+      "color",
+      "tuning",
+      "color-tuning"
+    ]
+  },
+  {
+    "name": "Colorfilter",
+    "category": "General UI",
+    "keywords": [
+      "colorfilter"
+    ]
+  },
+  {
+    "name": "Command",
+    "category": "It",
+    "keywords": [
+      "crosshair",
+      "target",
+      "command"
+    ]
+  },
+  {
+    "name": "CommandSquare",
+    "category": "General UI",
+    "keywords": [
+      "command",
+      "square",
+      "command-square"
+    ]
+  },
+  {
+    "name": "Comment",
+    "category": "Messages",
+    "keywords": [
+      "comment"
+    ]
+  },
+  {
+    "name": "CommentCheck",
+    "category": "Messages",
+    "keywords": [
+      "comment",
+      "check",
+      "comment-check"
+    ]
+  },
+  {
+    "name": "CommentDots",
+    "category": "Messages",
+    "keywords": [
+      "comment",
+      "dots",
+      "comment-dots"
+    ]
+  },
+  {
+    "name": "CommentMinus",
+    "category": "Messages",
+    "keywords": [
+      "comment",
+      "minus",
+      "comment-minus"
+    ]
+  },
+  {
+    "name": "CommentPlus",
+    "category": "Messages",
+    "keywords": [
+      "comment",
+      "plus",
+      "comment-plus"
+    ]
+  },
+  {
+    "name": "CommentX",
+    "category": "Messages",
+    "keywords": [
+      "comment",
+      "comment-x"
+    ]
+  },
+  {
+    "name": "Compass",
+    "category": "Map",
+    "keywords": [
+      "navigation",
+      "directions",
+      "compass"
+    ]
+  },
+  {
+    "name": "CompassSquare",
+    "category": "Map",
+    "keywords": [
+      "navigation",
+      "direction",
+      "compass",
+      "square",
+      "compass-square"
+    ]
+  },
+  {
+    "name": "Computer",
+    "category": "Devices",
+    "keywords": [
+      "computer"
+    ]
+  },
+  {
+    "name": "Confetti",
+    "category": "General UI",
+    "keywords": [
+      "explosion",
+      "celebration",
+      "confetti"
+    ]
+  },
+  {
+    "name": "ConvertCard",
+    "category": "General UI",
+    "keywords": [
+      "convert",
+      "card"
+    ]
+  },
+  {
+    "name": "Convertshape",
+    "category": "General UI",
+    "keywords": [
+      "convertshape",
+      "convertshape2"
+    ]
+  },
+  {
+    "name": "Cookie",
+    "category": "Food",
+    "keywords": [
+      "cookie"
+    ]
+  },
+  {
+    "name": "Copy",
+    "category": "General UI",
+    "keywords": [
+      "copy",
+      "copy3"
+    ]
+  },
+  {
+    "name": "CopySuccess",
+    "category": "General UI",
+    "keywords": [
+      "copy",
+      "success",
+      "copy-success"
+    ]
+  },
+  {
+    "name": "Copy2",
+    "category": "General UI",
+    "keywords": [
+      "copied",
+      "transfer",
+      "duplicate",
+      "copy"
+    ]
+  },
+  {
+    "name": "Copyright",
+    "category": "General UI",
+    "keywords": [
+      "copy right",
+      "creative copyright",
+      "copyright"
+    ]
+  },
+  {
+    "name": "Corkscrew",
+    "category": "Food",
+    "keywords": [
+      "twist",
+      "spiral",
+      "corkscrew"
+    ]
+  },
+  {
+    "name": "Cosmetic",
+    "category": "General UI",
+    "keywords": [
+      "lipstick",
+      "mirror",
+      "cosmetic"
+    ]
+  },
+  {
+    "name": "CourseDown",
+    "category": "Business",
+    "keywords": [
+      "downward curve",
+      "decrease graph",
+      "course",
+      "down",
+      "course-down"
+    ]
+  },
+  {
+    "name": "CourseUp",
+    "category": "Business",
+    "keywords": [
+      "growth chart",
+      "upward trend graph",
+      "course",
+      "up",
+      "course-up"
+    ]
+  },
+  {
+    "name": "Courthouse",
+    "category": "General UI",
+    "keywords": [
+      "courthouse"
+    ]
+  },
+  {
+    "name": "Cpu",
+    "category": "Devices",
+    "keywords": [
+      "central",
+      "processor",
+      "cpu"
+    ]
+  },
+  {
+    "name": "CpuBolt",
+    "category": "Devices",
+    "keywords": [
+      "processor",
+      "chip",
+      "electronics",
+      "cpu",
+      "bolt",
+      "cpu-bolt"
+    ]
+  },
+  {
+    "name": "CpuCharge",
+    "category": "General UI",
+    "keywords": [
+      "cpu",
+      "charge",
+      "cpu-charge"
+    ]
+  },
+  {
+    "name": "CpuSetting",
+    "category": "General UI",
+    "keywords": [
+      "cpu",
+      "setting",
+      "cpu-setting"
+    ]
+  },
+  {
+    "name": "CreativeCommons",
+    "category": "General UI",
+    "keywords": [
+      "creative",
+      "commons"
+    ]
+  },
+  {
+    "name": "CreditCard",
+    "category": "Money",
+    "keywords": [
+      "credit",
+      "card",
+      "credit-card"
+    ]
+  },
+  {
+    "name": "CreditCardOff",
+    "category": "Money",
+    "keywords": [
+      "credit",
+      "card",
+      "off",
+      "credit-card-off"
+    ]
+  },
+  {
+    "name": "Crop",
+    "category": "Tools",
+    "keywords": [
+      "Crop",
+      "Minimalist",
+      "crop",
+      "crop2"
+    ]
+  },
+  {
+    "name": "Crosshairs",
+    "category": "General UI",
+    "keywords": [
+      "crosshairs"
+    ]
+  },
+  {
+    "name": "CrosshairsOff",
+    "category": "General UI",
+    "keywords": [
+      "crosshairs",
+      "off",
+      "crosshairs-off"
+    ]
+  },
+  {
+    "name": "CrosshairsSlash",
+    "category": "Map",
+    "keywords": [
+      "crosshairs",
+      "slash",
+      "crosshairs-slash"
+    ]
+  },
+  {
+    "name": "Crown",
+    "category": "General UI",
+    "keywords": [
+      "crown",
+      "regal",
+      "crown2"
+    ]
+  },
+  {
+    "name": "CrownStar",
+    "category": "General UI",
+    "keywords": [
+      "crowned",
+      "starred",
+      "crown",
+      "star",
+      "crown-star"
+    ]
+  },
+  {
+    "name": "Cryptography",
+    "category": "Security",
+    "keywords": [
+      "cryptography"
+    ]
+  },
+  {
+    "name": "Cup",
+    "category": "General UI",
+    "keywords": [
+      "trophy",
+      "victory",
+      "cup"
+    ]
+  },
+  {
+    "name": "CupStar",
+    "category": "General UI",
+    "keywords": [
+      "trophy",
+      "prize",
+      "cup",
+      "star",
+      "cup-star"
+    ]
+  },
+  {
+    "name": "CupTrophy",
+    "category": "General UI",
+    "keywords": [
+      "trophy",
+      "first-place",
+      "cup",
+      "cup-trophy"
+    ]
+  },
+  {
+    "name": "Cursor",
+    "category": "General UI",
+    "keywords": [
+      "pointer",
+      "arrow pointer",
+      "scroll arrow",
+      "cursor"
+    ]
+  },
+  {
+    "name": "Cycling",
+    "category": "Sports",
+    "keywords": [
+      "bicycle",
+      "pedal",
+      "cycling",
+      "cycling2"
+    ]
+  },
+  {
+    "name": "DarkLight",
+    "category": "General UI",
+    "keywords": [
+      "dark",
+      "light",
+      "dark-light"
+    ]
+  },
+  {
+    "name": "Data",
+    "category": "General UI",
+    "keywords": [
+      "data"
+    ]
+  },
+  {
+    "name": "Database",
+    "category": "General UI",
+    "keywords": [
+      "database",
+      "datastore"
+    ]
+  },
+  {
+    "name": "Delivery",
+    "category": "General UI",
+    "keywords": [
+      "cart",
+      "shopping",
+      "delivery"
+    ]
+  },
+  {
+    "name": "DescendingSorting",
+    "category": "Arrows",
+    "keywords": [
+      "descending",
+      "sorting",
+      "descending-sorting"
+    ]
+  },
+  {
+    "name": "Desktop",
+    "category": "Devices",
+    "keywords": [
+      "desktop"
+    ]
+  },
+  {
+    "name": "DesktopDownload",
+    "category": "Devices",
+    "keywords": [
+      "desktop",
+      "download",
+      "desktop-download"
+    ]
+  },
+  {
+    "name": "DeviceMessage",
+    "category": "General UI",
+    "keywords": [
+      "device",
+      "message",
+      "device-message"
+    ]
+  },
+  {
+    "name": "Devices",
+    "category": "Devices",
+    "keywords": [
+      "database",
+      "documentation",
+      "devices"
+    ]
+  },
+  {
+    "name": "Diagram",
+    "category": "General UI",
+    "keywords": [
+      "diagram"
+    ]
+  },
+  {
+    "name": "DiagramDown",
+    "category": "Business",
+    "keywords": [
+      "downward arrow",
+      "decrease graph",
+      "diagram",
+      "down",
+      "diagram-down"
+    ]
+  },
+  {
+    "name": "Diploma",
+    "category": "School",
+    "keywords": [
+      "credential",
+      "degree",
+      "certificate",
+      "diploma"
+    ]
+  },
+  {
+    "name": "DirectDown",
+    "category": "General UI",
+    "keywords": [
+      "direct",
+      "down",
+      "direct-down"
+    ]
+  },
+  {
+    "name": "DirectLeft",
+    "category": "General UI",
+    "keywords": [
+      "direct",
+      "left",
+      "direct-left"
+    ]
+  },
+  {
+    "name": "DirectNotification",
+    "category": "General UI",
+    "keywords": [
+      "direct",
+      "notification",
+      "direct-notification"
+    ]
+  },
+  {
+    "name": "DirectRight",
+    "category": "General UI",
+    "keywords": [
+      "direct",
+      "right",
+      "direct-right"
+    ]
+  },
+  {
+    "name": "DirectUp",
+    "category": "General UI",
+    "keywords": [
+      "direct",
+      "up",
+      "direct-up"
+    ]
+  },
+  {
+    "name": "DiscountShape",
+    "category": "General UI",
+    "keywords": [
+      "discount",
+      "shape",
+      "discount-shape"
+    ]
+  },
+  {
+    "name": "Dislike",
+    "category": "General UI",
+    "keywords": [
+      "dislike",
+      "dislike3"
+    ]
+  },
+  {
+    "name": "Display",
+    "category": "Devices",
+    "keywords": [
+      "monitor",
+      "screen",
+      "display"
+    ]
+  },
+  {
+    "name": "Dna",
+    "category": "Medicine",
+    "keywords": [
+      "DNA strand",
+      "double helix",
+      "dna"
+    ]
+  },
+  {
+    "name": "Doc",
+    "category": "Notes",
+    "keywords": [
+      "Equalize",
+      "Balance",
+      "doc"
+    ]
+  },
+  {
+    "name": "DocAdd",
+    "category": "Notes",
+    "keywords": [
+      "pen-note",
+      "writing-pad",
+      "doc",
+      "add",
+      "doc-add"
+    ]
+  },
+  {
+    "name": "Document",
+    "category": "General UI",
+    "keywords": [
+      "document"
+    ]
+  },
+  {
+    "name": "DocumentCloud",
+    "category": "General UI",
+    "keywords": [
+      "document",
+      "cloud",
+      "document-cloud"
+    ]
+  },
+  {
+    "name": "DocumentCode",
+    "category": "General UI",
+    "keywords": [
+      "document",
+      "code",
+      "document-code"
+    ]
+  },
+  {
+    "name": "DocumentDownload",
+    "category": "General UI",
+    "keywords": [
+      "document",
+      "download",
+      "document-download"
+    ]
+  },
+  {
+    "name": "DocumentFilter",
+    "category": "General UI",
+    "keywords": [
+      "document",
+      "filter",
+      "document-filter"
+    ]
+  },
+  {
+    "name": "DocumentNormal",
+    "category": "General UI",
+    "keywords": [
+      "document",
+      "normal"
+    ]
+  },
+  {
+    "name": "DocumentText",
+    "category": "General UI",
+    "keywords": [
+      "document",
+      "text"
+    ]
+  },
+  {
+    "name": "DocumentUpload",
+    "category": "General UI",
+    "keywords": [
+      "document",
+      "upload",
+      "document-upload"
+    ]
+  },
+  {
+    "name": "Dollar",
+    "category": "Money",
+    "keywords": [
+      "coin",
+      "finance symbol",
+      "dollar"
+    ]
+  },
+  {
+    "name": "DollarCircle",
+    "category": "Money",
+    "keywords": [
+      "dollar",
+      "circle",
+      "dollar-circle"
+    ]
+  },
+  {
+    "name": "DollarDown",
+    "category": "Money",
+    "keywords": [
+      "dollar",
+      "down",
+      "dollar-down"
+    ]
+  },
+  {
+    "name": "DollarReload",
+    "category": "Money",
+    "keywords": [
+      "dollar",
+      "reload",
+      "dollar-reload"
+    ]
+  },
+  {
+    "name": "DollarSign",
+    "category": "Money",
+    "keywords": [
+      "dollar",
+      "sign",
+      "dollar-sign"
+    ]
+  },
+  {
+    "name": "DollarSquare",
+    "category": "General UI",
+    "keywords": [
+      "dollar",
+      "square",
+      "dollar-square"
+    ]
+  },
+  {
+    "name": "DollarUp",
+    "category": "Money",
+    "keywords": [
+      "dollar",
+      "up",
+      "dollar-up"
+    ]
+  },
+  {
+    "name": "Donut",
+    "category": "Food",
+    "keywords": [
+      "pastry",
+      "baked good",
+      "donut"
+    ]
+  },
+  {
+    "name": "Donut2",
+    "category": "Food",
+    "keywords": [
+      "bitten donut",
+      "partially eaten pastry",
+      "donut",
+      "donut-2",
+      "donut2"
+    ]
+  },
+  {
+    "name": "Download",
+    "category": "Arrows-action",
+    "keywords": [
+      "down arrow",
+      "data download",
+      "download"
+    ]
+  },
+  {
+    "name": "DownloadSquare",
+    "category": "Arrows-action",
+    "keywords": [
+      "Download",
+      "Square arrow",
+      "download",
+      "square",
+      "download-square"
+    ]
+  },
+  {
+    "name": "Download2",
+    "category": "Arrows-action",
+    "keywords": [
+      "download",
+      "arrow-down",
+      "download-2",
+      "download2"
+    ]
+  },
+  {
+    "name": "DrawCompass",
+    "category": "Tools",
+    "keywords": [
+      "draw",
+      "compass",
+      "draw-compass"
+    ]
+  },
+  {
+    "name": "Driver",
+    "category": "General UI",
+    "keywords": [
+      "driver"
+    ]
+  },
+  {
+    "name": "DriverRefresh",
+    "category": "General UI",
+    "keywords": [
+      "driver",
+      "refresh",
+      "driver-refresh"
+    ]
+  },
+  {
+    "name": "Driving",
+    "category": "General UI",
+    "keywords": [
+      "driving"
+    ]
+  },
+  {
+    "name": "Drop",
+    "category": "General UI",
+    "keywords": [
+      "water",
+      "droplet",
+      "drop"
+    ]
+  },
+  {
+    "name": "Dropper",
+    "category": "Medicine",
+    "keywords": [
+      "dropper",
+      "fluid"
+    ]
+  },
+  {
+    "name": "Drops",
+    "category": "Weather",
+    "keywords": [
+      "droplets",
+      "raindrop trio",
+      "drops"
+    ]
+  },
+  {
+    "name": "Dumbbell",
+    "category": "Sports",
+    "keywords": [
+      "barbell",
+      "weightlifting equipment",
+      "dumbbell"
+    ]
+  },
+  {
+    "name": "Dumbbell2",
+    "category": "Sports",
+    "keywords": [
+      "weightlifting",
+      "fitness",
+      "muscle-building",
+      "dumbbell",
+      "dumbbell-2",
+      "dumbbell2"
+    ]
+  },
+  {
+    "name": "Dumbbells",
+    "category": "Sports",
+    "keywords": [
+      "dumbbell",
+      "weightlifting",
+      "dumbbells"
+    ]
+  },
+  {
+    "name": "Dumbbells2",
+    "category": "Sports",
+    "keywords": [
+      "dumbbell",
+      "weightlifting",
+      "dumbbells",
+      "dumbbells-2",
+      "dumbbells2"
+    ]
+  },
+  {
+    "name": "Earbuds",
+    "category": "Devices",
+    "keywords": [
+      "earphones",
+      "in-ear headphones",
+      "earbuds"
+    ]
+  },
+  {
+    "name": "EarbudsCase",
+    "category": "Devices",
+    "keywords": [
+      "earcase",
+      "wirelesscarf",
+      "portableaudio",
+      "earbuds",
+      "case",
+      "earbuds-case"
+    ]
+  },
+  {
+    "name": "EarbudsCaseCharge",
+    "category": "Devices",
+    "keywords": [
+      "Earbud Case",
+      "Charging Case"
+    ]
+  },
+  {
+    "name": "EarbudsCaseOpen",
+    "category": "Devices",
+    "keywords": [
+      "earbud case",
+      "open earphones",
+      "earbuds",
+      "case",
+      "open",
+      "earbuds-case-open"
+    ]
+  },
+  {
+    "name": "EarbudsCase2",
+    "category": "Devices",
+    "keywords": [
+      "EarPods",
+      "Headphones Case"
+    ]
+  },
+  {
+    "name": "EarbudsCharge",
+    "category": "Devices",
+    "keywords": [
+      "earbuds",
+      "charging case",
+      "charge",
+      "earbuds-charge"
+    ]
+  },
+  {
+    "name": "Earth",
+    "category": "Astronomy",
+    "keywords": [
+      "world",
+      "globe",
+      "earth"
+    ]
+  },
+  {
+    "name": "Edit",
+    "category": "General UI",
+    "keywords": [
+      "edit",
+      "edit2"
+    ]
+  },
+  {
+    "name": "Electricity",
+    "category": "General UI",
+    "keywords": [
+      "electricity"
+    ]
+  },
+  {
+    "name": "ElementPlus",
+    "category": "General UI",
+    "keywords": [
+      "element",
+      "plus"
+    ]
+  },
+  {
+    "name": "EmptyWallet",
+    "category": "General UI",
+    "keywords": [
+      "empty",
+      "wallet",
+      "empty-wallet"
+    ]
+  },
+  {
+    "name": "EmptyWalletAdd",
+    "category": "General UI",
+    "keywords": [
+      "empty",
+      "wallet",
+      "add",
+      "empty-wallet-add"
+    ]
+  },
+  {
+    "name": "EmptyWalletChange",
+    "category": "General UI",
+    "keywords": [
+      "empty",
+      "wallet",
+      "change",
+      "empty-wallet-change"
+    ]
+  },
+  {
+    "name": "EmptyWalletRemove",
+    "category": "General UI",
+    "keywords": [
+      "empty",
+      "wallet",
+      "remove",
+      "empty-wallet-remove"
+    ]
+  },
+  {
+    "name": "EmptyWalletTick",
+    "category": "General UI",
+    "keywords": [
+      "empty",
+      "wallet",
+      "tick",
+      "empty-wallet-tick"
+    ]
+  },
+  {
+    "name": "EmptyWalletTime",
+    "category": "General UI",
+    "keywords": [
+      "empty",
+      "wallet",
+      "time",
+      "empty-wallet-time"
+    ]
+  },
+  {
+    "name": "Eraser",
+    "category": "Text-formatting",
+    "keywords": [
+      "pencil-sharpening-tool",
+      "stationery-eraser",
+      "eraser"
+    ]
+  },
+  {
+    "name": "Ethereum",
+    "category": "Money",
+    "keywords": [
+      "ethereum"
+    ]
+  },
+  {
+    "name": "Euro",
+    "category": "Money",
+    "keywords": [
+      "euro",
+      "euro2"
+    ]
+  },
+  {
+    "name": "Exit",
+    "category": "Arrows-action",
+    "keywords": [
+      "door-handle",
+      "lock-open",
+      "exit"
+    ]
+  },
+  {
+    "name": "Expand",
+    "category": "General UI",
+    "keywords": [
+      "expand"
+    ]
+  },
+  {
+    "name": "Export",
+    "category": "Arrows-action",
+    "keywords": [
+      "arrow-up",
+      "smiley",
+      "laughing-face",
+      "export"
+    ]
+  },
+  {
+    "name": "Eye",
+    "category": "General UI",
+    "keywords": [
+      "eye",
+      "eye3"
+    ]
+  },
+  {
+    "name": "EyeClosed",
+    "category": "General UI",
+    "keywords": [
+      "eye",
+      "closed",
+      "eye-closed"
+    ]
+  },
+  {
+    "name": "EyeOpen",
+    "category": "General UI",
+    "keywords": [
+      "eye",
+      "open",
+      "eye-open"
+    ]
+  },
+  {
+    "name": "EyeSlash",
+    "category": "General UI",
+    "keywords": [
+      "eye",
+      "slash",
+      "eye-slash"
+    ]
+  },
+  {
+    "name": "FaceSmile",
+    "category": "Faces",
+    "keywords": [
+      "face",
+      "smile",
+      "face-smile"
+    ]
+  },
+  {
+    "name": "FastForward",
+    "category": "Video",
+    "keywords": [
+      "fastforward",
+      "playback",
+      "fast",
+      "forward",
+      "fast-forward"
+    ]
+  },
+  {
+    "name": "FavoriteChart",
+    "category": "General UI",
+    "keywords": [
+      "favorite",
+      "chart",
+      "favorite-chart"
+    ]
+  },
+  {
+    "name": "Feather",
+    "category": "Messages",
+    "keywords": [
+      "feather"
+    ]
+  },
+  {
+    "name": "Feed",
+    "category": "General UI",
+    "keywords": [
+      "file",
+      "folder",
+      "feed"
+    ]
+  },
+  {
+    "name": "Female",
+    "category": "Astronomy",
+    "keywords": [
+      "Female Symbol",
+      "Gender Icon",
+      "female"
+    ]
+  },
+  {
+    "name": "FerrisWheel",
+    "category": "General UI",
+    "keywords": [
+      "wheel",
+      "amusement",
+      "entertainment",
+      "ferris",
+      "ferris-wheel"
+    ]
+  },
+  {
+    "name": "Figma",
+    "category": "General UI",
+    "keywords": [
+      "fiba",
+      "fiba logo",
+      "figma"
+    ]
+  },
+  {
+    "name": "FigmaFile",
+    "category": "Files",
+    "keywords": [
+      "file",
+      "paper",
+      "document"
+    ]
+  },
+  {
+    "name": "File",
+    "category": "Files",
+    "keywords": [
+      "document",
+      "paperwork",
+      "file"
+    ]
+  },
+  {
+    "name": "FileDownload",
+    "category": "Files",
+    "keywords": [
+      "download",
+      "save",
+      "file",
+      "file-download"
+    ]
+  },
+  {
+    "name": "FilePdf",
+    "category": "Files",
+    "keywords": []
+  },
+  {
+    "name": "FileStar",
+    "category": "Files",
+    "keywords": [
+      "Document Favorite",
+      "Starred Document",
+      "file",
+      "star",
+      "file-star"
+    ]
+  },
+  {
+    "name": "Film",
+    "category": "Video",
+    "keywords": [
+      "film"
+    ]
+  },
+  {
+    "name": "Filter",
+    "category": "General UI",
+    "keywords": [
+      "funnel",
+      "filtration",
+      "filter"
+    ]
+  },
+  {
+    "name": "FilterAdd",
+    "category": "General UI",
+    "keywords": [
+      "filter",
+      "add",
+      "filter-add"
+    ]
+  },
+  {
+    "name": "FilterEdit",
+    "category": "General UI",
+    "keywords": [
+      "filter",
+      "edit",
+      "filter-edit"
+    ]
+  },
+  {
+    "name": "FilterRemove",
+    "category": "General UI",
+    "keywords": [
+      "filter",
+      "remove",
+      "filter-remove"
+    ]
+  },
+  {
+    "name": "FilterSearch",
+    "category": "General UI",
+    "keywords": [
+      "filter",
+      "search",
+      "filter-search"
+    ]
+  },
+  {
+    "name": "FilterSquare",
+    "category": "General UI",
+    "keywords": [
+      "filter",
+      "square",
+      "filter-square"
+    ]
+  },
+  {
+    "name": "FilterTick",
+    "category": "General UI",
+    "keywords": [
+      "filter",
+      "tick",
+      "filter-tick"
+    ]
+  },
+  {
+    "name": "Filters",
+    "category": "Tools",
+    "keywords": [
+      "filtering",
+      "screening",
+      "filters"
+    ]
+  },
+  {
+    "name": "Fingerprint",
+    "category": "General UI",
+    "keywords": [
+      "fingerprint"
+    ]
+  },
+  {
+    "name": "Fire",
+    "category": "Nature",
+    "keywords": [
+      "flame",
+      "burning",
+      "fire"
+    ]
+  },
+  {
+    "name": "Flag",
+    "category": "General UI",
+    "keywords": [
+      "signal",
+      "connectivity",
+      "flag"
+    ]
+  },
+  {
+    "name": "FlagBanner",
+    "category": "Weather",
+    "keywords": [
+      "flag",
+      "banner",
+      "flag-banner"
+    ]
+  },
+  {
+    "name": "Flame",
+    "category": "Nature",
+    "keywords": [
+      "fire",
+      "ignition",
+      "flame"
+    ]
+  },
+  {
+    "name": "Flash",
+    "category": "General UI",
+    "keywords": [
+      "flash"
+    ]
+  },
+  {
+    "name": "FlashDrive",
+    "category": "Devices",
+    "keywords": [
+      "USB",
+      "flash drive",
+      "flash",
+      "drive",
+      "flash-drive"
+    ]
+  },
+  {
+    "name": "Flash2",
+    "category": "General UI",
+    "keywords": [
+      "flash",
+      "flash-2",
+      "flash2"
+    ]
+  },
+  {
+    "name": "Flashlight",
+    "category": "General UI",
+    "keywords": [
+      "lamp",
+      "spotlight",
+      "flashlight"
+    ]
+  },
+  {
+    "name": "Folder",
+    "category": "Folders",
+    "keywords": [
+      "directory",
+      "file Cabinet",
+      "folder"
+    ]
+  },
+  {
+    "name": "FolderAdd",
+    "category": "Folders",
+    "keywords": [
+      "plus-folder",
+      "file-addition",
+      "folder",
+      "add",
+      "folder-add"
+    ]
+  },
+  {
+    "name": "FolderCloud",
+    "category": "Folders",
+    "keywords": [
+      "cloud storage",
+      "data folder",
+      "folder",
+      "cloud",
+      "folder-cloud"
+    ]
+  },
+  {
+    "name": "FolderFiles",
+    "category": "Folders",
+    "keywords": [
+      "file folder",
+      "document organizer",
+      "folder",
+      "files",
+      "folder-files"
+    ]
+  },
+  {
+    "name": "FolderLock",
+    "category": "Folders",
+    "keywords": [
+      "security-lock",
+      "file-locking",
+      "folder",
+      "lock",
+      "folder-lock"
+    ]
+  },
+  {
+    "name": "FolderStar",
+    "category": "Folders",
+    "keywords": [
+      "Starred Folder",
+      "Favorite Folder",
+      "folder",
+      "star",
+      "folder-star"
+    ]
+  },
+  {
+    "name": "FoodTray",
+    "category": "Food",
+    "keywords": [
+      "food",
+      "tray",
+      "food-tray"
+    ]
+  },
+  {
+    "name": "Football",
+    "category": "Sports",
+    "keywords": [
+      "soccer ball",
+      "footbal",
+      "ball"
+    ]
+  },
+  {
+    "name": "ForbiddenCircle",
+    "category": "General UI",
+    "keywords": [
+      "prohibition symbol",
+      "no sign",
+      "forbidden",
+      "circle",
+      "forbidden-circle"
+    ]
+  },
+  {
+    "name": "ForkKnife",
+    "category": "Food",
+    "keywords": [
+      "fork",
+      "knife",
+      "fork-knife"
+    ]
+  },
+  {
+    "name": "Forklift",
+    "category": "General UI",
+    "keywords": [
+      "forklift"
+    ]
+  },
+  {
+    "name": "FormatCircle",
+    "category": "General UI",
+    "keywords": [
+      "format",
+      "circle",
+      "format-circle"
+    ]
+  },
+  {
+    "name": "FormatSquare",
+    "category": "General UI",
+    "keywords": [
+      "format",
+      "square"
+    ]
+  },
+  {
+    "name": "Forward",
+    "category": "Arrows-action",
+    "keywords": [
+      "Navigation",
+      "Directional arrow",
+      "forward"
+    ]
+  },
+  {
+    "name": "ForwardItem",
+    "category": "General UI",
+    "keywords": [
+      "forward",
+      "item",
+      "forward-item"
+    ]
+  },
+  {
+    "name": "ForwardLeft",
+    "category": "Messages",
+    "keywords": [
+      "forward left arrow",
+      "navigation right",
+      "forward",
+      "left",
+      "forward-left"
+    ]
+  },
+  {
+    "name": "ForwardRight",
+    "category": "Messages",
+    "keywords": [
+      "forward",
+      "next",
+      "arrow forward",
+      "right",
+      "forward-right",
+      "forward-right2"
+    ]
+  },
+  {
+    "name": "Forward2",
+    "category": "Arrows-action",
+    "keywords": [
+      "arrow forward",
+      "navigation arrow",
+      "forward",
+      "forward-2",
+      "forward2"
+    ]
+  },
+  {
+    "name": "Fridge",
+    "category": "Home",
+    "keywords": [
+      "refrigerator",
+      "cabinet",
+      "fridge"
+    ]
+  },
+  {
+    "name": "Fuel",
+    "category": "General UI",
+    "keywords": [
+      "tank",
+      "liquid container",
+      "fuel"
+    ]
+  },
+  {
+    "name": "Fullscreen",
+    "category": "Video",
+    "keywords": [
+      "screen full",
+      "maximize window",
+      "fullscreen"
+    ]
+  },
+  {
+    "name": "Fx",
+    "category": "General UI",
+    "keywords": [
+      "fx",
+      "filter"
+    ]
+  },
+  {
+    "name": "Gallery",
+    "category": "Video",
+    "keywords": [
+      "Image",
+      "Icon",
+      "gallery"
+    ]
+  },
+  {
+    "name": "GalleryAdd",
+    "category": "Video",
+    "keywords": [
+      "photo",
+      "image",
+      "gallery",
+      "add",
+      "gallery-add"
+    ]
+  },
+  {
+    "name": "GalleryDownload",
+    "category": "Video",
+    "keywords": [
+      "Download",
+      "Save",
+      "gallery",
+      "download",
+      "gallery-download"
+    ]
+  },
+  {
+    "name": "GallerySlash",
+    "category": "General UI",
+    "keywords": [
+      "gallery",
+      "slash",
+      "gallery-slash"
+    ]
+  },
+  {
+    "name": "GalleryStar",
+    "category": "Video",
+    "keywords": [
+      "Favourite",
+      "Saved",
+      "gallery",
+      "star",
+      "gallery-star"
+    ]
+  },
+  {
+    "name": "GalleryWide",
+    "category": "Video",
+    "keywords": [
+      "camera",
+      "picture",
+      "portrait",
+      "gallery",
+      "wide",
+      "gallery-wide"
+    ]
+  },
+  {
+    "name": "Game",
+    "category": "General UI",
+    "keywords": [
+      "game"
+    ]
+  },
+  {
+    "name": "Gamepad",
+    "category": "Devices",
+    "keywords": [
+      "controller",
+      "gaming",
+      "game joystick",
+      "gamepad"
+    ]
+  },
+  {
+    "name": "GamepadButtons",
+    "category": "Like",
+    "keywords": [
+      "gamepad",
+      "buttons",
+      "gamepad-buttons"
+    ]
+  },
+  {
+    "name": "Garage",
+    "category": "Building",
+    "keywords": [
+      "garage",
+      "storage"
+    ]
+  },
+  {
+    "name": "GasStation",
+    "category": "Parts",
+    "keywords": [
+      "fuel",
+      "pump",
+      "gas",
+      "station",
+      "gas-station"
+    ]
+  },
+  {
+    "name": "Gauge",
+    "category": "General UI",
+    "keywords": [
+      "gauge"
+    ]
+  },
+  {
+    "name": "Gear",
+    "category": "Settings",
+    "keywords": [
+      "gear"
+    ]
+  },
+  {
+    "name": "Ghost",
+    "category": "General UI",
+    "keywords": [
+      "skeeter",
+      "specter",
+      "ghost"
+    ]
+  },
+  {
+    "name": "GhostSmile",
+    "category": "General UI",
+    "keywords": [
+      "smiling ghost",
+      "joyful spirit",
+      "ghost",
+      "smile",
+      "ghost-smile"
+    ]
+  },
+  {
+    "name": "Gift",
+    "category": "General UI",
+    "keywords": [
+      "gift",
+      "gift2"
+    ]
+  },
+  {
+    "name": "Glass",
+    "category": "General UI",
+    "keywords": [
+      "glass"
+    ]
+  },
+  {
+    "name": "Glasses",
+    "category": "General UI",
+    "keywords": [
+      "glasses",
+      "glasses2"
+    ]
+  },
+  {
+    "name": "Global",
+    "category": "General UI",
+    "keywords": [
+      "global"
+    ]
+  },
+  {
+    "name": "GlobalRefresh",
+    "category": "General UI",
+    "keywords": [
+      "global",
+      "refresh",
+      "global-refresh"
+    ]
+  },
+  {
+    "name": "GlobePointer",
+    "category": "Map",
+    "keywords": [
+      "globe",
+      "pointer",
+      "globe-pointer"
+    ]
+  },
+  {
+    "name": "Gps",
+    "category": "Map",
+    "keywords": [
+      "target",
+      "bullseye",
+      "gps"
+    ]
+  },
+  {
+    "name": "GradCap",
+    "category": "General UI",
+    "keywords": [
+      "grad",
+      "cap",
+      "grad-cap"
+    ]
+  },
+  {
+    "name": "Grid",
+    "category": "General UI",
+    "keywords": [
+      "grid",
+      "grid2"
+    ]
+  },
+  {
+    "name": "Grid10",
+    "category": "General UI",
+    "keywords": [
+      "grid",
+      "10",
+      "grid-10",
+      "grid10"
+    ]
+  },
+  {
+    "name": "GridLock",
+    "category": "General UI",
+    "keywords": [
+      "grid",
+      "lock",
+      "grid-lock"
+    ]
+  },
+  {
+    "name": "Grid2",
+    "category": "General UI",
+    "keywords": [
+      "grid",
+      "grid-4",
+      "grid4"
+    ]
+  },
+  {
+    "name": "Grid3",
+    "category": "General UI",
+    "keywords": [
+      "grid",
+      "grid-6",
+      "grid6"
+    ]
+  },
+  {
+    "name": "Grid4",
+    "category": "General UI",
+    "keywords": [
+      "grid",
+      "grid-8",
+      "grid8"
+    ]
+  },
+  {
+    "name": "Group1",
+    "category": "General UI",
+    "keywords": [
+      "group",
+      "11"
+    ]
+  },
+  {
+    "name": "HalfDottedCirclePlay",
+    "category": "Video",
+    "keywords": [
+      "half",
+      "dotted",
+      "circle",
+      "play"
+    ]
+  },
+  {
+    "name": "Hand",
+    "category": "Tools",
+    "keywords": [
+      "hand"
+    ]
+  },
+  {
+    "name": "HandDollar",
+    "category": "Hands",
+    "keywords": [
+      "hand",
+      "dollar",
+      "hand-dollar"
+    ]
+  },
+  {
+    "name": "HandHeart",
+    "category": "Hands",
+    "keywords": [
+      "heart-in-hand",
+      "giving heart",
+      "hand",
+      "heart",
+      "hand-heart"
+    ]
+  },
+  {
+    "name": "HandStars",
+    "category": "Hands",
+    "keywords": [
+      "support-star",
+      "help-icon",
+      "hand",
+      "stars",
+      "hand-stars"
+    ]
+  },
+  {
+    "name": "Hanger",
+    "category": "General UI",
+    "keywords": [
+      "clothing hanger",
+      "wardrobe accessory",
+      "hangar hook",
+      "hanger"
+    ]
+  },
+  {
+    "name": "Hanger2",
+    "category": "General UI",
+    "keywords": [
+      "clothing hanger",
+      "wardrobe accessory",
+      "hanger",
+      "hanger-2",
+      "hanger2"
+    ]
+  },
+  {
+    "name": "HardDrive",
+    "category": "General UI",
+    "keywords": [
+      "hard",
+      "drive",
+      "hard-drive"
+    ]
+  },
+  {
+    "name": "Hashtag",
+    "category": "It",
+    "keywords": [
+      "hash",
+      "tag",
+      "symbol",
+      "hashtag"
+    ]
+  },
+  {
+    "name": "HashtagChat",
+    "category": "It",
+    "keywords": [
+      "hash tag",
+      "chat icon",
+      "hashtag",
+      "chat",
+      "hashtag-chat"
+    ]
+  },
+  {
+    "name": "HashtagCircle",
+    "category": "It",
+    "keywords": [
+      "hash tag",
+      "hashtag circle",
+      "hashtag",
+      "circle",
+      "hashtag-circle"
+    ]
+  },
+  {
+    "name": "HashtagDown",
+    "category": "General UI",
+    "keywords": [
+      "hashtag",
+      "down",
+      "hashtag-down"
+    ]
+  },
+  {
+    "name": "HashtagSquare",
+    "category": "It",
+    "keywords": [
+      "hash",
+      "square",
+      "hashtag",
+      "hashtag-square"
+    ]
+  },
+  {
+    "name": "HashtagUp",
+    "category": "General UI",
+    "keywords": [
+      "hashtag",
+      "up",
+      "hashtag-up"
+    ]
+  },
+  {
+    "name": "Hd",
+    "category": "General UI",
+    "keywords": [
+      "High Definition",
+      "HD Video",
+      "hd"
+    ]
+  },
+  {
+    "name": "Headphones",
+    "category": "Devices",
+    "keywords": [
+      "earphones",
+      "audio headset",
+      "headphones"
+    ]
+  },
+  {
+    "name": "Heart",
+    "category": "General UI",
+    "keywords": [
+      "heart",
+      "heart3"
+    ]
+  },
+  {
+    "name": "HeartBroken",
+    "category": "Like",
+    "keywords": [
+      "broken heart",
+      "sad love"
+    ]
+  },
+  {
+    "name": "HeartHand",
+    "category": "Like",
+    "keywords": [
+      "heart",
+      "hand"
+    ]
+  },
+  {
+    "name": "HeartLock",
+    "category": "Like",
+    "keywords": [
+      "locked heart",
+      "security love",
+      "heart",
+      "lock",
+      "heart-lock"
+    ]
+  },
+  {
+    "name": "HeartOff",
+    "category": "Like",
+    "keywords": [
+      "heart",
+      "off",
+      "heart-off"
+    ]
+  },
+  {
+    "name": "HeartUnlock",
+    "category": "Like",
+    "keywords": [
+      "unlocked heart",
+      "security lock with heart",
+      "heart",
+      "unlock",
+      "heart-unlock"
+    ]
+  },
+  {
+    "name": "Heart2",
+    "category": "Like",
+    "keywords": [
+      "love",
+      "affection",
+      "heart"
+    ]
+  },
+  {
+    "name": "Heart3",
+    "category": "Like",
+    "keywords": [
+      "angled heart",
+      "broken heart",
+      "heart split",
+      "heart",
+      "heart-2",
+      "heart2"
+    ]
+  },
+  {
+    "name": "Hierarchy",
+    "category": "General UI",
+    "keywords": [
+      "hierarchy"
+    ]
+  },
+  {
+    "name": "Hierarchy2",
+    "category": "General UI",
+    "keywords": [
+      "hierarchy",
+      "hierarchy-2",
+      "hierarchy2"
+    ]
+  },
+  {
+    "name": "Hiking",
+    "category": "Sports",
+    "keywords": [
+      "person walking",
+      "trail hiking"
+    ]
+  },
+  {
+    "name": "History",
+    "category": "Time",
+    "keywords": [
+      "clock",
+      "hourglass",
+      "history",
+      "history2"
+    ]
+  },
+  {
+    "name": "Home",
+    "category": "General UI",
+    "keywords": [
+      "house",
+      "roof",
+      "home",
+      "home3"
+    ]
+  },
+  {
+    "name": "HomeAdd",
+    "category": "General UI",
+    "keywords": [
+      "house-plus",
+      "add-housing",
+      "home",
+      "add",
+      "home-add",
+      "home-add2"
+    ]
+  },
+  {
+    "name": "HomeHashtag",
+    "category": "General UI",
+    "keywords": [
+      "home",
+      "hashtag",
+      "home-hashtag"
+    ]
+  },
+  {
+    "name": "HomeSmile",
+    "category": "General UI",
+    "keywords": [
+      "house",
+      "smile",
+      "home",
+      "home-smile",
+      "home-smile2"
+    ]
+  },
+  {
+    "name": "HomeWifi",
+    "category": "General UI",
+    "keywords": [
+      "Wi-Fi",
+      "signal",
+      "network",
+      "home",
+      "wifi",
+      "home-wifi"
+    ]
+  },
+  {
+    "name": "HomeWifi2",
+    "category": "General UI",
+    "keywords": [
+      "wifi-angle",
+      "network-symbol",
+      "home",
+      "wifi",
+      "home-wifi-2",
+      "home-wifi2"
+    ]
+  },
+  {
+    "name": "Home2",
+    "category": "General UI",
+    "keywords": [
+      "house",
+      "roof",
+      "home",
+      "home-4",
+      "home4"
+    ]
+  },
+  {
+    "name": "Home3",
+    "category": "General UI",
+    "keywords": [
+      "home",
+      "home-6",
+      "home6"
+    ]
+  },
+  {
+    "name": "Hospital",
+    "category": "Building",
+    "keywords": [
+      "healthcare building",
+      "medical facility",
+      "hospital"
+    ]
+  },
+  {
+    "name": "HotDrink",
+    "category": "Food",
+    "keywords": [
+      "hot",
+      "drink"
+    ]
+  },
+  {
+    "name": "Hourglass",
+    "category": "Time",
+    "keywords": [
+      "Sand clock",
+      "Hourglass symbol"
+    ]
+  },
+  {
+    "name": "House",
+    "category": "Home",
+    "keywords": [
+      "house2"
+    ]
+  },
+  {
+    "name": "Hq",
+    "category": "General UI",
+    "keywords": [
+      "HQ",
+      "quality",
+      "hq"
+    ]
+  },
+  {
+    "name": "Image",
+    "category": "General UI",
+    "keywords": [
+      "image"
+    ]
+  },
+  {
+    "name": "Industry",
+    "category": "Home",
+    "keywords": [
+      "industry"
+    ]
+  },
+  {
+    "name": "Infinite",
+    "category": "Astronomy",
+    "keywords": [
+      "infinite",
+      "endless"
+    ]
+  },
+  {
+    "name": "InfoCircle",
+    "category": "General UI",
+    "keywords": [
+      "information",
+      "help",
+      "info",
+      "circle",
+      "info-circle"
+    ]
+  },
+  {
+    "name": "Instagram",
+    "category": "General UI",
+    "keywords": [
+      "instagram"
+    ]
+  },
+  {
+    "name": "Italic",
+    "category": "Text-formatting",
+    "keywords": [
+      "italic",
+      "font-style"
+    ]
+  },
+  {
+    "name": "Key",
+    "category": "Security",
+    "keywords": [
+      "lock key",
+      "access pass",
+      "key"
+    ]
+  },
+  {
+    "name": "KeySquare",
+    "category": "Security",
+    "keywords": [
+      "lock",
+      "minimalist square",
+      "key",
+      "square",
+      "key-square"
+    ]
+  },
+  {
+    "name": "Keyboard",
+    "category": "Devices",
+    "keywords": [
+      "keyboard",
+      "input device"
+    ]
+  },
+  {
+    "name": "KeyboardOpen",
+    "category": "General UI",
+    "keywords": [
+      "keyboard",
+      "open",
+      "keyboard-open"
+    ]
+  },
+  {
+    "name": "Ladle",
+    "category": "Food",
+    "keywords": [
+      "spoon",
+      "ladle",
+      "stew ladle"
+    ]
+  },
+  {
+    "name": "Lamp",
+    "category": "General UI",
+    "keywords": [
+      "lamp",
+      "lamp3"
+    ]
+  },
+  {
+    "name": "Lamp2",
+    "category": "Home",
+    "keywords": [
+      "luminaire",
+      "desk lamp",
+      "lamp"
+    ]
+  },
+  {
+    "name": "Language",
+    "category": "General UI",
+    "keywords": [
+      "language"
+    ]
+  },
+  {
+    "name": "LanguageSquare",
+    "category": "General UI",
+    "keywords": [
+      "language",
+      "square",
+      "language-square"
+    ]
+  },
+  {
+    "name": "Laptop",
+    "category": "Devices",
+    "keywords": [
+      "minimal laptop",
+      "simple computer device",
+      "laptop",
+      "laptop4"
+    ]
+  },
+  {
+    "name": "LaptopCode",
+    "category": "Devices",
+    "keywords": [
+      "laptop",
+      "code",
+      "laptop-code"
+    ]
+  },
+  {
+    "name": "LaptopDownload",
+    "category": "Devices",
+    "keywords": [
+      "laptop",
+      "download",
+      "laptop-download"
+    ]
+  },
+  {
+    "name": "Layers",
+    "category": "Tools",
+    "keywords": [
+      "stack",
+      "arrangement",
+      "layers"
+    ]
+  },
+  {
+    "name": "Layers2",
+    "category": "Tools",
+    "keywords": [
+      "stack",
+      "arrangement",
+      "layers",
+      "layers-2",
+      "layers2"
+    ]
+  },
+  {
+    "name": "Layout",
+    "category": "General UI",
+    "keywords": [
+      "layout"
+    ]
+  },
+  {
+    "name": "Lightning",
+    "category": "Devices",
+    "keywords": [
+      "plug",
+      "charging",
+      "lightning"
+    ]
+  },
+  {
+    "name": "LikeTag",
+    "category": "General UI",
+    "keywords": [
+      "like",
+      "tag",
+      "like-tag"
+    ]
+  },
+  {
+    "name": "Link",
+    "category": "Text-formatting",
+    "keywords": [
+      "loop",
+      "swirl",
+      "link",
+      "link4"
+    ]
+  },
+  {
+    "name": "List",
+    "category": "List",
+    "keywords": [
+      "Vertical List",
+      "Tall Menu",
+      "list"
+    ]
+  },
+  {
+    "name": "ListDown",
+    "category": "List",
+    "keywords": [
+      "checklist",
+      "menu",
+      "options",
+      "list",
+      "down",
+      "list-down"
+    ]
+  },
+  {
+    "name": "ListUp",
+    "category": "List",
+    "keywords": [
+      "arrow-list",
+      "up-arrow-list",
+      "list",
+      "up",
+      "list-up"
+    ]
+  },
+  {
+    "name": "Loader",
+    "category": "General UI",
+    "keywords": [
+      "loader"
+    ]
+  },
+  {
+    "name": "Location",
+    "category": "Map",
+    "keywords": [
+      "location"
+    ]
+  },
+  {
+    "name": "LocationAdd",
+    "category": "General UI",
+    "keywords": [
+      "location",
+      "add"
+    ]
+  },
+  {
+    "name": "LocationAlt",
+    "category": "General UI",
+    "keywords": [
+      "location"
+    ]
+  },
+  {
+    "name": "LocationCross",
+    "category": "General UI",
+    "keywords": [
+      "location",
+      "cross"
+    ]
+  },
+  {
+    "name": "LocationMinus",
+    "category": "General UI",
+    "keywords": [
+      "location",
+      "minus"
+    ]
+  },
+  {
+    "name": "LocationSlash",
+    "category": "General UI",
+    "keywords": [
+      "location",
+      "slash"
+    ]
+  },
+  {
+    "name": "LocationTick",
+    "category": "General UI",
+    "keywords": [
+      "location",
+      "tick"
+    ]
+  },
+  {
+    "name": "Lock",
+    "category": "Security",
+    "keywords": [
+      "padlock",
+      "security lock",
+      "lock"
+    ]
+  },
+  {
+    "name": "LockCircle",
+    "category": "General UI",
+    "keywords": [
+      "lock",
+      "circle",
+      "lock-circle"
+    ]
+  },
+  {
+    "name": "LockKeyhole",
+    "category": "Security",
+    "keywords": [
+      "padlock",
+      "security lock",
+      "lock",
+      "keyhole",
+      "lock-keyhole"
+    ]
+  },
+  {
+    "name": "LockKeyholeOpen",
+    "category": "Security",
+    "keywords": [
+      "unsecured lock",
+      "keyhole unlocked",
+      "lock",
+      "keyhole",
+      "open",
+      "lock-keyhole-open"
+    ]
+  },
+  {
+    "name": "LockOpen",
+    "category": "Security",
+    "keywords": [
+      "unlocked lock",
+      "open padlock",
+      "lock",
+      "open",
+      "lock-open"
+    ]
+  },
+  {
+    "name": "LockPassword",
+    "category": "Security",
+    "keywords": [
+      "password lock",
+      "digital security padlock",
+      "lock",
+      "password",
+      "lock-password"
+    ]
+  },
+  {
+    "name": "LockPasswordOpen",
+    "category": "Security",
+    "keywords": [
+      "unlocked-lock",
+      "password-secured",
+      "security-lock",
+      "open-security",
+      "lock",
+      "password",
+      "open",
+      "lock-password-open"
+    ]
+  },
+  {
+    "name": "LockSlash",
+    "category": "General UI",
+    "keywords": [
+      "lock",
+      "slash",
+      "lock-slash"
+    ]
+  },
+  {
+    "name": "Login",
+    "category": "Arrows-action",
+    "keywords": [
+      "login",
+      "exit",
+      "login2"
+    ]
+  },
+  {
+    "name": "Logout",
+    "category": "Arrows-action",
+    "keywords": [
+      "arrow-right",
+      "log-out",
+      "logout",
+      "logout2"
+    ]
+  },
+  {
+    "name": "MagicStar",
+    "category": "General UI",
+    "keywords": [
+      "magic",
+      "star",
+      "magic-star"
+    ]
+  },
+  {
+    "name": "Magicpen",
+    "category": "General UI",
+    "keywords": [
+      "magicpen"
+    ]
+  },
+  {
+    "name": "Magnet",
+    "category": "General UI",
+    "keywords": [
+      "magnetic",
+      "retractable",
+      "suspension"
+    ]
+  },
+  {
+    "name": "MagnetWave",
+    "category": "General UI",
+    "keywords": [
+      "wave magnet",
+      "magnetic wave"
+    ]
+  },
+  {
+    "name": "Mailbox",
+    "category": "Messages",
+    "keywords": [
+      "mailbox",
+      "post box"
+    ]
+  },
+  {
+    "name": "Male",
+    "category": "Astronomy",
+    "keywords": [
+      "Male Symbol",
+      "Gender Icon",
+      "male"
+    ]
+  },
+  {
+    "name": "Map",
+    "category": "Map",
+    "keywords": [
+      "map"
+    ]
+  },
+  {
+    "name": "MapAlt",
+    "category": "General UI",
+    "keywords": []
+  },
+  {
+    "name": "MapArrowDown",
+    "category": "Map",
+    "keywords": [
+      "downward-pointing map arrow",
+      "arrow pointing down on a map",
+      "map",
+      "arrow",
+      "down",
+      "map-arrow-down"
+    ]
+  },
+  {
+    "name": "MapArrowLeft",
+    "category": "Map",
+    "keywords": [
+      "left-arrow",
+      "navigation-arrow",
+      "map",
+      "arrow",
+      "left",
+      "map-arrow-left"
+    ]
+  },
+  {
+    "name": "MapArrowRight",
+    "category": "Map",
+    "keywords": [
+      "play-button",
+      "navigation-arrow",
+      "map",
+      "arrow",
+      "right",
+      "map-arrow-right"
+    ]
+  },
+  {
+    "name": "MapArrowSquare",
+    "category": "Map",
+    "keywords": [
+      "map pointer",
+      "navigation arrow",
+      "map",
+      "arrow",
+      "square",
+      "map-arrow-square"
+    ]
+  },
+  {
+    "name": "MapArrowUp",
+    "category": "Map",
+    "keywords": [
+      "navigation arrow",
+      "point up sign",
+      "map",
+      "arrow",
+      "up",
+      "map-arrow-up"
+    ]
+  },
+  {
+    "name": "MapPoint",
+    "category": "Map",
+    "keywords": [
+      "geolocation",
+      "navigation marker",
+      "map",
+      "point",
+      "map-point"
+    ]
+  },
+  {
+    "name": "MapPoint2",
+    "category": "Map",
+    "keywords": [
+      "pin",
+      "geolocation"
+    ]
+  },
+  {
+    "name": "Maximize",
+    "category": "General UI",
+    "keywords": [
+      "maximize",
+      "maximize5"
+    ]
+  },
+  {
+    "name": "MaximizeSquare",
+    "category": "Arrows-action",
+    "keywords": [
+      "Expand",
+      "Square Arrow",
+      "maximize",
+      "square",
+      "maximize-square"
+    ]
+  },
+  {
+    "name": "MaximizeSquare2",
+    "category": "Arrows-action",
+    "keywords": [
+      "arrow-icon",
+      "square-arrow",
+      "maximize",
+      "square",
+      "maximize-square-4",
+      "maximize-square4"
+    ]
+  },
+  {
+    "name": "Maximize2",
+    "category": "Arrows-action",
+    "keywords": [
+      "maximize",
+      "expand"
+    ]
+  },
+  {
+    "name": "Maximize3",
+    "category": "General UI",
+    "keywords": [
+      "maximize",
+      "21"
+    ]
+  },
+  {
+    "name": "MedalStar",
+    "category": "Like",
+    "keywords": [
+      "award",
+      "prize",
+      "medal",
+      "star",
+      "medal-star"
+    ]
+  },
+  {
+    "name": "MedalStars",
+    "category": "Like",
+    "keywords": [
+      "star",
+      "prize",
+      "medal",
+      "stars",
+      "medal-stars"
+    ]
+  },
+  {
+    "name": "Meditation",
+    "category": "Sports",
+    "keywords": [
+      "Meditation pose",
+      "Lotus position",
+      "meditation"
+    ]
+  },
+  {
+    "name": "Meditation2",
+    "category": "Sports",
+    "keywords": [
+      "meditation",
+      "pose"
+    ]
+  },
+  {
+    "name": "Memo",
+    "category": "Notes",
+    "keywords": []
+  },
+  {
+    "name": "MentionCircle",
+    "category": "General UI",
+    "keywords": [
+      "mention",
+      "symbol"
+    ]
+  },
+  {
+    "name": "Menu",
+    "category": "General UI",
+    "keywords": [
+      "menu",
+      "menu2"
+    ]
+  },
+  {
+    "name": "MenuBoard",
+    "category": "General UI",
+    "keywords": [
+      "menu",
+      "board"
+    ]
+  },
+  {
+    "name": "Menu2",
+    "category": "General UI",
+    "keywords": [
+      "hamburger",
+      "menu"
+    ]
+  },
+  {
+    "name": "Message",
+    "category": "General UI",
+    "keywords": [
+      "message",
+      "message3"
+    ]
+  },
+  {
+    "name": "MessageAdd",
+    "category": "General UI",
+    "keywords": [
+      "message",
+      "add",
+      "message-add"
+    ]
+  },
+  {
+    "name": "MessageCheck",
+    "category": "Messages",
+    "keywords": [
+      "message",
+      "check",
+      "message-check"
+    ]
+  },
+  {
+    "name": "MessageCircle",
+    "category": "General UI",
+    "keywords": [
+      "message",
+      "circle",
+      "message-circle"
+    ]
+  },
+  {
+    "name": "MessageDots",
+    "category": "Messages",
+    "keywords": [
+      "message",
+      "dots",
+      "message-dots"
+    ]
+  },
+  {
+    "name": "MessageEdit",
+    "category": "General UI",
+    "keywords": [
+      "message",
+      "edit",
+      "message-edit"
+    ]
+  },
+  {
+    "name": "MessageFavorite",
+    "category": "General UI",
+    "keywords": [
+      "message",
+      "favorite",
+      "message-favorite"
+    ]
+  },
+  {
+    "name": "MessageMinus",
+    "category": "Messages",
+    "keywords": [
+      "message",
+      "minus",
+      "message-minus"
+    ]
+  },
+  {
+    "name": "MessageNotif",
+    "category": "General UI",
+    "keywords": [
+      "message",
+      "notif",
+      "message-notif"
+    ]
+  },
+  {
+    "name": "MessagePlus",
+    "category": "Messages",
+    "keywords": [
+      "message",
+      "plus",
+      "message-plus"
+    ]
+  },
+  {
+    "name": "MessageProgramming",
+    "category": "General UI",
+    "keywords": [
+      "message",
+      "programming",
+      "message-programming"
+    ]
+  },
+  {
+    "name": "MessageQuestion",
+    "category": "General UI",
+    "keywords": [
+      "message",
+      "question",
+      "message-question"
+    ]
+  },
+  {
+    "name": "MessageRemove",
+    "category": "General UI",
+    "keywords": [
+      "message",
+      "remove",
+      "message-remove"
+    ]
+  },
+  {
+    "name": "MessageSearch",
+    "category": "General UI",
+    "keywords": [
+      "message",
+      "search",
+      "message-search"
+    ]
+  },
+  {
+    "name": "MessageSquare",
+    "category": "General UI",
+    "keywords": [
+      "message",
+      "square",
+      "message-square"
+    ]
+  },
+  {
+    "name": "MessageText",
+    "category": "General UI",
+    "keywords": [
+      "message",
+      "text",
+      "message-text"
+    ]
+  },
+  {
+    "name": "MessageText2",
+    "category": "General UI",
+    "keywords": [
+      "message",
+      "text",
+      "message-text-2",
+      "message-text2"
+    ]
+  },
+  {
+    "name": "MessageTick",
+    "category": "General UI",
+    "keywords": [
+      "message",
+      "tick",
+      "message-tick"
+    ]
+  },
+  {
+    "name": "MessageTime",
+    "category": "General UI",
+    "keywords": [
+      "message",
+      "time",
+      "message-time"
+    ]
+  },
+  {
+    "name": "MessageX",
+    "category": "Messages",
+    "keywords": [
+      "message",
+      "message-x"
+    ]
+  },
+  {
+    "name": "Message2",
+    "category": "Messages",
+    "keywords": [
+      "message"
+    ]
+  },
+  {
+    "name": "Messages",
+    "category": "General UI",
+    "keywords": [
+      "messages"
+    ]
+  },
+  {
+    "name": "Messages2",
+    "category": "General UI",
+    "keywords": [
+      "messages"
+    ]
+  },
+  {
+    "name": "Mic",
+    "category": "Video",
+    "keywords": [
+      "microphone",
+      "speaker",
+      "mic",
+      "mic2"
+    ]
+  },
+  {
+    "name": "Mic2",
+    "category": "Video",
+    "keywords": [
+      "microphone",
+      "voice recorder",
+      "mic",
+      "mic-4",
+      "mic4"
+    ]
+  },
+  {
+    "name": "Microphone",
+    "category": "Video",
+    "keywords": [
+      "microphone"
+    ]
+  },
+  {
+    "name": "MicrophoneSlash",
+    "category": "Video",
+    "keywords": [
+      "microphone",
+      "slash"
+    ]
+  },
+  {
+    "name": "MicrophoneSlash2",
+    "category": "General UI",
+    "keywords": [
+      "microphone",
+      "slash"
+    ]
+  },
+  {
+    "name": "Microscope",
+    "category": "General UI",
+    "keywords": [
+      "microscope"
+    ]
+  },
+  {
+    "name": "Milk",
+    "category": "General UI",
+    "keywords": [
+      "milk"
+    ]
+  },
+  {
+    "name": "Minimize",
+    "category": "Arrows-action",
+    "keywords": [
+      "arrow-button",
+      "dim-size",
+      "minimize"
+    ]
+  },
+  {
+    "name": "MinimizeSquare",
+    "category": "Arrows-action",
+    "keywords": [
+      "square-shrink",
+      "reduce-window",
+      "minimize",
+      "square",
+      "minimize-square",
+      "minimize-square2"
+    ]
+  },
+  {
+    "name": "Minus",
+    "category": "General UI",
+    "keywords": [
+      "minus"
+    ]
+  },
+  {
+    "name": "Mirror",
+    "category": "Home",
+    "keywords": [
+      "table mirror",
+      "vanity mirror"
+    ]
+  },
+  {
+    "name": "MirrorLeft",
+    "category": "Tools",
+    "keywords": [
+      "left-mirror",
+      "mirror-tool",
+      "mirror",
+      "left",
+      "mirror-left"
+    ]
+  },
+  {
+    "name": "MirrorRight",
+    "category": "Tools",
+    "keywords": [
+      "right-mirror",
+      "reflection-tool",
+      "mirror",
+      "right",
+      "mirror-right"
+    ]
+  },
+  {
+    "name": "Mirror2",
+    "category": "General UI",
+    "keywords": [
+      "mirror"
+    ]
+  },
+  {
+    "name": "Mobile",
+    "category": "Devices",
+    "keywords": []
+  },
+  {
+    "name": "MobileOff",
+    "category": "Devices",
+    "keywords": []
+  },
+  {
+    "name": "Money",
+    "category": "General UI",
+    "keywords": [
+      "money",
+      "money3"
+    ]
+  },
+  {
+    "name": "MoneyBag",
+    "category": "Money",
+    "keywords": [
+      "financial briefcase",
+      "treasure chest"
+    ]
+  },
+  {
+    "name": "MoneyBill",
+    "category": "Money",
+    "keywords": []
+  },
+  {
+    "name": "MoneyBillCoin",
+    "category": "Money",
+    "keywords": [
+      "money",
+      "bill",
+      "coin",
+      "money-bill-coin"
+    ]
+  },
+  {
+    "name": "MoneyReceive",
+    "category": "Money",
+    "keywords": []
+  },
+  {
+    "name": "MoneySend",
+    "category": "Money",
+    "keywords": []
+  },
+  {
+    "name": "MoneyWithdraw",
+    "category": "Money",
+    "keywords": []
+  },
+  {
+    "name": "Money2",
+    "category": "General UI",
+    "keywords": [
+      "money"
+    ]
+  },
+  {
+    "name": "Monitor",
+    "category": "Devices",
+    "keywords": [
+      "computer monitor",
+      "display screen"
+    ]
+  },
+  {
+    "name": "MonitorMobbile",
+    "category": "General UI",
+    "keywords": [
+      "monitor",
+      "mobbile"
+    ]
+  },
+  {
+    "name": "MonitorRecorder",
+    "category": "General UI",
+    "keywords": [
+      "monitor",
+      "recorder"
+    ]
+  },
+  {
+    "name": "Moon",
+    "category": "Weather",
+    "keywords": [
+      "crescent",
+      "night",
+      "half moon",
+      "moon"
+    ]
+  },
+  {
+    "name": "MoonCloud",
+    "category": "Weather",
+    "keywords": [
+      "cloud moon",
+      "rain cloud",
+      "night rain",
+      "moon",
+      "cloud",
+      "moon-cloud"
+    ]
+  },
+  {
+    "name": "MoonStars",
+    "category": "Weather",
+    "keywords": [
+      "night",
+      "starlight",
+      "moon",
+      "stars",
+      "moon-stars"
+    ]
+  },
+  {
+    "name": "MoreH",
+    "category": "General UI",
+    "keywords": [
+      "dots",
+      "icon",
+      "more",
+      "more-h"
+    ]
+  },
+  {
+    "name": "MortarboardSquare",
+    "category": "School",
+    "keywords": [
+      "academic cap",
+      "mortarboard"
+    ]
+  },
+  {
+    "name": "Mouse",
+    "category": "General UI",
+    "keywords": [
+      "mouse"
+    ]
+  },
+  {
+    "name": "MsgBubbleUser",
+    "category": "Messages",
+    "keywords": [
+      "msg",
+      "bubble",
+      "user"
+    ]
+  },
+  {
+    "name": "MsgSmile",
+    "category": "Messages",
+    "keywords": [
+      "msg",
+      "smile",
+      "msg-smile"
+    ]
+  },
+  {
+    "name": "Mug",
+    "category": "Food",
+    "keywords": [
+      "coffee mug",
+      "cup on saucer",
+      "mug"
+    ]
+  },
+  {
+    "name": "Music",
+    "category": "General UI",
+    "keywords": [
+      "music"
+    ]
+  },
+  {
+    "name": "MusicFilter",
+    "category": "General UI",
+    "keywords": [
+      "music",
+      "filter",
+      "music-filter"
+    ]
+  },
+  {
+    "name": "MusicLib",
+    "category": "Video",
+    "keywords": [
+      "Digital music",
+      "Audio file",
+      "music",
+      "lib",
+      "music-lib",
+      "music-lib2"
+    ]
+  },
+  {
+    "name": "MusicLib2",
+    "category": "Video",
+    "keywords": [
+      "Music library",
+      "Audio files"
+    ]
+  },
+  {
+    "name": "MusicNote",
+    "category": "Video",
+    "keywords": [
+      "note",
+      "musical note"
+    ]
+  },
+  {
+    "name": "MusicNoteVariant",
+    "category": "General UI",
+    "keywords": [
+      "musicnote"
+    ]
+  },
+  {
+    "name": "MusicNotes",
+    "category": "Video",
+    "keywords": [
+      "musical notes",
+      "melody symbols",
+      "music",
+      "notes",
+      "music-notes"
+    ]
+  },
+  {
+    "name": "Mute",
+    "category": "Video",
+    "keywords": [
+      "mute",
+      "silence"
+    ]
+  },
+  {
+    "name": "Nodes",
+    "category": "Business",
+    "keywords": [
+      "nodes"
+    ]
+  },
+  {
+    "name": "Note",
+    "category": "General UI",
+    "keywords": [
+      "note",
+      "note2"
+    ]
+  },
+  {
+    "name": "Notebook",
+    "category": "School",
+    "keywords": [
+      "notebook",
+      "open book",
+      "notebook2"
+    ]
+  },
+  {
+    "name": "Notebook2",
+    "category": "Notes",
+    "keywords": [
+      "journal",
+      "paperback notebook",
+      "notepad",
+      "notebook"
+    ]
+  },
+  {
+    "name": "Notes",
+    "category": "Notes",
+    "keywords": [
+      "minimalist",
+      "diary"
+    ]
+  },
+  {
+    "name": "Notification",
+    "category": "Notifications",
+    "keywords": [
+      "notification"
+    ]
+  },
+  {
+    "name": "NotificationBing",
+    "category": "General UI",
+    "keywords": [
+      "notification",
+      "bing",
+      "notification-bing"
+    ]
+  },
+  {
+    "name": "NotificationCircle",
+    "category": "General UI",
+    "keywords": [
+      "notification",
+      "circle",
+      "notification-circle"
+    ]
+  },
+  {
+    "name": "NotificationFavorite",
+    "category": "General UI",
+    "keywords": [
+      "notification",
+      "favorite",
+      "notification-favorite"
+    ]
+  },
+  {
+    "name": "NotificationStatus",
+    "category": "General UI",
+    "keywords": [
+      "notification",
+      "status",
+      "notification-status"
+    ]
+  },
+  {
+    "name": "OvenMitts",
+    "category": "Food",
+    "keywords": [
+      "oven mitt",
+      "hot pad"
+    ]
+  },
+  {
+    "name": "Package",
+    "category": "General UI",
+    "keywords": []
+  },
+  {
+    "name": "Page",
+    "category": "Files",
+    "keywords": []
+  },
+  {
+    "name": "Palette",
+    "category": "Tools",
+    "keywords": [
+      "color palette",
+      "paints",
+      "artbox",
+      "palette"
+    ]
+  },
+  {
+    "name": "Palette2",
+    "category": "Tools",
+    "keywords": [
+      "art",
+      "palette"
+    ]
+  },
+  {
+    "name": "Panorama",
+    "category": "Video",
+    "keywords": [
+      "camera",
+      "viewfinder"
+    ]
+  },
+  {
+    "name": "PaperPlane",
+    "category": "Messages",
+    "keywords": [
+      "paper",
+      "plane"
+    ]
+  },
+  {
+    "name": "Paperclip",
+    "category": "Messages",
+    "keywords": [
+      "loop",
+      "curl",
+      "paperclip"
+    ]
+  },
+  {
+    "name": "Password",
+    "category": "Security",
+    "keywords": [
+      "lock",
+      "privacy",
+      "encryption"
+    ]
+  },
+  {
+    "name": "PasswordAlt",
+    "category": "Security",
+    "keywords": [
+      "lock",
+      "security",
+      "access"
+    ]
+  },
+  {
+    "name": "PasswordCheck",
+    "category": "General UI",
+    "keywords": [
+      "password",
+      "check"
+    ]
+  },
+  {
+    "name": "Password2",
+    "category": "Security",
+    "keywords": [
+      "password2"
+    ]
+  },
+  {
+    "name": "Password3",
+    "category": "Security",
+    "keywords": [
+      "lock",
+      "icon",
+      "symbol"
+    ]
+  },
+  {
+    "name": "Path",
+    "category": "General UI",
+    "keywords": [
+      "path"
+    ]
+  },
+  {
+    "name": "Pause",
+    "category": "Video",
+    "keywords": [
+      "play",
+      "start"
+    ]
+  },
+  {
+    "name": "Paw",
+    "category": "General UI",
+    "keywords": [
+      "Pawprint",
+      "Footprint"
+    ]
+  },
+  {
+    "name": "Pen",
+    "category": "Messages",
+    "keywords": [
+      "writing instrument",
+      "drawing tool",
+      "pen",
+      "pen2"
+    ]
+  },
+  {
+    "name": "PenNib",
+    "category": "Text-formatting",
+    "keywords": [
+      "pen",
+      "nib",
+      "pen-nib"
+    ]
+  },
+  {
+    "name": "PenTool",
+    "category": "General UI",
+    "keywords": [
+      "pen",
+      "tool",
+      "pen-tool",
+      "pen-tool2"
+    ]
+  },
+  {
+    "name": "PenWriting",
+    "category": "Text-formatting",
+    "keywords": [
+      "pen",
+      "writing",
+      "pen-writing"
+    ]
+  },
+  {
+    "name": "PenWriting2",
+    "category": "Text-formatting",
+    "keywords": [
+      "pen",
+      "writing2"
+    ]
+  },
+  {
+    "name": "Pen2",
+    "category": "Messages",
+    "keywords": [
+      "writing instrument",
+      "fountain pen"
+    ]
+  },
+  {
+    "name": "People",
+    "category": "General UI",
+    "keywords": [
+      "people"
+    ]
+  },
+  {
+    "name": "PercentTag",
+    "category": "General UI",
+    "keywords": [
+      "percent",
+      "tag",
+      "percent-tag"
+    ]
+  },
+  {
+    "name": "PercentageCircle",
+    "category": "General UI",
+    "keywords": [
+      "percentage",
+      "circle",
+      "percentage-circle"
+    ]
+  },
+  {
+    "name": "PercentageSquare",
+    "category": "General UI",
+    "keywords": [
+      "percentage",
+      "square",
+      "percentage-square"
+    ]
+  },
+  {
+    "name": "Phone",
+    "category": "Devices",
+    "keywords": [
+      "cell phone",
+      "mobile device",
+      "phone",
+      "phone4"
+    ]
+  },
+  {
+    "name": "PhoneChat",
+    "category": "Call",
+    "keywords": [
+      "phone",
+      "communication",
+      "chat",
+      "phone-chat"
+    ]
+  },
+  {
+    "name": "PhoneRotate",
+    "category": "Devices",
+    "keywords": [
+      "rotating phone",
+      "smartphone switch",
+      "phone",
+      "rotate",
+      "phone-rotate"
+    ]
+  },
+  {
+    "name": "Phone2",
+    "category": "Call",
+    "keywords": [
+      "rounded phone",
+      "circular handset",
+      "phone",
+      "phone2"
+    ]
+  },
+  {
+    "name": "Pie",
+    "category": "Business",
+    "keywords": [
+      "chart",
+      "section"
+    ]
+  },
+  {
+    "name": "Pill",
+    "category": "Medicine",
+    "keywords": [
+      "capsule",
+      "tablet"
+    ]
+  },
+  {
+    "name": "PillJar",
+    "category": "Medicine",
+    "keywords": [
+      "medication jar",
+      "pill bottle",
+      "pill",
+      "jar",
+      "pill-jar"
+    ]
+  },
+  {
+    "name": "Pills",
+    "category": "Medicine",
+    "keywords": [
+      "pill",
+      "capsule",
+      "pills"
+    ]
+  },
+  {
+    "name": "Pills2",
+    "category": "Medicine",
+    "keywords": [
+      "medication",
+      "tablet",
+      "pill"
+    ]
+  },
+  {
+    "name": "Pin",
+    "category": "Map",
+    "keywords": [
+      "pin marker",
+      "geolocation point",
+      "pin"
+    ]
+  },
+  {
+    "name": "PinAdd",
+    "category": "Map",
+    "keywords": [
+      "plus map point",
+      "location marker",
+      "navigation pin",
+      "pin",
+      "add",
+      "pin-add"
+    ]
+  },
+  {
+    "name": "PinHospital",
+    "category": "Map",
+    "keywords": [
+      "Hospital Marker",
+      "Medical Location",
+      "pin",
+      "hospital",
+      "pin-hospital"
+    ]
+  },
+  {
+    "name": "PinOff",
+    "category": "General UI",
+    "keywords": [
+      "pin",
+      "off",
+      "pin-off"
+    ]
+  },
+  {
+    "name": "PinRemove",
+    "category": "Map",
+    "keywords": [
+      "remove marker",
+      "delete location pin",
+      "pin",
+      "remove",
+      "pin-remove"
+    ]
+  },
+  {
+    "name": "PinRotate",
+    "category": "Map",
+    "keywords": [
+      "compass",
+      "directions",
+      "navigation",
+      "pin",
+      "rotate",
+      "pin-rotate"
+    ]
+  },
+  {
+    "name": "PinSchool",
+    "category": "Map",
+    "keywords": [
+      "school marker",
+      "education pointer",
+      "pin",
+      "school",
+      "pin-school"
+    ]
+  },
+  {
+    "name": "PinSearch",
+    "category": "Map",
+    "keywords": [
+      "Search marker",
+      "Location pin",
+      "pin",
+      "search",
+      "pin-search"
+    ]
+  },
+  {
+    "name": "PinStar",
+    "category": "Map",
+    "keywords": [
+      "heart",
+      "favorite",
+      "pin",
+      "star",
+      "pin-star"
+    ]
+  },
+  {
+    "name": "PinTack",
+    "category": "Map",
+    "keywords": [
+      "pin",
+      "tack",
+      "pin-tack"
+    ]
+  },
+  {
+    "name": "PinWave",
+    "category": "Map",
+    "keywords": [
+      "Wave Icon",
+      "Navigation Point",
+      "pin",
+      "wave",
+      "pin-wave"
+    ]
+  },
+  {
+    "name": "Pipette",
+    "category": "Tools",
+    "keywords": [
+      "syringe",
+      "medicine dispenser",
+      "pipette"
+    ]
+  },
+  {
+    "name": "PizzaSlice",
+    "category": "Food",
+    "keywords": [
+      "pizza",
+      "slice"
+    ]
+  },
+  {
+    "name": "Plane",
+    "category": "Messages",
+    "keywords": [
+      "single-paper-plane",
+      "email-sending"
+    ]
+  },
+  {
+    "name": "Planet",
+    "category": "Astronomy",
+    "keywords": [
+      "saturn",
+      "gas giant",
+      "planet"
+    ]
+  },
+  {
+    "name": "Planet2",
+    "category": "Astronomy",
+    "keywords": [
+      "orb",
+      "sphere",
+      "cosmic body"
+    ]
+  },
+  {
+    "name": "PlayStream",
+    "category": "Video",
+    "keywords": [
+      "streaming",
+      "media-player",
+      "play-arrow"
+    ]
+  },
+  {
+    "name": "PlaybackSpeed",
+    "category": "Video",
+    "keywords": [
+      "play",
+      "speed-up"
+    ]
+  },
+  {
+    "name": "Playlist",
+    "category": "List",
+    "keywords": [
+      "music",
+      "melody"
+    ]
+  },
+  {
+    "name": "Plug",
+    "category": "General UI",
+    "keywords": [
+      "plug"
+    ]
+  },
+  {
+    "name": "Plug2",
+    "category": "Devices",
+    "keywords": [
+      "plug2",
+      "plug"
+    ]
+  },
+  {
+    "name": "Podcast",
+    "category": "Video",
+    "keywords": [
+      "headphones",
+      "radio",
+      "earbuds"
+    ]
+  },
+  {
+    "name": "Pointer",
+    "category": "Map",
+    "keywords": [
+      "pointer"
+    ]
+  },
+  {
+    "name": "Poll",
+    "category": "General UI",
+    "keywords": [
+      "poll"
+    ]
+  },
+  {
+    "name": "Power",
+    "category": "General UI",
+    "keywords": [
+      "power button",
+      "on sign"
+    ]
+  },
+  {
+    "name": "Presentation",
+    "category": "Business",
+    "keywords": [
+      "presentation",
+      "presentation2"
+    ]
+  },
+  {
+    "name": "PresentationPlay",
+    "category": "Business",
+    "keywords": []
+  },
+  {
+    "name": "PresentionChart",
+    "category": "General UI",
+    "keywords": [
+      "presention",
+      "chart",
+      "presention-chart"
+    ]
+  },
+  {
+    "name": "Printer",
+    "category": "Devices",
+    "keywords": [
+      "Printer",
+      "Stationery",
+      "printer",
+      "printer3"
+    ]
+  },
+  {
+    "name": "Programming",
+    "category": "It",
+    "keywords": [
+      "programming code",
+      "developer tool"
+    ]
+  },
+  {
+    "name": "Projector",
+    "category": "Devices",
+    "keywords": [
+      "cinema",
+      "projecting",
+      "screen-projecter",
+      "projector"
+    ]
+  },
+  {
+    "name": "Pulse",
+    "category": "Medicine",
+    "keywords": [
+      "cardiogram",
+      "electrocardiogram",
+      "ECG",
+      "waveform",
+      "heart beat",
+      "pulse"
+    ]
+  },
+  {
+    "name": "Puzzle",
+    "category": "General UI",
+    "keywords": [
+      "puzzle"
+    ]
+  },
+  {
+    "name": "Qr",
+    "category": "Security",
+    "keywords": [
+      "QR code",
+      "square barcode",
+      "qr"
+    ]
+  },
+  {
+    "name": "QuoteDown",
+    "category": "General UI",
+    "keywords": [
+      "quote",
+      "down",
+      "quote-down"
+    ]
+  },
+  {
+    "name": "Radar",
+    "category": "Map",
+    "keywords": [
+      "radar dish",
+      "radar antenna"
+    ]
+  },
+  {
+    "name": "Radar2",
+    "category": "General UI",
+    "keywords": [
+      "radar"
+    ]
+  },
+  {
+    "name": "Radio",
+    "category": "Devices",
+    "keywords": [
+      "radioreceiver",
+      "portableradio",
+      "radio"
+    ]
+  },
+  {
+    "name": "Ram",
+    "category": "General UI",
+    "keywords": [
+      "ram"
+    ]
+  },
+  {
+    "name": "Ranking",
+    "category": "Sports",
+    "keywords": [
+      "star",
+      "rank",
+      "ranking"
+    ]
+  },
+  {
+    "name": "Receipt",
+    "category": "Notes",
+    "keywords": [
+      "receipt"
+    ]
+  },
+  {
+    "name": "ReceiptEdit",
+    "category": "General UI",
+    "keywords": [
+      "receipt",
+      "edit",
+      "receipt-edit"
+    ]
+  },
+  {
+    "name": "ReceiptSearch",
+    "category": "General UI",
+    "keywords": [
+      "receipt",
+      "search",
+      "receipt-search"
+    ]
+  },
+  {
+    "name": "Received",
+    "category": "General UI",
+    "keywords": [
+      "received"
+    ]
+  },
+  {
+    "name": "Record",
+    "category": "Video",
+    "keywords": [
+      "data",
+      "database"
+    ]
+  },
+  {
+    "name": "RecordAudio",
+    "category": "Video",
+    "keywords": [
+      "microphone",
+      "recording device"
+    ]
+  },
+  {
+    "name": "RecordCircle",
+    "category": "Call",
+    "keywords": [
+      "circle",
+      "recording"
+    ]
+  },
+  {
+    "name": "Record2",
+    "category": "General UI",
+    "keywords": [
+      "record"
+    ]
+  },
+  {
+    "name": "RecoveryConvert",
+    "category": "General UI",
+    "keywords": [
+      "recovery",
+      "convert"
+    ]
+  },
+  {
+    "name": "Refresh",
+    "category": "Arrows",
+    "keywords": [
+      "revolve",
+      "rotate",
+      "refresh"
+    ]
+  },
+  {
+    "name": "RefreshCircle",
+    "category": "Arrows",
+    "keywords": [
+      "revolving",
+      "swirl",
+      "refresh",
+      "circle",
+      "refresh-circle"
+    ]
+  },
+  {
+    "name": "RefreshLeftSquare",
+    "category": "General UI",
+    "keywords": [
+      "refresh",
+      "left",
+      "square",
+      "refresh-left-square"
+    ]
+  },
+  {
+    "name": "RefreshRightSquare",
+    "category": "General UI",
+    "keywords": [
+      "refresh",
+      "right",
+      "square",
+      "refresh-right-square"
+    ]
+  },
+  {
+    "name": "RefreshSquare",
+    "category": "Arrows",
+    "keywords": [
+      "refresh",
+      "update",
+      "reload",
+      "square",
+      "refresh-square"
+    ]
+  },
+  {
+    "name": "Refresh2",
+    "category": "Arrows-action",
+    "keywords": [
+      "refresh2"
+    ]
+  },
+  {
+    "name": "Reorder",
+    "category": "Arrows-action",
+    "keywords": [
+      "order",
+      "adjustment",
+      "reorder",
+      "reorder2"
+    ]
+  },
+  {
+    "name": "Reply",
+    "category": "Arrows-action",
+    "keywords": [
+      "left-pointed arrow",
+      "arrow pointer",
+      "reply"
+    ]
+  },
+  {
+    "name": "Reply2",
+    "category": "Arrows-action",
+    "keywords": [
+      "left-pointing arrow",
+      "navigation-left",
+      "reply",
+      "reply-2",
+      "reply2"
+    ]
+  },
+  {
+    "name": "Res4k",
+    "category": "General UI",
+    "keywords": [
+      "Ultra HD",
+      "4K resolution"
+    ]
+  },
+  {
+    "name": "Reserve",
+    "category": "General UI",
+    "keywords": [
+      "reserve"
+    ]
+  },
+  {
+    "name": "Restart",
+    "category": "Arrows",
+    "keywords": [
+      "reboot",
+      "refresh",
+      "restart"
+    ]
+  },
+  {
+    "name": "RestartCircle",
+    "category": "Arrows",
+    "keywords": [
+      "Refresh circle",
+      "Replay arrow",
+      "restart",
+      "circle",
+      "restart-circle"
+    ]
+  },
+  {
+    "name": "RestartSquare",
+    "category": "Arrows",
+    "keywords": [
+      "refresh",
+      "renew",
+      "revive",
+      "restart",
+      "square",
+      "restart-square"
+    ]
+  },
+  {
+    "name": "Roadmap",
+    "category": "General UI",
+    "keywords": [
+      "roadmap"
+    ]
+  },
+  {
+    "name": "Rocket",
+    "category": "Astronomy",
+    "keywords": [
+      "launch",
+      "ship",
+      "rocket"
+    ]
+  },
+  {
+    "name": "RollingPin",
+    "category": "Food",
+    "keywords": [
+      "baking pin",
+      "rolling tool",
+      "rolling",
+      "pin",
+      "rolling-pin"
+    ]
+  },
+  {
+    "name": "Rotation",
+    "category": "General UI",
+    "keywords": [
+      "rotation"
+    ]
+  },
+  {
+    "name": "RouteTrack",
+    "category": "Map",
+    "keywords": []
+  },
+  {
+    "name": "Router",
+    "category": "It",
+    "keywords": [
+      "router",
+      "wireless-router"
+    ]
+  },
+  {
+    "name": "Routing",
+    "category": "Map",
+    "keywords": [
+      "arrow",
+      "ringroad",
+      "routing",
+      "routing3"
+    ]
+  },
+  {
+    "name": "Routing2",
+    "category": "Map",
+    "keywords": [
+      "route",
+      "guide"
+    ]
+  },
+  {
+    "name": "Rugby",
+    "category": "Sports",
+    "keywords": [
+      "football",
+      "ruggery ball"
+    ]
+  },
+  {
+    "name": "Ruler",
+    "category": "Tools",
+    "keywords": [
+      "measuring",
+      "drawing"
+    ]
+  },
+  {
+    "name": "RulerPen",
+    "category": "Tools",
+    "keywords": [
+      "crossed pens",
+      "pen crossed out"
+    ]
+  },
+  {
+    "name": "Ruler2",
+    "category": "Tools",
+    "keywords": [
+      "angular-ruler",
+      "angle-measuring-tool"
+    ]
+  },
+  {
+    "name": "Run",
+    "category": "Sports",
+    "keywords": [
+      "round running",
+      "circular jog"
+    ]
+  },
+  {
+    "name": "SackDollar",
+    "category": "Money",
+    "keywords": [
+      "sack",
+      "dollar",
+      "sack-dollar"
+    ]
+  },
+  {
+    "name": "Sale",
+    "category": "Money",
+    "keywords": [
+      "discount",
+      "sale"
+    ]
+  },
+  {
+    "name": "Satellite",
+    "category": "Astronomy",
+    "keywords": [
+      "Satellite",
+      "Orbital Device",
+      "satellite"
+    ]
+  },
+  {
+    "name": "Scale",
+    "category": "Devices",
+    "keywords": [
+      "balance",
+      "scales"
+    ]
+  },
+  {
+    "name": "ScanBarcode",
+    "category": "General UI",
+    "keywords": [
+      "scan",
+      "barcode",
+      "scan-barcode"
+    ]
+  },
+  {
+    "name": "Scanner",
+    "category": "Security",
+    "keywords": [
+      "Document scanner",
+      "Business scanner"
+    ]
+  },
+  {
+    "name": "Scanning",
+    "category": "General UI",
+    "keywords": [
+      "scanning"
+    ]
+  },
+  {
+    "name": "Scissor",
+    "category": "General UI",
+    "keywords": [
+      "scissor"
+    ]
+  },
+  {
+    "name": "Scooter",
+    "category": "Parts",
+    "keywords": [
+      "motorcycle",
+      "two-wheeler"
+    ]
+  },
+  {
+    "name": "ScreenShare",
+    "category": "Arrows-action",
+    "keywords": [
+      "upload-file",
+      "data-transfer",
+      "screen",
+      "share",
+      "screen-share"
+    ]
+  },
+  {
+    "name": "Screencast",
+    "category": "It",
+    "keywords": [
+      " broadcasting signal",
+      " broadcast device"
+    ]
+  },
+  {
+    "name": "Screencast2",
+    "category": "It",
+    "keywords": [
+      "display",
+      "video",
+      "screen"
+    ]
+  },
+  {
+    "name": "Scribble",
+    "category": "Tools",
+    "keywords": [
+      "scribble"
+    ]
+  },
+  {
+    "name": "SdCard",
+    "category": "Devices",
+    "keywords": [
+      "microSD card",
+      "memory card"
+    ]
+  },
+  {
+    "name": "Search",
+    "category": "Search",
+    "keywords": [
+      "magnifying glass",
+      "circle search",
+      "search",
+      "search2"
+    ]
+  },
+  {
+    "name": "SearchBug",
+    "category": "Search",
+    "keywords": [
+      "Bug magnifier",
+      "Magnifying glass with bug"
+    ]
+  },
+  {
+    "name": "SearchMinus",
+    "category": "Search",
+    "keywords": [
+      "zoom out",
+      "magnifier",
+      "decrease size"
+    ]
+  },
+  {
+    "name": "SearchNormal",
+    "category": "General UI",
+    "keywords": [
+      "search",
+      "normal"
+    ]
+  },
+  {
+    "name": "SearchPlus",
+    "category": "Search",
+    "keywords": [
+      "Magnifying Glass",
+      "Zoom In"
+    ]
+  },
+  {
+    "name": "Search2",
+    "category": "Search",
+    "keywords": [
+      "lens",
+      "optical",
+      "zoom"
+    ]
+  },
+  {
+    "name": "Search3",
+    "category": "Search",
+    "keywords": [
+      "magnifying glass",
+      "zoom lens",
+      "search",
+      "search-3",
+      "search3"
+    ]
+  },
+  {
+    "name": "Security",
+    "category": "General UI",
+    "keywords": [
+      "security"
+    ]
+  },
+  {
+    "name": "SecurityCard",
+    "category": "General UI",
+    "keywords": [
+      "security",
+      "card",
+      "security-card"
+    ]
+  },
+  {
+    "name": "SecuritySafe",
+    "category": "General UI",
+    "keywords": [
+      "security",
+      "safe",
+      "security-safe"
+    ]
+  },
+  {
+    "name": "SecurityTime",
+    "category": "General UI",
+    "keywords": [
+      "security",
+      "time",
+      "security-time"
+    ]
+  },
+  {
+    "name": "SecurityUser",
+    "category": "General UI",
+    "keywords": [
+      "security",
+      "user",
+      "security-user"
+    ]
+  },
+  {
+    "name": "Send",
+    "category": "General UI",
+    "keywords": [
+      "send",
+      "send4"
+    ]
+  },
+  {
+    "name": "SendClock",
+    "category": "Messages",
+    "keywords": [
+      "send",
+      "clock",
+      "send-clock"
+    ]
+  },
+  {
+    "name": "Server",
+    "category": "Devices",
+    "keywords": [
+      "server",
+      "datacenter"
+    ]
+  },
+  {
+    "name": "ServerCloud",
+    "category": "Devices",
+    "keywords": [
+      "server",
+      "cloud storage",
+      "cloud",
+      "server-cloud"
+    ]
+  },
+  {
+    "name": "ServerPath",
+    "category": "Devices",
+    "keywords": [
+      "Server",
+      "Datacenter",
+      "server",
+      "path",
+      "server-path"
+    ]
+  },
+  {
+    "name": "ServerSquare",
+    "category": "Devices",
+    "keywords": [
+      "server",
+      "computers",
+      "square",
+      "server-square"
+    ]
+  },
+  {
+    "name": "ServerUpdate",
+    "category": "Devices",
+    "keywords": [
+      "server update",
+      "network server",
+      "server",
+      "update",
+      "server-update"
+    ]
+  },
+  {
+    "name": "Setting",
+    "category": "General UI",
+    "keywords": [
+      "setting",
+      "setting2"
+    ]
+  },
+  {
+    "name": "Setting2",
+    "category": "General UI",
+    "keywords": [
+      "setting"
+    ]
+  },
+  {
+    "name": "Shapes",
+    "category": "General UI",
+    "keywords": [
+      "shapes"
+    ]
+  },
+  {
+    "name": "Share",
+    "category": "General UI",
+    "keywords": [
+      "split",
+      "branch",
+      "divided",
+      "share"
+    ]
+  },
+  {
+    "name": "ShareCircle",
+    "category": "General UI",
+    "keywords": [
+      "connect",
+      "collaborate",
+      "share",
+      "circle",
+      "share-circle"
+    ]
+  },
+  {
+    "name": "Shield",
+    "category": "Security",
+    "keywords": [
+      "protective",
+      "defense",
+      "shield"
+    ]
+  },
+  {
+    "name": "ShieldAlert",
+    "category": "Security",
+    "keywords": [
+      "security",
+      "warning",
+      "shield",
+      "alert",
+      "shield-alert"
+    ]
+  },
+  {
+    "name": "ShieldCheck",
+    "category": "Security",
+    "keywords": [
+      "Shield Checkmark",
+      "Security Badge",
+      "shield",
+      "check",
+      "shield-check"
+    ]
+  },
+  {
+    "name": "ShieldCross",
+    "category": "General UI",
+    "keywords": [
+      "shield",
+      "cross",
+      "shield-cross"
+    ]
+  },
+  {
+    "name": "ShieldLock",
+    "category": "Security",
+    "keywords": [
+      "Shield",
+      "Security symbol",
+      "shield",
+      "lock",
+      "shield-lock"
+    ]
+  },
+  {
+    "name": "ShieldMinus",
+    "category": "Security",
+    "keywords": [
+      "minus shield",
+      "dashed circle",
+      "shield",
+      "minus",
+      "shield-minus"
+    ]
+  },
+  {
+    "name": "ShieldNetwork",
+    "category": "Security",
+    "keywords": [
+      "Shield Security",
+      "Network Safety",
+      "shield",
+      "network",
+      "shield-network"
+    ]
+  },
+  {
+    "name": "ShieldOff",
+    "category": "Security",
+    "keywords": [
+      "shield",
+      "off",
+      "shield-off"
+    ]
+  },
+  {
+    "name": "ShieldPlus",
+    "category": "Security",
+    "keywords": [
+      "protection",
+      "guard",
+      "shield",
+      "plus",
+      "shield-plus"
+    ]
+  },
+  {
+    "name": "ShieldSearch",
+    "category": "General UI",
+    "keywords": [
+      "shield",
+      "search",
+      "shield-search"
+    ]
+  },
+  {
+    "name": "ShieldSecurity",
+    "category": "General UI",
+    "keywords": [
+      "shield",
+      "security",
+      "shield-security"
+    ]
+  },
+  {
+    "name": "ShieldSlash",
+    "category": "General UI",
+    "keywords": [
+      "shield",
+      "slash",
+      "shield-slash"
+    ]
+  },
+  {
+    "name": "ShieldStar",
+    "category": "Security",
+    "keywords": [
+      "protection",
+      "defense",
+      "shield",
+      "star",
+      "shield-star"
+    ]
+  },
+  {
+    "name": "ShieldTick",
+    "category": "General UI",
+    "keywords": [
+      "shield",
+      "tick",
+      "shield-tick"
+    ]
+  },
+  {
+    "name": "ShieldUp",
+    "category": "Security",
+    "keywords": [
+      "security shield",
+      "protection emblem",
+      "shield",
+      "up",
+      "shield-up"
+    ]
+  },
+  {
+    "name": "ShieldUser",
+    "category": "Security",
+    "keywords": [
+      "Shield Icon",
+      "Security Badge",
+      "shield",
+      "user",
+      "shield-user"
+    ]
+  },
+  {
+    "name": "ShieldX",
+    "category": "Security",
+    "keywords": [
+      "shield",
+      "crossed shield",
+      "shield-x"
+    ]
+  },
+  {
+    "name": "Shield2",
+    "category": "Security",
+    "keywords": [
+      "minimal shield",
+      "simple emblem",
+      "shield",
+      "shield-2",
+      "shield2"
+    ]
+  },
+  {
+    "name": "Ship",
+    "category": "General UI",
+    "keywords": [
+      "ship"
+    ]
+  },
+  {
+    "name": "ShockAbsorber",
+    "category": "Parts",
+    "keywords": [
+      "suspension",
+      "engine-lift-supporter",
+      "shock",
+      "absorber",
+      "shock-absorber"
+    ]
+  },
+  {
+    "name": "Shop",
+    "category": "Shopping",
+    "keywords": [
+      "store",
+      "retail",
+      "shop",
+      "shop2"
+    ]
+  },
+  {
+    "name": "Shop2",
+    "category": "Shopping",
+    "keywords": [
+      "store",
+      "outlet"
+    ]
+  },
+  {
+    "name": "ShoppingBag",
+    "category": "General UI",
+    "keywords": [
+      "shopping",
+      "bag",
+      "shopping-bag"
+    ]
+  },
+  {
+    "name": "ShoppingCart",
+    "category": "General UI",
+    "keywords": [
+      "shopping",
+      "cart",
+      "shopping-cart"
+    ]
+  },
+  {
+    "name": "Shuffle",
+    "category": "Video",
+    "keywords": [
+      "playlist",
+      "shuffle",
+      "repeat"
+    ]
+  },
+  {
+    "name": "SideProfile",
+    "category": "Users",
+    "keywords": [
+      "side",
+      "profile"
+    ]
+  },
+  {
+    "name": "Sidebar",
+    "category": "It",
+    "keywords": [
+      "Minimalist Sidebar",
+      "Icon for Menu",
+      "sidebar",
+      "sidebar2"
+    ]
+  },
+  {
+    "name": "SidebarCode",
+    "category": "It",
+    "keywords": [
+      "code-panel",
+      "development-tools",
+      "coding-interface",
+      "sidebar",
+      "code",
+      "sidebar-code"
+    ]
+  },
+  {
+    "name": "SidebarLeft",
+    "category": "General UI",
+    "keywords": [
+      "sidebar",
+      "left",
+      "sidebar-left"
+    ]
+  },
+  {
+    "name": "SidebarLeft2",
+    "category": "General UI",
+    "keywords": [
+      "sidebar",
+      "left"
+    ]
+  },
+  {
+    "name": "SidebarRight",
+    "category": "General UI",
+    "keywords": [
+      "sidebar",
+      "right",
+      "sidebar-right"
+    ]
+  },
+  {
+    "name": "SidebarRight2",
+    "category": "General UI",
+    "keywords": [
+      "sidebar",
+      "right"
+    ]
+  },
+  {
+    "name": "Signpost",
+    "category": "Map",
+    "keywords": [
+      "road sign",
+      "directions"
+    ]
+  },
+  {
+    "name": "Simcard",
+    "category": "General UI",
+    "keywords": [
+      "simcard"
+    ]
+  },
+  {
+    "name": "Simcard2",
+    "category": "General UI",
+    "keywords": [
+      "simcard",
+      "simcard-3",
+      "simcard3"
+    ]
+  },
+  {
+    "name": "Siren",
+    "category": "Security",
+    "keywords": [
+      "warning",
+      "alert",
+      "siren",
+      "siren2"
+    ]
+  },
+  {
+    "name": "Sitemap",
+    "category": "Business",
+    "keywords": [
+      "sitemap"
+    ]
+  },
+  {
+    "name": "Skateboard",
+    "category": "Sports",
+    "keywords": [
+      "Skate",
+      "Board",
+      "skateboard"
+    ]
+  },
+  {
+    "name": "Skateboarding",
+    "category": "Sports",
+    "keywords": [
+      "Skateboarder",
+      "Sportsman",
+      "skateboarding"
+    ]
+  },
+  {
+    "name": "SkipNext",
+    "category": "Video",
+    "keywords": [
+      "play",
+      "next",
+      "skip",
+      "skip-next"
+    ]
+  },
+  {
+    "name": "SkipPrev",
+    "category": "Video",
+    "keywords": [
+      "previous",
+      "backward",
+      "skip",
+      "prev",
+      "skip-prev"
+    ]
+  },
+  {
+    "name": "Slash",
+    "category": "General UI",
+    "keywords": [
+      "slash"
+    ]
+  },
+  {
+    "name": "Sledgehammer",
+    "category": "General UI",
+    "keywords": [
+      "mallet",
+      "hammer",
+      "building tool"
+    ]
+  },
+  {
+    "name": "Sleeping",
+    "category": "General UI",
+    "keywords": [
+      "bed",
+      "rest",
+      "sleeping"
+    ]
+  },
+  {
+    "name": "SleepingCircle",
+    "category": "Faces",
+    "keywords": [
+      "slumber",
+      "restful",
+      "dreamtime",
+      "sleeping",
+      "circle",
+      "sleeping-circle"
+    ]
+  },
+  {
+    "name": "SleepingSquare",
+    "category": "Faces",
+    "keywords": [
+      "resting-face",
+      "dreamer-icon",
+      "slumber-sign",
+      "yawning-mascot",
+      "sleeping",
+      "square",
+      "sleeping-square"
+    ]
+  },
+  {
+    "name": "SliderH",
+    "category": "General UI",
+    "keywords": [
+      "horizontal-interface",
+      "swipe-bar",
+      "slider",
+      "slider-h"
+    ]
+  },
+  {
+    "name": "SliderV",
+    "category": "General UI",
+    "keywords": [
+      "vertical slider",
+      "control slider",
+      "slider",
+      "slider-v"
+    ]
+  },
+  {
+    "name": "Sliders",
+    "category": "Settings",
+    "keywords": [
+      "sliders"
+    ]
+  },
+  {
+    "name": "Smallcaps",
+    "category": "General UI",
+    "keywords": [
+      "smallcaps"
+    ]
+  },
+  {
+    "name": "SmartCar",
+    "category": "General UI",
+    "keywords": [
+      "smart",
+      "car"
+    ]
+  },
+  {
+    "name": "SmartSpeaker",
+    "category": "Devices",
+    "keywords": [
+      "speaker",
+      "audio-device"
+    ]
+  },
+  {
+    "name": "Smileys",
+    "category": "General UI",
+    "keywords": [
+      "smileys"
+    ]
+  },
+  {
+    "name": "Sms",
+    "category": "General UI",
+    "keywords": [
+      "sms"
+    ]
+  },
+  {
+    "name": "SmsEdit",
+    "category": "General UI",
+    "keywords": [
+      "sms",
+      "edit"
+    ]
+  },
+  {
+    "name": "SmsNotification",
+    "category": "General UI",
+    "keywords": [
+      "sms",
+      "notification",
+      "sms-notification"
+    ]
+  },
+  {
+    "name": "SmsSearch",
+    "category": "General UI",
+    "keywords": [
+      "sms",
+      "search"
+    ]
+  },
+  {
+    "name": "SmsStar",
+    "category": "General UI",
+    "keywords": [
+      "sms",
+      "star",
+      "sms-star"
+    ]
+  },
+  {
+    "name": "SmsTracking",
+    "category": "General UI",
+    "keywords": [
+      "sms",
+      "tracking"
+    ]
+  },
+  {
+    "name": "Snowflake",
+    "category": "Weather",
+    "keywords": [
+      "snowflake",
+      "winter symbol"
+    ]
+  },
+  {
+    "name": "Sofa",
+    "category": "Home",
+    "keywords": [
+      "couch",
+      "loveseat",
+      "sofa",
+      "sofa2"
+    ]
+  },
+  {
+    "name": "Sofa2",
+    "category": "Home",
+    "keywords": [
+      "couch",
+      "settee"
+    ]
+  },
+  {
+    "name": "Sort",
+    "category": "General UI",
+    "keywords": [
+      "list",
+      "ranking"
+    ]
+  },
+  {
+    "name": "SortAlpha",
+    "category": "List",
+    "keywords": [
+      "alphabet",
+      "order"
+    ]
+  },
+  {
+    "name": "SortAsc",
+    "category": "List",
+    "keywords": [
+      "arrow",
+      "upward"
+    ]
+  },
+  {
+    "name": "SortDesc",
+    "category": "List",
+    "keywords": [
+      "arrow-down",
+      "arrangement"
+    ]
+  },
+  {
+    "name": "Sparkle",
+    "category": "General UI",
+    "keywords": [
+      "sparkle"
+    ]
+  },
+  {
+    "name": "Sparkles",
+    "category": "General UI",
+    "keywords": [
+      "sparkles"
+    ]
+  },
+  {
+    "name": "Speaker",
+    "category": "Home",
+    "keywords": [
+      "speaker",
+      "audio"
+    ]
+  },
+  {
+    "name": "SpeedLow",
+    "category": "Parts",
+    "keywords": [
+      "speedometer",
+      "measuring-tool"
+    ]
+  },
+  {
+    "name": "SpeedMax",
+    "category": "Parts",
+    "keywords": [
+      "sightseeing",
+      "compass"
+    ]
+  },
+  {
+    "name": "Speedometer",
+    "category": "General UI",
+    "keywords": []
+  },
+  {
+    "name": "SquareShare",
+    "category": "Messages",
+    "keywords": [
+      "share",
+      "send",
+      "square",
+      "square-share"
+    ]
+  },
+  {
+    "name": "Ssd",
+    "category": "Devices",
+    "keywords": [
+      "external hard drive",
+      "disk"
+    ]
+  },
+  {
+    "name": "StackPerspective",
+    "category": "General UI",
+    "keywords": [
+      "stack",
+      "perspective"
+    ]
+  },
+  {
+    "name": "Star",
+    "category": "Like",
+    "keywords": [
+      "five-pointed star",
+      "five-star rating",
+      "star"
+    ]
+  },
+  {
+    "name": "StarCircle",
+    "category": "Astronomy",
+    "keywords": [
+      "star symbol",
+      "circle star",
+      "star",
+      "circle",
+      "star-circle"
+    ]
+  },
+  {
+    "name": "StarFall",
+    "category": "Astronomy",
+    "keywords": [
+      "sky",
+      "stars",
+      "falling",
+      "star",
+      "fall",
+      "star-fall"
+    ]
+  },
+  {
+    "name": "StarFall2",
+    "category": "Astronomy",
+    "keywords": [
+      "stardust",
+      "skyglow",
+      "star",
+      "fall",
+      "star-fall-3",
+      "star-fall3"
+    ]
+  },
+  {
+    "name": "StarOff",
+    "category": "Like",
+    "keywords": [
+      "star",
+      "off",
+      "star-off"
+    ]
+  },
+  {
+    "name": "StarRainbow",
+    "category": "Astronomy",
+    "keywords": [
+      "star",
+      "rainbow",
+      "star-rainbow"
+    ]
+  },
+  {
+    "name": "StarRing",
+    "category": "Astronomy",
+    "keywords": [
+      "ringed star",
+      "stellar ring",
+      "star",
+      "ring",
+      "star-ring"
+    ]
+  },
+  {
+    "name": "StarRings",
+    "category": "Astronomy",
+    "keywords": [
+      "atomic",
+      "atomistic",
+      "star",
+      "rings",
+      "star-rings"
+    ]
+  },
+  {
+    "name": "StarShine",
+    "category": "Like",
+    "keywords": [
+      "starburst",
+      "radiation",
+      "star",
+      "shine",
+      "star-shine"
+    ]
+  },
+  {
+    "name": "StarSlash",
+    "category": "General UI",
+    "keywords": [
+      "star",
+      "slash",
+      "star-slash"
+    ]
+  },
+  {
+    "name": "StarSparkle",
+    "category": "Like",
+    "keywords": [
+      "star",
+      "sparkle",
+      "star-sparkle"
+    ]
+  },
+  {
+    "name": "StarSquare",
+    "category": "Like",
+    "keywords": [
+      "star",
+      "square",
+      "star-square"
+    ]
+  },
+  {
+    "name": "Stars",
+    "category": "Weather",
+    "keywords": [
+      "star",
+      "sparkle",
+      "stars"
+    ]
+  },
+  {
+    "name": "Stars2",
+    "category": "Astronomy",
+    "keywords": [
+      "double",
+      "star",
+      "stars",
+      "stars2"
+    ]
+  },
+  {
+    "name": "Station",
+    "category": "It",
+    "keywords": [
+      "antenna",
+      "signal",
+      "transmitter"
+    ]
+  },
+  {
+    "name": "StickerSmile",
+    "category": "Faces",
+    "keywords": [
+      "smiley-face",
+      "circle-smile",
+      "sticker",
+      "smile",
+      "sticker-smile"
+    ]
+  },
+  {
+    "name": "Stop",
+    "category": "General UI",
+    "keywords": [
+      "stop",
+      "stop3"
+    ]
+  },
+  {
+    "name": "Stop2",
+    "category": "Video",
+    "keywords": [
+      "traffic",
+      "sign"
+    ]
+  },
+  {
+    "name": "Stopwatch",
+    "category": "Time",
+    "keywords": [
+      "timer",
+      "clock",
+      "stopwatch"
+    ]
+  },
+  {
+    "name": "StopwatchOff",
+    "category": "Time",
+    "keywords": [
+      "stopwatch",
+      "off",
+      "stopwatch-off"
+    ]
+  },
+  {
+    "name": "StopwatchPlay",
+    "category": "Time",
+    "keywords": [
+      "play",
+      "start",
+      "stopwatch",
+      "stopwatch-play"
+    ]
+  },
+  {
+    "name": "Store",
+    "category": "Shopping",
+    "keywords": [
+      "store"
+    ]
+  },
+  {
+    "name": "Story",
+    "category": "General UI",
+    "keywords": [
+      "story"
+    ]
+  },
+  {
+    "name": "Stream",
+    "category": "Video",
+    "keywords": [
+      "upload",
+      "transmission",
+      "stream"
+    ]
+  },
+  {
+    "name": "StreetsPin",
+    "category": "Map",
+    "keywords": [
+      "navigation",
+      "compass",
+      "streets",
+      "pin",
+      "streets-pin"
+    ]
+  },
+  {
+    "name": "Structure",
+    "category": "It",
+    "keywords": [
+      "network",
+      "connectivity",
+      "structure"
+    ]
+  },
+  {
+    "name": "Subtitle",
+    "category": "General UI",
+    "keywords": [
+      "subtitle"
+    ]
+  },
+  {
+    "name": "Suitcase",
+    "category": "Nature",
+    "keywords": [
+      "luggage",
+      "briefcase",
+      "suitcase"
+    ]
+  },
+  {
+    "name": "SuitcaseTag",
+    "category": "Nature",
+    "keywords": [
+      "luggage",
+      "baggage",
+      "tote bag",
+      "suitcase",
+      "tag",
+      "suitcase-tag"
+    ]
+  },
+  {
+    "name": "Sun",
+    "category": "General UI",
+    "keywords": [
+      "sun",
+      "sun2"
+    ]
+  },
+  {
+    "name": "Sun2",
+    "category": "General UI",
+    "keywords": [
+      "sun"
+    ]
+  },
+  {
+    "name": "Suspension",
+    "category": "Parts",
+    "keywords": [
+      "suspension",
+      "gearbox"
+    ]
+  },
+  {
+    "name": "SuspensionBolt",
+    "category": "Parts",
+    "keywords": [
+      "bolt",
+      "screw",
+      "suspension",
+      "suspension-bolt"
+    ]
+  },
+  {
+    "name": "SuspensionX",
+    "category": "Parts",
+    "keywords": [
+      "suspension",
+      "cross-link"
+    ]
+  },
+  {
+    "name": "Swimming",
+    "category": "Sports",
+    "keywords": [
+      "swimmer",
+      "bather"
+    ]
+  },
+  {
+    "name": "Syringe",
+    "category": "Medicine",
+    "keywords": [
+      "medical syringe",
+      "injection needle"
+    ]
+  },
+  {
+    "name": "Tablet",
+    "category": "Devices",
+    "keywords": [
+      "Tablet",
+      "Digital Device"
+    ]
+  },
+  {
+    "name": "Tag",
+    "category": "Money",
+    "keywords": [
+      "discount",
+      "sale",
+      "tag"
+    ]
+  },
+  {
+    "name": "TagCross",
+    "category": "General UI",
+    "keywords": [
+      "tag",
+      "cross",
+      "tag-cross"
+    ]
+  },
+  {
+    "name": "TagPrice",
+    "category": "Money",
+    "keywords": [
+      "price-tag",
+      "discount-label",
+      "tag",
+      "price",
+      "tag-price"
+    ]
+  },
+  {
+    "name": "TagRight",
+    "category": "General UI",
+    "keywords": [
+      "tag",
+      "right",
+      "tag-right"
+    ]
+  },
+  {
+    "name": "TagUser",
+    "category": "General UI",
+    "keywords": [
+      "tag",
+      "user",
+      "tag-user"
+    ]
+  },
+  {
+    "name": "Tags",
+    "category": "General UI",
+    "keywords": [
+      "tags"
+    ]
+  },
+  {
+    "name": "Target",
+    "category": "General UI",
+    "keywords": [
+      "aiming",
+      "sight",
+      "focus",
+      "target"
+    ]
+  },
+  {
+    "name": "TeaCup",
+    "category": "Food",
+    "keywords": [
+      "cup",
+      "hot beverage",
+      "tea",
+      "tea-cup"
+    ]
+  },
+  {
+    "name": "Telescope",
+    "category": "Devices",
+    "keywords": [
+      "optical instrument",
+      "astronomical telescope",
+      "telescope"
+    ]
+  },
+  {
+    "name": "Temperature",
+    "category": "Weather",
+    "keywords": [
+      "thermometer",
+      "heat",
+      "temperature"
+    ]
+  },
+  {
+    "name": "Tennis",
+    "category": "Sports",
+    "keywords": [
+      "ball",
+      "sport",
+      "tennis"
+    ]
+  },
+  {
+    "name": "TerminalCircle",
+    "category": "It",
+    "keywords": [
+      "terminal",
+      "circle",
+      "terminal-circle"
+    ]
+  },
+  {
+    "name": "TerminalSquare",
+    "category": "It",
+    "keywords": [
+      "terminal",
+      "square",
+      "terminal-square"
+    ]
+  },
+  {
+    "name": "Text",
+    "category": "General UI",
+    "keywords": [
+      "text",
+      "text3"
+    ]
+  },
+  {
+    "name": "TextBlock",
+    "category": "General UI",
+    "keywords": [
+      "text",
+      "block",
+      "text-block"
+    ]
+  },
+  {
+    "name": "TextBold",
+    "category": "General UI",
+    "keywords": [
+      "text",
+      "bold"
+    ]
+  },
+  {
+    "name": "TextHighlight",
+    "category": "Text-formatting",
+    "keywords": [
+      "text",
+      "highlight"
+    ]
+  },
+  {
+    "name": "TextInput",
+    "category": "Text-formatting",
+    "keywords": [
+      "input-box",
+      "digital-typeface",
+      "input-field"
+    ]
+  },
+  {
+    "name": "TextInputFocus",
+    "category": "Text-formatting",
+    "keywords": [
+      "input-field",
+      "focus-field"
+    ]
+  },
+  {
+    "name": "TextItalic",
+    "category": "General UI",
+    "keywords": [
+      "text",
+      "italic",
+      "text-italic"
+    ]
+  },
+  {
+    "name": "TextUnderline",
+    "category": "General UI",
+    "keywords": [
+      "text",
+      "underline",
+      "text-underline"
+    ]
+  },
+  {
+    "name": "TextX",
+    "category": "Text-formatting",
+    "keywords": [
+      "crossbar",
+      "line separator"
+    ]
+  },
+  {
+    "name": "TextalignCenter",
+    "category": "General UI",
+    "keywords": [
+      "textalign",
+      "center",
+      "textalign-center"
+    ]
+  },
+  {
+    "name": "TextalignJustifycenter",
+    "category": "General UI",
+    "keywords": [
+      "textalign",
+      "justifycenter",
+      "textalign-justifycenter"
+    ]
+  },
+  {
+    "name": "TextalignLeft",
+    "category": "General UI",
+    "keywords": [
+      "textalign",
+      "left",
+      "textalign-left"
+    ]
+  },
+  {
+    "name": "TextalignRight",
+    "category": "General UI",
+    "keywords": [
+      "textalign",
+      "right",
+      "textalign-right"
+    ]
+  },
+  {
+    "name": "ThumbsDown",
+    "category": "Like",
+    "keywords": []
+  },
+  {
+    "name": "ThumbsUp",
+    "category": "Like",
+    "keywords": []
+  },
+  {
+    "name": "Thumbtack",
+    "category": "General UI",
+    "keywords": [
+      "pushpin",
+      "tacks"
+    ]
+  },
+  {
+    "name": "TickerStar",
+    "category": "Money",
+    "keywords": [
+      "ticket",
+      "star ticket",
+      "ticker",
+      "star",
+      "ticker-star"
+    ]
+  },
+  {
+    "name": "Ticket",
+    "category": "Money",
+    "keywords": [
+      "entry pass",
+      "admission ticket"
+    ]
+  },
+  {
+    "name": "TicketAlt",
+    "category": "General UI",
+    "keywords": [
+      "ticket"
+    ]
+  },
+  {
+    "name": "TicketStar",
+    "category": "General UI",
+    "keywords": [
+      "ticket",
+      "star",
+      "ticket-star"
+    ]
+  },
+  {
+    "name": "Ticket2",
+    "category": "General UI",
+    "keywords": [
+      "ticket"
+    ]
+  },
+  {
+    "name": "Timer",
+    "category": "Time",
+    "keywords": [
+      "timer"
+    ]
+  },
+  {
+    "name": "TimerStart",
+    "category": "General UI",
+    "keywords": [
+      "timer",
+      "start",
+      "timer-start"
+    ]
+  },
+  {
+    "name": "Toggle",
+    "category": "Settings",
+    "keywords": [
+      "toggle"
+    ]
+  },
+  {
+    "name": "Tornado",
+    "category": "Weather",
+    "keywords": [
+      "cyclone",
+      "twister",
+      "tornado"
+    ]
+  },
+  {
+    "name": "Tower",
+    "category": "Building",
+    "keywords": [
+      "tower"
+    ]
+  },
+  {
+    "name": "Trade",
+    "category": "General UI",
+    "keywords": [
+      "trade"
+    ]
+  },
+  {
+    "name": "Traffic",
+    "category": "General UI",
+    "keywords": [
+      "traffic_sign",
+      "street_traffic",
+      "traffic"
+    ]
+  },
+  {
+    "name": "Tram",
+    "category": "Parts",
+    "keywords": [
+      "railcar",
+      "train",
+      "public transportation",
+      "tram"
+    ]
+  },
+  {
+    "name": "TransactionMinus",
+    "category": "General UI",
+    "keywords": [
+      "transaction",
+      "minus",
+      "transaction-minus"
+    ]
+  },
+  {
+    "name": "Translate",
+    "category": "General UI",
+    "keywords": [
+      "translate",
+      "translate4"
+    ]
+  },
+  {
+    "name": "Trash",
+    "category": "General UI",
+    "keywords": [
+      "trash",
+      "trash7"
+    ]
+  },
+  {
+    "name": "Trash2",
+    "category": "General UI",
+    "keywords": []
+  },
+  {
+    "name": "Tree",
+    "category": "General UI",
+    "keywords": [
+      "tree"
+    ]
+  },
+  {
+    "name": "Trophy",
+    "category": "Sports",
+    "keywords": [
+      "trophy"
+    ]
+  },
+  {
+    "name": "Truck",
+    "category": "General UI",
+    "keywords": [
+      "truck",
+      "truck3"
+    ]
+  },
+  {
+    "name": "Tshirt",
+    "category": "General UI",
+    "keywords": [
+      "shirt",
+      "top"
+    ]
+  },
+  {
+    "name": "Tuning",
+    "category": "Settings",
+    "keywords": [
+      "equalizer",
+      "control knobs",
+      "tuning"
+    ]
+  },
+  {
+    "name": "Tuning2",
+    "category": "Settings",
+    "keywords": [
+      "Tuning",
+      "Settings",
+      "tuning",
+      "tuning-2",
+      "tuning2"
+    ]
+  },
+  {
+    "name": "Tv",
+    "category": "Devices",
+    "keywords": [
+      "television",
+      "screen",
+      "monitor"
+    ]
+  },
+  {
+    "name": "Ufo",
+    "category": "Astronomy",
+    "keywords": [
+      "UFO",
+      "Alien Craft",
+      "ufo"
+    ]
+  },
+  {
+    "name": "Umbrella",
+    "category": "General UI",
+    "keywords": [
+      "open umbrella",
+      "black umbrella"
+    ]
+  },
+  {
+    "name": "Underline",
+    "category": "Text-formatting",
+    "keywords": [
+      "underline",
+      "graphic-underline"
+    ]
+  },
+  {
+    "name": "UndoCircle",
+    "category": "Arrows-action",
+    "keywords": [
+      "left-turn-arrow",
+      "reverse-left",
+      "backtrack",
+      "undo",
+      "circle",
+      "undo-circle"
+    ]
+  },
+  {
+    "name": "Unlimited",
+    "category": "General UI",
+    "keywords": [
+      "unlimited"
+    ]
+  },
+  {
+    "name": "Unlock",
+    "category": "Security",
+    "keywords": [
+      "unlock"
+    ]
+  },
+  {
+    "name": "Upload",
+    "category": "Arrows-action",
+    "keywords": [
+      "upload",
+      "data-upload"
+    ]
+  },
+  {
+    "name": "UploadSquare",
+    "category": "Arrows-action",
+    "keywords": [
+      "upload",
+      "submit",
+      "square",
+      "upload-square"
+    ]
+  },
+  {
+    "name": "UploadTrack",
+    "category": "Video",
+    "keywords": [
+      "upload",
+      "track",
+      "upload-track"
+    ]
+  },
+  {
+    "name": "Upload2",
+    "category": "Arrows-action",
+    "keywords": [
+      "upload",
+      "arrow-up",
+      "upload-2",
+      "upload2"
+    ]
+  },
+  {
+    "name": "Usb",
+    "category": "It",
+    "keywords": [
+      "USB port",
+      "data connector",
+      "micro USB"
+    ]
+  },
+  {
+    "name": "User",
+    "category": "General UI",
+    "keywords": [
+      "user",
+      "user4"
+    ]
+  },
+  {
+    "name": "UserBlock",
+    "category": "Users",
+    "keywords": [
+      "deactivated user",
+      "inactive account",
+      "user",
+      "block",
+      "user-block"
+    ]
+  },
+  {
+    "name": "UserCheck",
+    "category": "Users",
+    "keywords": [
+      "verified user",
+      "checked profile",
+      "user",
+      "check",
+      "user-check"
+    ]
+  },
+  {
+    "name": "UserEdit",
+    "category": "Users",
+    "keywords": []
+  },
+  {
+    "name": "UserHand",
+    "category": "Users",
+    "keywords": [
+      "raised hand",
+      "gesture of greeting"
+    ]
+  },
+  {
+    "name": "UserLaptop",
+    "category": "Users",
+    "keywords": [
+      "user",
+      "laptop",
+      "user-laptop"
+    ]
+  },
+  {
+    "name": "UserOctagon",
+    "category": "General UI",
+    "keywords": [
+      "user",
+      "octagon",
+      "user-octagon"
+    ]
+  },
+  {
+    "name": "UserOff",
+    "category": "Users",
+    "keywords": [
+      "user",
+      "off",
+      "user-off"
+    ]
+  },
+  {
+    "name": "UserScan",
+    "category": "Users",
+    "keywords": [
+      "user",
+      "scan",
+      "user-scan"
+    ]
+  },
+  {
+    "name": "UserTag",
+    "category": "General UI",
+    "keywords": [
+      "user",
+      "tag",
+      "user-tag"
+    ]
+  },
+  {
+    "name": "User2",
+    "category": "Users",
+    "keywords": [
+      "profile",
+      "avatar"
+    ]
+  },
+  {
+    "name": "Users",
+    "category": "Users",
+    "keywords": [
+      "users",
+      "users3"
+    ]
+  },
+  {
+    "name": "Users2",
+    "category": "Users",
+    "keywords": [
+      "user-circle",
+      "group-rounded"
+    ]
+  },
+  {
+    "name": "Vacuum",
+    "category": "Home",
+    "keywords": [
+      "vacuum cleaner",
+      "robot vacuum",
+      "vacuum"
+    ]
+  },
+  {
+    "name": "Verify",
+    "category": "General UI",
+    "keywords": [
+      "verify"
+    ]
+  },
+  {
+    "name": "Video",
+    "category": "Video",
+    "keywords": [
+      "video"
+    ]
+  },
+  {
+    "name": "VideoCut",
+    "category": "Video",
+    "keywords": [
+      "cut-video",
+      "split-screen",
+      "horizontal-split"
+    ]
+  },
+  {
+    "name": "VideoFrame",
+    "category": "Video",
+    "keywords": [
+      "square",
+      "picture"
+    ]
+  },
+  {
+    "name": "VideoOctagon",
+    "category": "General UI",
+    "keywords": [
+      "video",
+      "octagon",
+      "video-octagon"
+    ]
+  },
+  {
+    "name": "VideoOff",
+    "category": "Video",
+    "keywords": []
+  },
+  {
+    "name": "Volleyball",
+    "category": "Sports",
+    "keywords": [
+      "Volleyball",
+      "Sports"
+    ]
+  },
+  {
+    "name": "Volume",
+    "category": "Video",
+    "keywords": [
+      "speaker",
+      "speakernois",
+      "speakernoise",
+      "soundnoisy",
+      "volume"
+    ]
+  },
+  {
+    "name": "VolumeDown",
+    "category": "Video",
+    "keywords": [
+      "speaker",
+      "sound",
+      "audio level",
+      "volume",
+      "down",
+      "volume-down"
+    ]
+  },
+  {
+    "name": "VolumeHigh",
+    "category": "General UI",
+    "keywords": [
+      "volume",
+      "high",
+      "volume-high"
+    ]
+  },
+  {
+    "name": "VolumeLow",
+    "category": "General UI",
+    "keywords": [
+      "volume",
+      "low",
+      "volume-low"
+    ]
+  },
+  {
+    "name": "VolumeSlash",
+    "category": "General UI",
+    "keywords": [
+      "volume",
+      "slash",
+      "volume-slash"
+    ]
+  },
+  {
+    "name": "VolumeUp",
+    "category": "General UI",
+    "keywords": [
+      "volume",
+      "up",
+      "volume-up",
+      "volume-up3"
+    ]
+  },
+  {
+    "name": "Walk",
+    "category": "Sports",
+    "keywords": [
+      "pedestrian",
+      "person walking",
+      "walk"
+    ]
+  },
+  {
+    "name": "Wallet",
+    "category": "Money",
+    "keywords": [
+      "billfold",
+      "pocketbook",
+      "wallet"
+    ]
+  },
+  {
+    "name": "WalletAdd",
+    "category": "General UI",
+    "keywords": [
+      "wallet",
+      "add",
+      "wallet-add"
+    ]
+  },
+  {
+    "name": "WalletCheck",
+    "category": "General UI",
+    "keywords": [
+      "wallet",
+      "check",
+      "wallet-check"
+    ]
+  },
+  {
+    "name": "WalletDown",
+    "category": "Money",
+    "keywords": [
+      "wallet",
+      "down",
+      "wallet-down"
+    ]
+  },
+  {
+    "name": "WalletMinus",
+    "category": "Money",
+    "keywords": [
+      "wallet",
+      "minus",
+      "wallet-minus"
+    ]
+  },
+  {
+    "name": "WalletMoney",
+    "category": "Money",
+    "keywords": [
+      "wallet",
+      "cash",
+      "billfold",
+      "money",
+      "wallet-money"
+    ]
+  },
+  {
+    "name": "WalletPlus",
+    "category": "Money",
+    "keywords": [
+      "wallet",
+      "plus",
+      "wallet-plus"
+    ]
+  },
+  {
+    "name": "WalletRemove",
+    "category": "General UI",
+    "keywords": [
+      "wallet",
+      "remove",
+      "wallet-remove"
+    ]
+  },
+  {
+    "name": "WalletSearch",
+    "category": "General UI",
+    "keywords": [
+      "wallet",
+      "search",
+      "wallet-search"
+    ]
+  },
+  {
+    "name": "WalletUp",
+    "category": "Money",
+    "keywords": [
+      "wallet",
+      "up",
+      "wallet-up"
+    ]
+  },
+  {
+    "name": "Wallpaper",
+    "category": "Video",
+    "keywords": [
+      "camera",
+      "picture frame",
+      "wallpaper"
+    ]
+  },
+  {
+    "name": "Washer",
+    "category": "Home",
+    "keywords": [
+      "washing machine",
+      "laundromat"
+    ]
+  },
+  {
+    "name": "Watch",
+    "category": "Time",
+    "keywords": [
+      "smartwatch",
+      "wristwatch"
+    ]
+  },
+  {
+    "name": "WatchStatus",
+    "category": "General UI",
+    "keywords": [
+      "watch",
+      "status",
+      "watch-status"
+    ]
+  },
+  {
+    "name": "Wheel",
+    "category": "Parts",
+    "keywords": [
+      "tire",
+      "wheels",
+      "wheel"
+    ]
+  },
+  {
+    "name": "Whisk",
+    "category": "Food",
+    "keywords": [
+      "whisk",
+      "beater"
+    ]
+  },
+  {
+    "name": "Widget",
+    "category": "Settings",
+    "keywords": [
+      "settings",
+      "options",
+      "widget",
+      "widget2"
+    ]
+  },
+  {
+    "name": "Wifi",
+    "category": "General UI",
+    "keywords": [
+      "wifi"
+    ]
+  },
+  {
+    "name": "WifiOff",
+    "category": "General UI",
+    "keywords": [
+      "wifi",
+      "off",
+      "wifi-off"
+    ]
+  },
+  {
+    "name": "WifiSquare",
+    "category": "General UI",
+    "keywords": [
+      "wifi",
+      "square",
+      "wifi-square"
+    ]
+  },
+  {
+    "name": "Wifi2",
+    "category": "General UI",
+    "keywords": [
+      "wifi"
+    ]
+  },
+  {
+    "name": "Wind",
+    "category": "General UI",
+    "keywords": [
+      "wind"
+    ]
+  },
+  {
+    "name": "Wind2",
+    "category": "General UI",
+    "keywords": [
+      "wind"
+    ]
+  },
+  {
+    "name": "WindowChartLine",
+    "category": "Business",
+    "keywords": [
+      "window",
+      "chart",
+      "line",
+      "window-chart-line"
+    ]
+  },
+  {
+    "name": "Wineglass",
+    "category": "Food",
+    "keywords": [
+      "drink",
+      "goblet",
+      "wineglass"
+    ]
+  },
+  {
+    "name": "Winrar",
+    "category": "General UI",
+    "keywords": [
+      "file-compression",
+      "storage-utility"
+    ]
+  },
+  {
+    "name": "WirelessCharge",
+    "category": "Devices",
+    "keywords": [
+      "power-indicator",
+      "energy-transfer"
+    ]
+  },
+  {
+    "name": "Woman",
+    "category": "General UI",
+    "keywords": [
+      "woman"
+    ]
+  },
+  {
+    "name": "X",
+    "category": "General UI",
+    "keywords": [
+      "x"
+    ]
+  },
+  {
+    "name": "Zip",
+    "category": "Files",
+    "keywords": [
+      "Compression",
+      "Bundle"
+    ]
+  }
+]

@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+:root,
+html.dark {
+  --background: #000000;
+  --foreground: #ffffff;
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Theme Color System - Dark Defaults */
+  --bg-page: #0a0a0a;
+  --bg-body-gradient: #0a0a0a;
+  --top-blur-gradient: linear-gradient(to bottom, #0a0a0a 0%, transparent 100%);
+
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --bg-card-hover: rgba(255, 255, 255, 0.09);
+
+  --bg-btn: var(--bg-card);
+  --bg-btn-hover: var(--bg-card-hover);
+
+  --border-subtle: transparent;
+  --border-medium: rgba(255, 255, 255, 0.08);
+
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.72);
+  --text-muted: rgba(255, 255, 255, 0.42);
+  --text-dim: rgba(255, 255, 255, 0.28);
+
+  --pill-active-bg: #ffffff;
+  --pill-active-text: #000000;
+  --pill-inactive-bg: var(--bg-card);
+  --pill-inactive-text: rgba(255, 255, 255, 0.68);
+  --pill-inactive-hover-bg: var(--bg-card-hover);
+
+  --input-bg: var(--bg-card);
+  --input-border: transparent;
+  --input-text: #ffffff;
+  --input-placeholder: rgba(255, 255, 255, 0.4);
+
+  --modal-bg: #111113;
+  --dropdown-bg: #111113;
+  --code-bg: var(--bg-card);
+  --code-token-1: #38BDF8;
+  --code-token-2: #34D399;
+
+  --card-shadow: none;
+  --range-track-bg: rgba(255, 255, 255, 0.12);
+  --range-thumb-bg: #ffffff;
+}
+
+html.light {
+  --background: #ffffff;
+  --foreground: #0f172a;
+
+  /* Theme Color System - Light (#fff page background, #f3f3f5 card & button color) */
+  --bg-page: #ffffff;
+  --bg-body-gradient: #ffffff;
+  --top-blur-gradient: linear-gradient(to bottom, #ffffff 0%, transparent 100%);
+
+  --bg-card: #f3f3f5;
+  --bg-card-hover: #e5e5e8;
+
+  --bg-btn: var(--bg-card);
+  --bg-btn-hover: var(--bg-card-hover);
+
+  --border-subtle: transparent;
+  --border-medium: rgba(0, 0, 0, 0.08);
+
+  --text-primary: #0f172a;
+  --text-secondary: #3f3f46;
+  --text-muted: #71717a;
+  --text-dim: #a1a1aa;
+
+  --pill-active-bg: #0f172a;
+  --pill-active-text: #ffffff;
+  --pill-inactive-bg: var(--bg-card);
+  --pill-inactive-text: #52525b;
+  --pill-inactive-hover-bg: var(--bg-card-hover);
+
+  --input-bg: var(--bg-card);
+  --input-border: transparent;
+  --input-text: #0f172a;
+  --input-placeholder: #a1a1aa;
+
+  --modal-bg: #ffffff;
+  --dropdown-bg: #ffffff;
+  --code-bg: #f3f3f5;
+  --code-token-1: #0284c7;
+  --code-token-2: #059669;
+
+  --card-shadow: none;
+  --range-track-bg: rgba(0, 0, 0, 0.12);
+  --range-thumb-bg: #0f172a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-mono: var(--font-mono);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-synthesis: none;
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(155, 138, 251, 0.25);
+  color: inherit;
+}
+
+/* Custom Minimal Range Input Slider */
+.create-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 99px;
+  background: var(--range-track-bg);
+  outline: none;
+  cursor: pointer;
+}
+
+.create-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 99px;
+  background: var(--range-thumb-bg);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  cursor: grab;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-medium);
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+

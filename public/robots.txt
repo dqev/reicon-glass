@@ -1,0 +1,5 @@
+# robots.txt for https://agent.reicon.dev/
+User-agent: *
+Allow: /
+
+Sitemap: https://agent.reicon.dev/sitemap.xml

@@ -1,0 +1,100 @@
+# Agentic Library of Beautiful Icons by Reicon
+
+> Official 1100+ curated rounded SVG icon library built for AI Coding Agents (Cursor, Claude, Copilot, ChatGPT, Antigravity) & modern web developers.
+
+## How Agentic Icon Selection & Integration Works
+When generating UI code, AI agents automatically select, render, and style Reicon icons using zero-setup CDN Web Components or NPM ESM modules.
+
+### CDN Quickstart
+Include script in HTML `<head>`:
+```html
+<script src="https://cdn.jsdelivr.net/npm/reicon-agent/cdn/reicon.js"></script>
+```
+
+Render any icon anywhere in your HTML:
+```html
+<re-icon icon="home" size="24" color="currentColor"></re-icon>
+<re-icon icon="search" size="20" color="#9B8AFB"></re-icon>
+<re-icon icon="arrow-right" size="24" color="currentColor"></re-icon>
+```
+
+### NPM Installation
+```bash
+npm install reicon-agent
+```
+Import in JavaScript / React / Frameworks:
+```javascript
+import { Home, Search, ArrowRight } from 'reicon-agent';
+```
+
+## Icon Styling Rules for AI Agents
+1. **Size Standards**:
+   - `16`: Micro badges, inline status tags.
+   - `20`: Buttons, form inputs, compact lists.
+   - `24`: Default UI navigation, headers, action buttons.
+   - `32`: Card headers, hero features, highlighted actions.
+   - `48`: Empty states, landing page hero illustrations.
+
+2. **Coloring Strategy**:
+   - `color="currentColor"` (Recommended): Inherits parent element CSS font color automatically. Perfect for dark mode, hover states, and theme switching.
+   - Custom hex/hsl: `color="#9B8AFB"` or CSS variables `color="var(--accent)"`.
+
+3. **Flex Layout Alignment**:
+   ```html
+   <button class="btn">
+     <re-icon icon="download" size="20" color="currentColor"></re-icon>
+     <span>Download File</span>
+   </button>
+   ```
+   CSS: `.btn { display: inline-flex; align-items: center; gap: 8px; }`
+
+4. **Animations & Interactive States**:
+   - Loading state: Add CSS spin animation `re-icon[icon="loader"] { animation: spin 1s linear infinite; }`
+   - Hover scaling: `re-icon:hover { transform: scale(1.1); transition: transform 0.2s ease; }`
+
+## Categories Directory (38 Categories, 1104 Total Icons)
+- **arrows** (19): `arrow-down`, `arrow-left`, `arrow-left-down`, `arrow-left-up`, `arrow-right`, `arrow-right-down`, `arrow-right-up`, `arrow-up` +11 more
+- **arrows-action** (27): `refresh2`, `arrow-to-down-left`, `arrow-to-down-right`, `arrow-to-top-left`, `arrow-to-top-right`, `download`, `download2`, `exit` +19 more
+- **astronomy** (21): `asteroid`, `atom`, `black-hole`, `black-hole2`, `black-hole3`, `earth`, `infinite`, `male` +13 more
+- **building** (4): `city`, `garage`, `hospital`, `tower`
+- **business** (19): `chart2`, `course-down`, `course-up`, `diagram-down`, `award-certificate`, `award`, `nodes`, `sitemap` +11 more
+- **call** (3): `phone2`, `phone-chat`, `record-circle`
+- **devices** (53): `phone`, `earbuds`, `earbuds-case`, `earbuds-case2`, `earbuds-case-open`, `earbuds-charge`, `bluetooth`, `bluetooth-wave` +45 more
+- **faces** (4): `sticker-smile`, `face-smile`, `sleeping-circle`, `sleeping-square`
+- **files** (9): `code-file`, `file`, `cloud-file`, `file-download`, `file-star`, `figma-file`, `zip`, `file-pdf` +1 more
+- **folders** (6): `folder-add`, `folder`, `folder-files`, `folder-cloud`, `folder-star`, `folder-lock`
+- **food** (18): `bottle`, `chef-hat`, `chef-hat2`, `corkscrew`, `donut`, `donut2`, `ladle`, `mug` +10 more
+- **hands** (3): `hand-heart`, `hand-stars`, `hand-dollar`
+- **home** (20): `armchair`, `armchair2`, `bar-stool`, `bath`, `bed`, `chair`, `chair2`, `chandelier` +12 more
+- **it** (24): `bug`, `code2`, `code3`, `command`, `hashtag`, `sidebar`, `structure`, `bug-slash` +16 more
+- **like** (20): `heart2`, `heart3`, `gamepad-buttons`, `bookmark-x`, `heart-off`, `heart-lock`, `heart-unlock`, `medal-star` +12 more
+- **list** (7): `list-down`, `list-up`, `list`, `playlist`, `sort-alpha`, `sort-asc`, `sort-desc`
+- **map** (33): `compass`, `gps`, `pin`, `routing`, `routing2`, `globe-pointer`, `compass-square`, `map-arrow-down` +25 more
+- **medicine** (15): `bandage`, `bandage2`, `benzene`, `bone`, `bone-broken`, `bone-crack`, `dna`, `dropper` +7 more
+- **messages** (48): `chat-dots`, `chat-line`, `chat-square-arrow`, `chat-square-call`, `chat-square-code`, `chat-square-like`, `mailbox`, `forward-left` +40 more
+- **money** (39): `banknote`, `banknote2`, `bill`, `bill-check`, `bill-list`, `card`, `cash-out`, `dollar` +31 more
+- **nature** (10): `bonfire`, `fire`, `flame`, `suitcase`, `bolt-off`, `suitcase-tag`, `bolt-slash`, `cloud-down` +2 more
+- **newicons** (312): `maximize`, `maximize3`, `chart`, `bluetooth2`, `lamp`, `mirror2`, `code`, `radar2` +304 more
+- **notes** (11): `archive`, `archive-down`, `archive-up`, `clipboard`, `doc`, `doc-add`, `notebook2`, `check-list` +3 more
+- **notifications** (6): `bell`, `bell-off`, `bell-off2`, `bell-ring`, `notification`, `bell-alert`
+- **parts** (12): `accumulator`, `bus`, `gas-station`, `shock-absorber`, `tram`, `wheel`, `suspension-bolt`, `scooter` +4 more
+- **school** (9): `notebook`, `backpack`, `book`, `bookmark2`, `calculator`, `briefcase`, `diploma`, `mortarboard-square` +1 more
+- **search** (6): `search`, `search2`, `search3`, `search-bug`, `search-plus`, `search-minus`
+- **security** (33): `bomb`, `bomb2`, `code-scan`, `lock`, `lock-open`, `qr`, `shield`, `shield2` +25 more
+- **settings** (6): `tuning`, `tuning2`, `widget`, `gear`, `sliders`, `toggle`
+- **shopping** (14): `bag`, `bag3`, `bag-check`, `bag-x`, `shop`, `shop2`, `cart-check`, `cart-add` +6 more
+- **sports** (25): `balls`, `basketball`, `cycling`, `body-shape`, `bowling`, `dumbbell`, `dumbbell2`, `dumbbells` +17 more
+- **text-formatting** (13): `eraser`, `link`, `bold`, `pen-writing`, `pen-writing2`, `pen-nib`, `backspace`, `text-x` +5 more
+- **time** (22): `alarm`, `alarm-add`, `alarm-pause`, `alarm-play`, `alarm-off`, `calendar`, `calendar-add`, `calendar-search` +14 more
+- **tools** (21): `align-bottom`, `align-left`, `align-right`, `align-top`, `color-tuning`, `crop`, `filters`, `layers` +13 more
+- **ui** (126): `plug`, `heart`, `bookmark`, `ar`, `body`, `bolt`, `box2`, `box3` +118 more
+- **users** (11): `user-laptop`, `user-off`, `user-scan`, `users`, `users2`, `user-block`, `user-check`, `user2` +3 more
+- **video** (50): `album`, `camera`, `camera2`, `camera-rotate`, `clapperboard`, `clapperboard-edit`, `clapperboard-open`, `clapperboard-open-play` +42 more
+- **weather** (25): `stars`, `cloud`, `moon`, `temperature`, `tornado`, `drops`, `cloud-bolt`, `cloud-check` +17 more
+
+## Links & Resources
+- Website: https://agent.reicon.dev/
+- Full Agent Specifications: https://agent.reicon.dev/llms-full.txt
+- Documentation: https://agent.reicon.dev/docs/
+- GitHub: https://github.com/dqev/reicon-agent
+- License: MIT
