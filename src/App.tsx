@@ -1,12 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { SiteHeader, type NavTab } from "./components/SiteHeader";
 import { HeroExplorerView } from "./views/HeroExplorerView";
 import { DocsView } from "./views/DocsView";
 import { ChangelogView } from "./views/ChangelogView";
 import { IconDetailModal } from "./components/IconDetailModal";
+import { CmdkSearchModal } from "./components/CmdkSearchModal";
 import { Toast } from "./components/Toast";
 import { SiteFooter } from "./components/SiteFooter";
 
+import agentData from "./data/agent.json";
+import { parseAgentJson } from "./views/HeroExplorerView";
 import { isValidColorForTheme, getDefaultColorForTheme } from "./utils/themeColors";
 
 function getTabFromPath(path: string): NavTab {
@@ -19,6 +22,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<NavTab>(() =>
     getTabFromPath(window.location.pathname)
   );
+  const [cmdkOpen, setCmdkOpen] = useState(false);
   const [theme, setTheme] = useState<"dark" | "light">(
     () => (localStorage.getItem("reicon-theme") as "dark" | "light") || "dark"
   );
@@ -28,6 +32,8 @@ export default function App() {
     )
   );
   const [inspectedIcon, setInspectedIcon] = useState<{ name: string; category: string } | null>(null);
+
+  const cmdkIcons = useMemo(() => parseAgentJson(agentData), []);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [toastActive, setToastActive] = useState<boolean>(false);
   const [showTopBlur, setShowTopBlur] = useState<boolean>(false);
@@ -134,6 +140,7 @@ export default function App() {
                 onInspect={(name, category) => setInspectedIcon({ name, category })}
                 onCopyNotice={handleCopyNotice}
                 toastActive={toastActive}
+                onOpenCmdk={() => setCmdkOpen(true)}
               />
             )}
             {activeTab === "docs" && (
@@ -159,6 +166,17 @@ export default function App() {
         category={inspectedIcon?.category || "General UI"}
         color={color}
         onClose={() => setInspectedIcon(null)}
+        onCopyNotice={handleCopyNotice}
+      />
+
+      {/* Global CMDK Command Palette Search Modal */}
+      <CmdkSearchModal
+        open={cmdkOpen}
+        onOpenChange={setCmdkOpen}
+        icons={cmdkIcons}
+        onSelectIcon={(name, category) => setInspectedIcon({ name, category })}
+        onSelectNav={(tab, href) => handleTabChange(tab, href)}
+        onToggleTheme={toggleTheme}
         onCopyNotice={handleCopyNotice}
       />
 

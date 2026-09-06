@@ -18,9 +18,6 @@ export function FloatingControlBar({
   hidden?: boolean;
 }) {
   const reduced = useReducedMotion();
-
-  const SIZES = [48, 64, 84];
-
   const colorShades = getColorPalette(theme);
   const activeIndex = colorShades.findIndex(
     (s) => s.hex.toLowerCase() === color.toLowerCase()

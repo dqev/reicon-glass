@@ -17,6 +17,7 @@ export interface CategoryControlBarProps {
   search?: string;
   onSearchChange?: (val: string) => void;
   searchInputRef?: React.RefObject<any>;
+  onOpenCmdk?: () => void;
 }
 
 export function CategoryControlBar({
@@ -24,8 +25,8 @@ export function CategoryControlBar({
   categories,
   selectedCategory,
   onSelectCategory,
-  showAllCategories,
-  onToggleShowAllCategories,
+  showAllCategories: _showAllCategories,
+  onToggleShowAllCategories: _onToggleShowAllCategories,
   size,
   onSizeChange,
   color,
@@ -33,6 +34,7 @@ export function CategoryControlBar({
   search = "",
   onSearchChange,
   searchInputRef,
+  onOpenCmdk,
 }: CategoryControlBarProps) {
   const reduced = useReducedMotion();
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -48,9 +50,6 @@ export function CategoryControlBar({
     window.addEventListener("mousedown", handleClickOutside);
     return () => window.removeEventListener("mousedown", handleClickOutside);
   }, []);
-
-  const visibleCategories = showAllCategories ? categories : categories.slice(0, 10);
-  const hasMoreCategories = categories.length > 10;
 
   const colorShades = getColorPalette(theme);
   const activeColorIndex = colorShades.findIndex(
@@ -113,7 +112,7 @@ export function CategoryControlBar({
               playClickSound();
               setDropdownOpen((prev) => !prev);
             }}
-            className="h-8.5 sm:h-10 px-3 sm:px-4 rounded-full text-xs sm:text-sm font-[550] leading-none whitespace-nowrap transition cursor-pointer flex items-center gap-1.5 sm:gap-2 bg-[var(--bg-btn)] text-[var(--text-primary)] hover:bg-[var(--bg-btn-hover)] border-none"
+            className="h-8.5 sm:h-10 px-3 sm:px-4 rounded-full text-xs sm:text-sm font-[550] leading-none whitespace-nowrap transition cursor-pointer flex items-center gap-1.5 sm:gap-2 bg-[var(--bg-btn)] text-[var(--text-primary)] hover:bg-[var(--bg-btn-hover)] border-none select-none"
           >
             <span className="text-[var(--text-muted)] font-normal">Category:</span>
             <span className="font-semibold">{selectedCategory}</span>
@@ -138,7 +137,7 @@ export function CategoryControlBar({
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 6, scale: 0.96 }}
                 transition={{ duration: 0.15 }}
-                className="absolute top-10 sm:top-12 left-0 w-48 sm:w-52 max-h-64 overflow-y-auto rounded-2xl bg-[var(--dropdown-bg)] border-none backdrop-blur-2xl p-1.5 z-50 shadow-none scrollbar-thin flex flex-col gap-0.5"
+                className="absolute top-10 sm:top-12 left-0 w-48 sm:w-56 max-h-64 overflow-y-auto rounded-2xl bg-[var(--dropdown-bg)] border border-[var(--border-medium)] backdrop-blur-2xl p-1.5 z-50 shadow-2xl scrollbar-thin flex flex-col gap-0.5"
               >
                 {categories.map((cat) => {
                   const active = selectedCategory === cat;
@@ -151,10 +150,10 @@ export function CategoryControlBar({
                         onSelectCategory(cat);
                         setDropdownOpen(false);
                       }}
-                      className={`w-full text-left px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-xl text-xs font-[550] transition cursor-pointer flex items-center justify-between ${
+                      className={`w-full text-left px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-xl text-xs font-[550] transition cursor-pointer flex items-center justify-between border-none ${
                         active
                           ? "bg-[var(--pill-active-bg)] text-[var(--pill-active-text)] font-semibold"
-                          : "text-[var(--text-secondary)] hover:bg-[var(--bg-btn)] hover:text-[var(--text-primary)]"
+                          : "text-[var(--text-secondary)] hover:bg-[var(--bg-btn-hover)] hover:text-[var(--text-primary)]"
                       }`}
                     >
                       <span>{cat}</span>
@@ -187,7 +186,7 @@ export function CategoryControlBar({
               type="text"
               value={search}
               onChange={(e) => onSearchChange(e.target.value)}
-              placeholder="Search 2,676+ icons... (/)"
+              placeholder="Search 1,100+ icons... (⌘K)"
               spellCheck={false}
               autoComplete="off"
               className="w-full bg-transparent border-none text-xs sm:text-sm text-[var(--text-primary)] placeholder:text-[var(--input-placeholder)] focus:outline-none"
@@ -201,9 +200,14 @@ export function CategoryControlBar({
                 ✕
               </button>
             ) : (
-              <kbd className="hidden md:inline-flex h-5 items-center rounded border border-[var(--border-medium)] px-1.5 font-mono text-[10px] text-[var(--text-muted)] select-none">
-                /
-              </kbd>
+              <button
+                type="button"
+                onClick={() => onOpenCmdk?.()}
+                title="Open Command Palette (⌘K)"
+                className="hidden md:inline-flex h-5 items-center gap-0.5 rounded border border-[var(--border-medium)] px-1.5 font-mono text-[10px] text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:border-[var(--text-muted)] transition cursor-pointer select-none"
+              >
+                <span className="text-[11px] font-bold">⌘</span>K
+              </button>
             )}
           </div>
         )}

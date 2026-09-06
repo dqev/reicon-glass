@@ -41,6 +41,7 @@ export interface HeroExplorerViewProps {
   onInspect: (iconName: string, category: string) => void;
   onCopyNotice: (msg: string) => void;
   toastActive?: boolean;
+  onOpenCmdk?: () => void;
 }
 
 export function HeroExplorerView({
@@ -49,6 +50,7 @@ export function HeroExplorerView({
   onColorChange = () => {},
   onInspect,
   onCopyNotice,
+  onOpenCmdk,
 }: HeroExplorerViewProps) {
   const [icons, setIcons] = useState<IconMetaItem[]>(INITIAL_ICONS);
   const [search, setSearch] = useState("");
@@ -74,10 +76,6 @@ export function HeroExplorerView({
     return () => window.removeEventListener("resize", handleResize);
   }, [size]);
 
-  const [copiedHeroJsx, setCopiedHeroJsx] = useState(false);
-  const [copiedHeroSvg, setCopiedHeroSvg] = useState(false);
-
-  const heroCardRef = useSmoothCorners<HTMLLabelElement>(20, 60);
   const searchInputRef = useRef<HTMLInputElement | null>(null);
   const loadMoreRef = useRef<HTMLDivElement | null>(null);
 
@@ -176,48 +174,6 @@ export function HeroExplorerView({
     };
   }, [filteredIcons.length]);
 
-  const featuredHeroIcon = search.trim() ? (filteredIcons[0]?.name || "Search") : "Search";
-  const featuredHeroKebab = search.trim() ? (filteredIcons[0]?.kebab || "search") : "search";
-  const featuredCategory = icons.find((i) => i.name === featuredHeroIcon)?.category || "General UI";
-
-  const handleRandomize = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    e.preventDefault();
-    if (icons.length === 0) return;
-    const randomIndex = Math.floor(Math.random() * icons.length);
-    const randomIcon = icons[randomIndex].name;
-    setSearch(randomIcon);
-  };
-
-  const handleCopyHeroJsx = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    e.preventDefault();
-    const jsxCode = `<re-icon icon="${featuredHeroKebab}" size={32} color="${color}"></re-icon>`;
-    void navigator.clipboard?.writeText(jsxCode).then(() => {
-      setCopiedHeroJsx(true);
-      onCopyNotice(`Copied <re-icon icon="${featuredHeroKebab}" />`);
-      setTimeout(() => setCopiedHeroJsx(false), 1400);
-    });
-  };
-
-  const handleCopyHeroSvg = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    e.preventDefault();
-    const rawCode = window.ReiconAgent?.getIconCode ? window.ReiconAgent.getIconCode(featuredHeroKebab) : null;
-    let finalCode = rawCode || "";
-    if (strokeWidth != null && finalCode) {
-      finalCode = finalCode.replace(/stroke-width="[^"]*"/g, `stroke-width="${strokeWidth}"`);
-    }
-    const svgCode = finalCode
-      ? `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none">${finalCode}</svg>`
-      : `<re-icon icon="${featuredHeroKebab}" size="32" color="${color}"></re-icon>`;
-    void navigator.clipboard?.writeText(svgCode).then(() => {
-      setCopiedHeroSvg(true);
-      onCopyNotice(`Copied ${featuredHeroKebab} SVG`);
-      setTimeout(() => setCopiedHeroSvg(false), 1400);
-    });
-  };
-
   return (
     <div className="w-full flex flex-col items-center">
       {/* HERO Banner Header */}
@@ -249,6 +205,7 @@ export function HeroExplorerView({
           search={search}
           onSearchChange={setSearch}
           searchInputRef={searchInputRef}
+          onOpenCmdk={onOpenCmdk}
         />
 
         {/* Icon Cards Wall */}

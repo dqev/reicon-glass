@@ -5,7 +5,6 @@ import { IconRenderer } from "./IconRenderer";
 import { CopyMorphIcon } from "./CopyMorphIcon";
 import { useSmoothCorners } from "../utils/useSmoothCorners";
 import { playClickSound } from "../utils/sound";
-import { DARK_COLOR_SHADES } from "../utils/themeColors";
 
 export interface IconDetailModalProps {
   iconName: string | null;

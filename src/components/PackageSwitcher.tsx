@@ -5,7 +5,6 @@ import { useSmoothCorners } from "../utils/useSmoothCorners";
 import { playClickSound } from "../utils/sound";
 
 const INK = "var(--text-primary)";
-const MUTED = "var(--text-muted)";
 const MONO = "var(--font-mono), ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace";
 
 const TOKEN_COLORS = ["var(--accent-color, #9B8AFB)", "var(--code-token-1, #38BDF8)", "var(--code-token-2, #34D399)"];

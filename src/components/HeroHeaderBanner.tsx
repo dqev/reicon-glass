@@ -1,8 +1,11 @@
-import { NpmInstall } from "./NpmInstall";
 import { WordmarkLogo } from "./WordmarkLogo";
 
 export function HeroHeaderBanner({
   color,
+  onCopyNotice: _onCopyNotice,
+  search: _search,
+  onSearchChange: _onSearchChange,
+  searchInputRef: _searchInputRef,
 }: {
   color?: string;
   onCopyNotice?: (msg: string) => void;

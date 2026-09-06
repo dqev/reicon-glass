@@ -20,8 +20,8 @@ export interface IconCardProps {
 export function IconCard({
   name,
   kebab,
-  category,
-  index,
+  category: _category,
+  index: _index,
   size,
   weight,
   color,
@@ -31,10 +31,7 @@ export function IconCard({
 }: IconCardProps) {
   const cardRef = useSmoothCorners<HTMLDivElement>(20, 60);
   const [copiedJsx, setCopiedJsx] = useState(false);
-  const [copiedSvg, setCopiedSvg] = useState(false);
 
-  const formattedIndex = String(index + 1).padStart(3, "0");
-  const shortCategory = category.split(" ")[0].toLowerCase();
   const kebabName = kebab || toKebabCase(name);
   const jsxCode = `<re-icon icon="${kebabName}" size={${size}} color="${color}"></re-icon>`;
 
