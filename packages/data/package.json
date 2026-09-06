@@ -1,0 +1,12 @@
+{
+  "name": "@reicon/data",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./icons.json",
+  "exports": {
+    "./icons.json": "./icons.json",
+    "./icon-names.json": "./icon-names.json",
+    "./icons-state.json": "./icons-state.json"
+  }
+}
