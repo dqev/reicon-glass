@@ -3,7 +3,6 @@ import agentData from "../data/agent.json";
 import { HeroHeaderBanner } from "../components/HeroHeaderBanner";
 import { CategoryControlBar } from "../components/CategoryControlBar";
 import { IconGridWall } from "../components/IconGridWall";
-import { useSmoothCorners } from "../utils/useSmoothCorners";
 import { loadReiconCdn, getParsedIconsList } from "../utils/reiconCdn";
 
 export interface IconMetaItem {

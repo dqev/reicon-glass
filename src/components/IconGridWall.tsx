@@ -32,13 +32,12 @@ export function IconGridWall(props: IconGridWallProps) {
       {/* Grid Wall Layout */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2.5 w-full">
         {/* Icon Cards Wall */}
-        {displayedIcons.map((icon, idx) => (
+        {displayedIcons.map((icon) => (
           <IconCard
             key={icon.kebab}
             name={icon.name}
             kebab={icon.kebab}
             category={icon.category}
-            index={idx}
             size={size}
             weight={weight}
             color={color}

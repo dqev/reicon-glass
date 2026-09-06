@@ -2,6 +2,9 @@ import { motion, useReducedMotion } from "framer-motion";
 import { getColorPalette } from "../utils/themeColors";
 import { playClickSound } from "../utils/sound";
 
+const SIZES_MOBILE = [38, 48, 58];
+const SIZES_DESKTOP = [48, 64, 84];
+
 export function FloatingControlBar({
   size,
   onSizeChange,
@@ -48,7 +51,7 @@ export function FloatingControlBar({
         >
           {/* Mobile Size options container (visible on mobile < sm) */}
           <div className="sm:hidden flex items-center gap-0.5">
-            {[38, 48, 58].map((s) => {
+            {SIZES_MOBILE.map((s) => {
               const active = s === size;
               return (
                 <button
@@ -83,7 +86,7 @@ export function FloatingControlBar({
 
           {/* Desktop Size options container (visible on desktop >= sm) */}
           <div className="hidden sm:flex items-center gap-0.5">
-            {[48, 64, 84].map((s) => {
+            {SIZES_DESKTOP.map((s) => {
               const active = s === size;
               return (
                 <button

@@ -8,7 +8,6 @@ export interface IconCardProps {
   name: string;
   kebab?: string;
   category: string;
-  index: number;
   size: number;
   weight: "outline" | "filled";
   color: string;
@@ -20,8 +19,7 @@ export interface IconCardProps {
 export function IconCard({
   name,
   kebab,
-  category: _category,
-  index: _index,
+  category,
   size,
   weight,
   color,
@@ -69,6 +67,7 @@ export function IconCard({
   return (
     <div
       ref={cardRef}
+      title={`${name} · ${category}`}
       onClick={() => {
         playClickSound();
         onInspect(name);

@@ -32,7 +32,7 @@ export function isValidColorForTheme(color: string, theme: "dark" | "light"): bo
   return palette.some((c) => c.hex.toLowerCase() === color.toLowerCase());
 }
 
-export function getDefaultColorForTheme(_theme: "dark" | "light"): string {
-  return "#9B8AFB";
+export function getDefaultColorForTheme(theme: "dark" | "light" = "dark"): string {
+  return theme === "light" ? "#9B8AFB" : "#9B8AFB";
 }
 
