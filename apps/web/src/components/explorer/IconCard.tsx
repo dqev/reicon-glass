@@ -90,8 +90,8 @@ export const IconCard = memo(function IconCard({
         {name}
       </span>
 
-      {/* Hover Micro Action Buttons: 1 Copy, 1 Download */}
-      <div className="absolute inset-x-2 bottom-2 flex items-center justify-end gap-1 opacity-100 sm:opacity-0 translate-y-0 sm:translate-y-1 transition-all duration-150 sm:group-hover:opacity-100 sm:group-hover:translate-y-0 z-10">
+      {/* Hover Micro Action Buttons: 1 Copy, 1 Download (Hidden on Mobile, Hover on Desktop) */}
+      <div className="hidden sm:flex absolute inset-x-2 bottom-2 items-center justify-end gap-1 opacity-0 translate-y-1 transition-all duration-150 group-hover:opacity-100 group-hover:translate-y-0 z-10">
         <button
           type="button"
           onClick={handleCopyJsx}
