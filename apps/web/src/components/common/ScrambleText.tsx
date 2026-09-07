@@ -12,15 +12,15 @@ export function ScrambleWord({ word }: { word: string }) {
       return;
     }
     const chars = [...word];
-    const PER = 6;
-    const DUR = 140;
+    const PER = 4;
+    const DUR = 120;
     const start = performance.now();
     let raf = 0;
     const tick = (now: number) => {
       const elapsed = now - start;
       let settled = true;
       const frame = chars.map((ch, i) => {
-        if (elapsed >= i * PER + DUR) return ch;
+        if (ch === " " || ch === "\n" || elapsed >= i * PER + DUR) return ch;
         settled = false;
         return GLYPHS[Math.floor(Math.random() * GLYPHS.length)];
       });

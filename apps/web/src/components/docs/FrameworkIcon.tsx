@@ -1,5 +1,6 @@
 const LOGO_MAP: Record<string, string> = {
   javascript: "/framework-logos/js.svg",
+  html: "/framework-logos/html.svg",
   react: "/framework-logos/react.svg",
   "react-native": "/framework-logos/react-native.svg",
   vue: "/framework-logos/vue.svg",
@@ -7,8 +8,9 @@ const LOGO_MAP: Record<string, string> = {
   flutter: "/framework-logos/flutter.svg",
   figma: "/framework-logos/figma.svg",
   vscode: "/framework-logos/vscode.svg",
+  antigravity: "/framework-logos/antigravity.svg",
   mcp: "/framework-logos/mcp.svg",
-  svg: "/framework-logos/js.svg",
+  svg: "/framework-logos/svg.svg",
   docs: "/assets/favicon.svg",
 };
 

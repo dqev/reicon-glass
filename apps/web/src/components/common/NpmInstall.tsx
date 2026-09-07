@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { CopyMorphIcon } from "./CopyIconTransition";
 import { playClickSound } from "../../utils/sound";
+import { copyToClipboard } from "../../utils/clipboard";
 
 export function NpmInstall({
   command = "npm i reicon-agent",
@@ -17,10 +18,12 @@ export function NpmInstall({
       title="Copy install command"
       onClick={() => {
         playClickSound();
-        void navigator.clipboard?.writeText(command).then(() => {
-          setCopied(true);
-          if (onCopy) onCopy(`Copied "${command}" to clipboard!`);
-          setTimeout(() => setCopied(false), 1400);
+        void copyToClipboard(command).then((ok) => {
+          if (ok) {
+            setCopied(true);
+            if (onCopy) onCopy(`Copied "${command}" to clipboard!`);
+            setTimeout(() => setCopied(false), 1400);
+          }
         });
       }}
       className="group/npm flex h-11 items-center gap-3 rounded-full bg-[var(--bg-btn)] pl-5 pr-2 hover:bg-[var(--bg-btn-hover)] border-none motion-safe:active:scale-[0.97] cursor-pointer"

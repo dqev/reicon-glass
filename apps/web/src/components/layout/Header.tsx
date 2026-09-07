@@ -50,6 +50,22 @@ export function SiteHeader({
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
+  const [pathname, setPathname] = useState(() => window.location.pathname);
+
+  useEffect(() => {
+    const handleLocationChange = () => {
+      setPathname(window.location.pathname);
+    };
+    window.addEventListener("popstate", handleLocationChange);
+    const interval = setInterval(handleLocationChange, 100);
+    return () => {
+      window.removeEventListener("popstate", handleLocationChange);
+      clearInterval(interval);
+    };
+  }, []);
+
+  const isDocDetail = activeTab === "docs" && pathname.startsWith("/docs/") && pathname !== "/docs";
+
   const NAV: { id: NavTab; href: string; label: string }[] = [
     { id: "explorer", href: "/", label: "Home" },
     { id: "docs", href: "/docs", label: "Docs" },
@@ -59,6 +75,7 @@ export function SiteHeader({
   const handleNavClick = (id: NavTab, href: string) => {
     playClickSound();
     onTabChange(id, href);
+    setPathname(href);
     setMenuOpen(false);
   };
 
@@ -66,21 +83,42 @@ export function SiteHeader({
     <header className="sticky top-4 z-[100] relative w-full">
       {/* Top Header Bar */}
       <div className="flex items-center justify-between w-full rounded-[10px] py-0">
-        {/* Brand Logo, left */}
-        <a
-          href="/"
-          onClick={(e) => {
-            e.preventDefault();
-            handleNavClick("explorer", "/");
-          }}
-          className="inline-flex items-center rounded-full bg-[var(--bg-btn)] py-2 px-3.5 leading-none text-[var(--text-primary)] hover:bg-[var(--bg-btn-hover)] motion-safe:active:scale-[0.97] cursor-pointer border border-[var(--border-subtle)]"
-          title="reicon home"
-        >
-          <WordmarkLogo
-            color={color || "var(--accent-color, currentColor)"}
-            className="h-[16px] w-auto inline-block select-none pointer-events-none"
-          />
-        </a>
+        {/* Left Section: Round Back Button (if detail view) + Brand Logo */}
+        <div className="flex items-center gap-2">
+          {isDocDetail && (
+            <button
+              type="button"
+              onClick={() => {
+                playClickSound();
+                onTabChange("docs", "/docs");
+                setPathname("/docs");
+              }}
+              aria-label="Back to Frameworks overview"
+              title="Back to Frameworks overview"
+              className="size-9 rounded-full bg-[var(--bg-btn)] hover:bg-[var(--bg-btn-hover)] text-[var(--text-primary)] flex items-center justify-center transition cursor-pointer border border-[var(--border-subtle)] shrink-0 motion-safe:active:scale-[0.97]"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M19 12H5" />
+                <path d="M12 19l-7-7 7-7" />
+              </svg>
+            </button>
+          )}
+
+          <a
+            href="/"
+            onClick={(e) => {
+              e.preventDefault();
+              handleNavClick("explorer", "/");
+            }}
+            className="inline-flex items-center rounded-full bg-[var(--bg-btn)] py-2 px-3.5 leading-none text-[var(--text-primary)] hover:bg-[var(--bg-btn-hover)] motion-safe:active:scale-[0.97] cursor-pointer border border-[var(--border-subtle)]"
+            title="reicon home"
+          >
+            <WordmarkLogo
+              color={color || "var(--accent-color, currentColor)"}
+              className="h-[16px] w-auto inline-block select-none pointer-events-none"
+            />
+          </a>
+        </div>
 
         {/* Desktop Nav links, centered */}
         <nav className="hidden sm:flex absolute left-1/2 -translate-x-1/2 items-center gap-4 md:gap-5">
@@ -167,7 +205,7 @@ export function SiteHeader({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -4 }}
             transition={{ duration: 0.15, ease: "easeOut" }}
-            className="sm:hidden absolute top-[calc(100%+8px)] left-0 right-0 z-50 rounded-[14px] bg-[#171717] p-2 border-none shadow-2xl"
+            className="sm:hidden absolute top-[calc(100%+8px)] left-0 right-0 z-50 rounded-[14px] bg-[#171717] p-2 border-none shadow-none"
           >
             <nav className="flex flex-col gap-1">
               {NAV.map((item) => {

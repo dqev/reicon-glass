@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from "react";
 import { Command } from "cmdk";
 import { IconRenderer } from "./IconRenderer";
 import { playClickSound } from "../../utils/sound";
+import { copyToClipboard } from "../../utils/clipboard";
 
 export interface IconItem {
   name: string;
@@ -140,8 +141,9 @@ export function CmdkSearchModal({
               <Command.Item
                 onSelect={() => {
                   playClickSound();
-                  navigator.clipboard.writeText('<script src="https://cdn.jsdelivr.net/npm/reicon-agent/cdn/reicon.js"></script>');
-                  onCopyNotice("Copied Reicon CDN Script!");
+                  void copyToClipboard('<script src="https://cdn.jsdelivr.net/npm/reicon-agent/cdn/reicon.js"></script>').then((ok) => {
+                    if (ok) onCopyNotice("Copied Reicon CDN Script!");
+                  });
                   onOpenChange(false);
                 }}
                 className="flex items-center justify-between p-2.5 rounded-[14px] text-xs font-medium text-[var(--text-primary)] hover:bg-[var(--bg-btn-hover)] cursor-pointer aria-selected:bg-[var(--bg-btn-hover)] transition-colors border-none"

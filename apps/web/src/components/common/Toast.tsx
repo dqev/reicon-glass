@@ -106,7 +106,7 @@ export function Toast({
   }, []);
 
   return (
-    <div className={`fixed ${bottomClassName} left-1/2 -translate-x-1/2 z-50 pointer-events-none`}>
+    <div className={`fixed ${bottomClassName} left-1/2 -translate-x-1/2 z-[99999] pointer-events-none`}>
       <div className="relative h-9">
         <AnimatePresence>
           {toasts.map((toast, index) => (

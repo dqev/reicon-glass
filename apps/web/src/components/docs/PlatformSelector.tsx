@@ -10,10 +10,11 @@ export function PlatformSelector({
   onSelect: (doc: PlatformDoc) => void;
 }) {
   const reduced = useReducedMotion() ?? false;
+  const platformOptions = PLATFORM_DOCS.filter((d) => d.id !== "docs");
 
   return (
     <div className="w-full flex items-center gap-1.5 overflow-x-auto no-scrollbar py-2 border-b border-[var(--border-subtle)]">
-      {PLATFORM_DOCS.map((doc) => {
+      {platformOptions.map((doc) => {
         const isActive = doc.id === activeId;
         return (
           <button

@@ -2,6 +2,7 @@ import { useState, memo } from "react";
 import { IconRenderer, toKebabCase } from "./IconRenderer";
 import { CopyMorphIcon } from "../common/CopyIconTransition";
 import { playClickSound } from "../../utils/sound";
+import { copyToClipboard } from "../../utils/clipboard";
 
 export interface IconCardProps {
   name: string;
@@ -34,10 +35,12 @@ export const IconCard = memo(function IconCard({
   const handleCopyJsx = (e: React.MouseEvent) => {
     e.stopPropagation();
     playClickSound();
-    void navigator.clipboard?.writeText(jsxCode).then(() => {
-      setCopiedJsx(true);
-      onCopyNotice(`Copied <re-icon icon="${kebabName}" />`);
-      setTimeout(() => setCopiedJsx(false), 1400);
+    void copyToClipboard(jsxCode).then((ok) => {
+      if (ok) {
+        setCopiedJsx(true);
+        onCopyNotice(`Copied <re-icon icon="${kebabName}" />`);
+        setTimeout(() => setCopiedJsx(false), 1400);
+      }
     });
   };
 
@@ -88,7 +91,7 @@ export const IconCard = memo(function IconCard({
       </span>
 
       {/* Hover Micro Action Buttons: 1 Copy, 1 Download */}
-      <div className="absolute inset-x-2 bottom-2 flex items-center justify-end gap-1 opacity-0 translate-y-1 transition-all duration-150 group-hover:opacity-100 group-hover:translate-y-0">
+      <div className="absolute inset-x-2 bottom-2 flex items-center justify-end gap-1 opacity-100 sm:opacity-0 translate-y-0 sm:translate-y-1 transition-all duration-150 sm:group-hover:opacity-100 sm:group-hover:translate-y-0 z-10">
         <button
           type="button"
           onClick={handleCopyJsx}

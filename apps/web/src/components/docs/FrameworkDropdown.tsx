@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { PLATFORM_DOCS, type PlatformDoc } from "../../docs/platforms";
 import { FrameworkIcon } from "./FrameworkIcon";
@@ -31,103 +31,69 @@ export function FrameworkDropdown({
     setOpen(false);
   };
 
+  const frameworkOptions = useMemo(
+    () => PLATFORM_DOCS.filter((d) => d.id !== "docs"),
+    []
+  );
+
+  const displayFrameworkName =
+    activeDoc.id === "docs" ? "Select Framework" : activeDoc.name;
+
   return (
-    <div ref={dropdownRef} className="relative inline-block" style={{ zIndex: 30 }}>
-      {/* Compact Framework Select Button */}
+    <div ref={dropdownRef} className="relative inline-block z-30 select-none">
+      {/* Modern Framework Select Pill Button */}
       <button
         type="button"
         onClick={() => {
           playClickSound();
           setOpen((prev) => !prev);
         }}
-        style={{
-          display: "inline-flex",
-          alignItems: "center",
-          gap: 12,
-          height: 38,
-          padding: "0 16px 0 14px",
-          borderRadius: 9999,
-          background: "#171717",
-          color: "var(--text-primary)",
-          border: "none",
-          fontSize: 13.5,
-          fontWeight: 500,
-          cursor: "pointer",
-          transition: "background 0.15s ease",
-          width: "auto",
-        }}
-        className="hover:bg-[var(--bg-btn-hover)]"
+        className="h-9 sm:h-10 px-3.5 sm:px-4 rounded-full text-xs sm:text-sm font-[550] leading-none whitespace-nowrap transition cursor-pointer flex items-center gap-2 bg-[var(--bg-btn)] text-[var(--text-primary)] hover:bg-[var(--bg-btn-hover)] border-none select-none shadow-sm"
       >
-        <div style={{ display: "inline-flex", alignItems: "center", gap: 9 }}>
-          <FrameworkIcon id={activeDoc.id} size={17} />
-          <span style={{ whiteSpace: "nowrap" }}>{activeDoc.badge}</span>
-        </div>
-        {/* Up-down chevron selector icon */}
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.65, flexShrink: 0 }}>
-          <polyline points="7 15 12 20 17 15" />
-          <polyline points="7 9 12 4 17 9" />
+        <span className="text-[var(--text-muted)] font-normal">Framework:</span>
+        <FrameworkIcon id={activeDoc.id === "docs" ? "react" : activeDoc.id} size={18} />
+        <span className="font-semibold text-[var(--text-primary)]">{displayFrameworkName}</span>
+        <svg
+          width="12"
+          height="12"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          className={`transition-transform duration-200 shrink-0 opacity-70 ${open ? "rotate-180" : ""}`}
+        >
+          <path d="M6 9l6 6 6-6" />
         </svg>
       </button>
 
-      {/* Popover Dropdown Menu (No Border) */}
+      {/* Popover Dropdown Menu */}
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, y: -4, scale: 0.97 }}
-            animate={{ opacity: 1, y: 6, scale: 1 }}
-            exit={{ opacity: 0, y: -4, scale: 0.97 }}
-            transition={{ duration: 0.14, ease: [0.16, 1, 0.3, 1] }}
-            style={{
-              position: "absolute",
-              top: "100%",
-              left: 0,
-              minWidth: 210,
-              zIndex: 100,
-              padding: 6,
-              borderRadius: 16,
-              background: "#171717",
-              border: "none",
-              boxShadow: "0 20px 48px rgba(0, 0, 0, 0.75)",
-              display: "flex",
-              flexDirection: "column",
-              gap: 2,
-            }}
+            initial={{ opacity: 0, y: 6, scale: 0.96 }}
+            animate={{ opacity: 1, y: 8, scale: 1 }}
+            exit={{ opacity: 0, y: 6, scale: 0.96 }}
+            transition={{ duration: 0.15 }}
+            className="absolute top-full left-0 w-52 sm:w-60 max-h-72 overflow-y-auto rounded-2xl bg-[var(--dropdown-bg)] border border-[var(--border-medium)] backdrop-blur-2xl p-1.5 z-50 shadow-2xl scrollbar-thin flex flex-col gap-0.5"
           >
-            {PLATFORM_DOCS.map((doc) => {
+            {frameworkOptions.map((doc) => {
               const isActive = doc.id === activeDoc.id;
               return (
                 <button
                   key={doc.id}
                   type="button"
                   onClick={() => handleSelect(doc)}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    width: "100%",
-                    padding: "9px 12px",
-                    borderRadius: 10,
-                    background: isActive ? "rgba(255, 255, 255, 0.08)" : "transparent",
-                    color: isActive ? "var(--text-primary)" : "var(--text-secondary)",
-                    border: "none",
-                    fontSize: 13.5,
-                    fontWeight: isActive ? 600 : 450,
-                    cursor: "pointer",
-                    transition: "background 0.12s ease",
-                    textAlign: "left",
-                    whiteSpace: "nowrap",
-                  }}
-                  className="hover:bg-[var(--bg-btn-hover)]"
+                  className={`w-full text-left px-3 py-2.5 sm:px-3.5 sm:py-2.5 rounded-xl text-xs font-[550] transition cursor-pointer flex items-center justify-between border-none ${
+                    isActive
+                      ? "bg-[var(--pill-active-bg)] text-[var(--pill-active-text)] font-semibold"
+                      : "text-[var(--text-secondary)] hover:bg-[var(--bg-btn-hover)] hover:text-[var(--text-primary)]"
+                  }`}
                 >
-                  <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                  <div className="flex items-center gap-2.5">
                     <FrameworkIcon id={doc.id} size={18} />
-                    <span>{doc.badge}</span>
+                    <span>{doc.name}</span>
                   </div>
-                  {isActive && (
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent-color, #9B8AFB)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: 14 }}>
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                  )}
+                  {isActive && <span className="text-xs font-bold">✓</span>}
                 </button>
               );
             })}

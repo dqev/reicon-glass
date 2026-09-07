@@ -44,12 +44,9 @@ export function ChangelogView() {
 
   return (
     <div className="w-full pt-8 pb-24">
-      <div className="max-w-[640px] mx-auto space-y-12">
+      <div className="max-w-[820px] mx-auto space-y-12">
         {/* Header */}
         <div className="space-y-3 border-b border-[var(--border-subtle)] pb-8">
-          <span className="text-[10px] font-mono uppercase tracking-[0.04em] text-[var(--text-muted)]">
-            Changelog
-          </span>
           <h1 className="text-3xl font-[550] leading-[1.2] tracking-[-0.4px] text-[var(--text-primary)]">
             Releases & Updates
           </h1>

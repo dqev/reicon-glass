@@ -5,6 +5,7 @@ import { IconRenderer } from "../explorer/IconRenderer";
 import { CopyMorphIcon } from "../common/CopyIconTransition";
 import { useSmoothCorners } from "../../hooks/useSmoothCorners";
 import { playClickSound } from "../../utils/sound";
+import { copyToClipboard } from "../../utils/clipboard";
 
 export interface IconDetailModalProps {
   iconName: string | null;
@@ -63,10 +64,12 @@ export function IconDetailModal({
   const handleCopyCode = () => {
     playClickSound();
     const code = getCodeSnippet();
-    void navigator.clipboard?.writeText(code).then(() => {
-      setCopied(true);
-      onCopyNotice(`Copied <${iconName} /> ${format.toUpperCase()}`);
-      setTimeout(() => setCopied(false), 1400);
+    void copyToClipboard(code).then((ok) => {
+      if (ok) {
+        setCopied(true);
+        onCopyNotice(`Copied <${iconName} /> ${format.toUpperCase()}`);
+        setTimeout(() => setCopied(false), 1400);
+      }
     });
   };
 
@@ -250,18 +253,20 @@ export function IconDetailModal({
                   {/* Code Box */}
                   <div
                     ref={codeBoxRef}
-                    className="flex-1 rounded-[16px] bg-[var(--code-bg)] p-4 border-none min-h-[110px] flex items-center relative"
+                    className="flex-1 rounded-[16px] bg-[var(--code-bg)] border-none min-h-[110px] flex flex-col justify-between overflow-hidden"
                   >
-                    <pre className="font-mono text-xs text-[var(--text-primary)] overflow-x-auto w-full leading-relaxed scrollbar-none pr-12">
+                    <div className="flex items-center justify-end px-3 pt-2.5 pb-1">
+                      <button
+                        type="button"
+                        onClick={handleCopyCode}
+                        className="py-1 px-2 rounded-full bg-[var(--bg-btn)] hover:bg-[var(--bg-btn-hover)] text-[var(--text-primary)] text-xs font-[550] flex items-center gap-1 transition cursor-pointer motion-safe:active:scale-[0.97] border-none"
+                      >
+                        <CopyMorphIcon copied={copied} />
+                      </button>
+                    </div>
+                    <pre className="font-mono text-xs text-[var(--text-primary)] overflow-x-auto w-full leading-relaxed scrollbar-none px-4 pb-3.5 pt-0">
                       <code>{getCodeSnippet()}</code>
                     </pre>
-                    <button
-                      type="button"
-                      onClick={handleCopyCode}
-                      className="absolute top-3 right-3 py-1.5 px-2.5 rounded-full bg-[var(--bg-btn)] hover:bg-[var(--bg-btn-hover)] text-[var(--text-primary)] text-xs font-[550] flex items-center gap-1 transition cursor-pointer motion-safe:active:scale-[0.97] border-none"
-                    >
-                      <CopyMorphIcon copied={copied} />
-                    </button>
                   </div>
 
                   {/* Action Buttons */}

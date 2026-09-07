@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import { PLATFORM_DOCS, type PlatformDoc } from "../../docs/platforms";
-import { FrameworkDropdown } from "./FrameworkDropdown";
 import { FrameworkIcon } from "./FrameworkIcon";
 import { CopyMorphIcon } from "../common/CopyIconTransition";
+import { ScrambleWord } from "../common/ScrambleText";
 import { useSmoothCorners } from "../../hooks/useSmoothCorners";
 import { playClickSound } from "../../utils/sound";
+import { copyToClipboard } from "../../utils/clipboard";
 
 const INK = "var(--text-primary)";
 const BODY = "var(--text-secondary)";
@@ -13,7 +14,7 @@ const MONO = "var(--font-mono), ui-monospace, 'SF Mono', SFMono-Regular, Menlo, 
 
 function Col({ children }: { children: React.ReactNode }) {
   return (
-    <div style={{ maxWidth: 640, margin: "0 auto" }}>
+    <div style={{ maxWidth: 820, margin: "0 auto" }}>
       {children}
     </div>
   );
@@ -76,10 +77,12 @@ function CodeBlock({ code, onCopy }: { code: string; onCopy?: () => void }) {
 
   const handleCopy = () => {
     playClickSound();
-    void navigator.clipboard?.writeText(code).then(() => {
-      setCopied(true);
-      if (onCopy) onCopy();
-      setTimeout(() => setCopied(false), 1400);
+    void copyToClipboard(code).then((ok) => {
+      if (ok) {
+        setCopied(true);
+        if (onCopy) onCopy();
+        setTimeout(() => setCopied(false), 1400);
+      }
     });
   };
 
@@ -91,38 +94,48 @@ function CodeBlock({ code, onCopy }: { code: string; onCopy?: () => void }) {
         borderRadius: 16,
         overflow: "hidden",
         background: "var(--code-bg)",
-        padding: "16px 18px",
-        position: "relative",
+        display: "flex",
+        flexDirection: "column",
       }}
     >
-      <pre style={{ margin: 0, fontFamily: MONO, fontSize: 13, color: INK, overflowX: "auto", lineHeight: 1.65 }}>
-        <code>{code}</code>
-      </pre>
-      <button
-        type="button"
-        onClick={handleCopy}
+      {/* Top Strip (Empty on left, Copy button on right) */}
+      <div
         style={{
-          position: "absolute",
-          top: 12,
-          right: 12,
-          padding: "4px 8px",
-          borderRadius: 7,
-          background: "transparent",
-          color: MUTED,
-          border: "none",
-          cursor: "pointer",
-          display: "grid",
-          placeItems: "center",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "flex-end",
+          padding: "10px 14px 4px 14px",
+          minHeight: 34,
         }}
-        title="Copy to clipboard"
       >
-        <CopyMorphIcon copied={copied} />
-      </button>
+        <button
+          type="button"
+          onClick={handleCopy}
+          style={{
+            padding: "4px 8px",
+            borderRadius: 7,
+            background: "transparent",
+            color: MUTED,
+            border: "none",
+            cursor: "pointer",
+            display: "grid",
+            placeItems: "center",
+          }}
+          title="Copy to clipboard"
+        >
+          <CopyMorphIcon copied={copied} />
+        </button>
+      </div>
+
+      {/* Code Content with ScrambleWord */}
+      <pre className="scrollbar-none" style={{ margin: 0, padding: "0 18px 16px 18px", fontFamily: MONO, fontSize: 13, color: INK, overflowX: "auto", lineHeight: 1.65 }}>
+        <code>
+          <ScrambleWord word={code} />
+        </code>
+      </pre>
     </div>
   );
 }
-
-const TOC_ITEM_H = 28;
 
 const PROPS = [
   { name: "size", type: "number | string", def: "24", desc: "Pixel dimension of the icon." },
@@ -137,17 +150,16 @@ function getDocFromPath(path: string): PlatformDoc {
   const parts = path.split("/").filter(Boolean);
   if (parts.length >= 2 && parts[0] === "docs") {
     const id = parts[1];
-    const match = PLATFORM_DOCS.find((d) => d.id === id);
+    const match = PLATFORM_DOCS.find((d) => d.id === id && d.id !== "docs");
     if (match) return match;
   }
-  return PLATFORM_DOCS[0];
+  return PLATFORM_DOCS.find((d) => d.id !== "docs") || PLATFORM_DOCS[0];
 }
 
-export function PlatformDocViewer({ onCopyNotice }: { onCopyNotice: (msg: string) => void }) {
+export function PlatformDocViewer({ color, onCopyNotice }: { color?: string; onCopyNotice: (msg: string) => void }) {
   const [activeDoc, setActiveDoc] = useState<PlatformDoc>(() =>
     getDocFromPath(window.location.pathname)
   );
-  const [activeSection, setActiveSection] = useState("overview");
   const propsTableRef = useSmoothCorners<HTMLDivElement>(16);
 
   // Sync framework doc on URL popstate (browser back/forward or navigation)
@@ -155,60 +167,31 @@ export function PlatformDocViewer({ onCopyNotice }: { onCopyNotice: (msg: string
     const handlePopState = () => {
       if (window.location.pathname.startsWith("/docs")) {
         setActiveDoc(getDocFromPath(window.location.pathname));
+        window.scrollTo(0, 0);
       }
     };
     window.addEventListener("popstate", handlePopState);
     return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
-  const sections = useMemo(() => {
-    if (activeDoc.id === "docs") {
-      return [{ id: "overview", label: "What is Reicon?" }];
-    }
-    return [
-      { id: "overview", label: "Overview" },
-      { id: "installation", label: "Installation" },
-      { id: "usage", label: "Quick Start" },
-      ...(activeDoc.customization ? [{ id: "customization", label: "Customization" }] : []),
-      ...(activeDoc.directImport ? [{ id: "direct-import", label: "Direct Import" }] : []),
-      { id: "props", label: "Props API" },
-      { id: "tree-shaking", label: "Tree Shaking" },
-      { id: "license", label: "License" },
-    ];
-  }, [activeDoc]);
-
+  // Scroll to top whenever active doc changes
   useEffect(() => {
-    const handleScroll = () => {
-      const pos = window.scrollY + 120;
-      for (const item of sections) {
-        const el = document.getElementById(item.id);
-        if (el) {
-          const top = el.offsetTop;
-          const height = el.offsetHeight;
-          if (pos >= top && pos < top + height) {
-            setActiveSection(item.id);
-            break;
-          }
-        }
-      }
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [sections]);
+    window.scrollTo(0, 0);
+  }, [activeDoc]);
 
   const handleSelectFramework = (doc: PlatformDoc) => {
     playClickSound();
     setActiveDoc(doc);
+    window.scrollTo(0, 0);
     const targetUrl = doc.id === "docs" ? "/docs" : `/docs/${doc.id}`;
     if (window.location.pathname !== targetUrl) {
       window.history.pushState({}, "", targetUrl);
     }
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <div
-      className="pt-2"
+      className="pt-6 sm:pt-10"
       style={{
         position: "relative",
         maxWidth: 1280,
@@ -216,79 +199,6 @@ export function PlatformDocViewer({ onCopyNotice }: { onCopyNotice: (msg: string
         width: "100%",
       }}
     >
-      {/* Left Sidebar (Framework Dropdown + TOC Navigation Points) */}
-      <aside
-        aria-label="Framework & TOC Navigation"
-        className="hidden lg:block"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          height: "100%",
-          width: 196,
-          zIndex: 30,
-        }}
-      >
-        <div
-          style={{
-            position: "sticky",
-            top: 80,
-            marginTop: 24,
-            width: "100%",
-            display: "flex",
-            flexDirection: "column",
-            gap: 20,
-          }}
-        >
-          {/* 1. Compact Framework Select Dropdown */}
-          <FrameworkDropdown activeDoc={activeDoc} onSelect={handleSelectFramework} />
-
-          {/* 2. TOC Section Navigation Links */}
-          <nav style={{ display: "flex", flexDirection: "column" }}>
-            <style>{`.toc-link-left:hover{color:rgba(255,255,255,0.74) !important}`}</style>
-            {sections.map((it) => {
-              const isActive = activeSection === it.id;
-              return (
-                <a
-                  key={it.id}
-                  href={`#${it.id}`}
-                  className="toc-link-left"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    const el = document.getElementById(it.id);
-                    if (el) {
-                      const y = el.getBoundingClientRect().top + window.scrollY - 96;
-                      window.scrollTo({ top: y, behavior: "smooth" });
-                    }
-                  }}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    height: TOC_ITEM_H,
-                    paddingLeft: 14,
-                    textDecoration: "none",
-                    fontSize: 14,
-                    letterSpacing: "0.1px",
-                    cursor: "pointer",
-                    color: isActive ? INK : MUTED,
-                    transition: "color 200ms ease",
-                  }}
-                >
-                  {it.label}
-                </a>
-              );
-            })}
-          </nav>
-        </div>
-      </aside>
-
-      {/* Top Mobile Framework Selector Dropdown (Hidden on default /docs page) */}
-      {activeDoc.id !== "docs" && (
-        <div className="lg:hidden w-full pb-4 mb-6">
-          <FrameworkDropdown activeDoc={activeDoc} onSelect={handleSelectFramework} />
-        </div>
-      )}
-
       {/* Main Content Column */}
       <main>
         {/* Overview */}
@@ -342,12 +252,15 @@ export function PlatformDocViewer({ onCopyNotice }: { onCopyNotice: (msg: string
                 </div>
               </div>
             ) : (
-              <>
-                <h1 className="sr-only">Reicon {activeDoc.name} Documentation</h1>
-                <P>
+              <div className="pt-2 pb-4 select-none flex flex-col items-center text-center gap-2.5">
+                <h1 className="text-lg sm:text-2xl font-[550] leading-[1.4] tracking-[-0.3px] text-[var(--text-primary)] text-center flex items-center justify-center gap-2.5">
+                  <FrameworkIcon id={activeDoc.id} size={28} />
+                  <span>Reicon {activeDoc.name} Integration</span>
+                </h1>
+                <p className="text-xs sm:text-sm leading-relaxed text-[var(--text-secondary)] font-normal max-w-xl text-center">
                   <C>{activeDoc.pkg}</C> — {activeDoc.tagline}
-                </P>
-              </>
+                </p>
+              </div>
             )}
           </Col>
         </section>

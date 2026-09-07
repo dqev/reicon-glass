@@ -52,6 +52,7 @@ export default function App() {
 
   const handleTabChange = (tab: NavTab, href: string) => {
     setActiveTab(tab);
+    window.scrollTo(0, 0);
     if (window.location.pathname !== href) {
       window.history.pushState({}, "", href);
       window.dispatchEvent(new Event("popstate"));
@@ -103,12 +104,15 @@ export default function App() {
               />
             )}
             {activeTab === "docs" && (
-              <div className="max-w-[1080px] mx-auto w-full pt-4">
-                <DocsView onCopyNotice={handleCopyNotice} />
-              </div>
+              <DocsView
+                color={color}
+                onColorChange={handleColorChange}
+                onCopyNotice={handleCopyNotice}
+                onOpenCmdk={() => setCmdkOpen(true)}
+              />
             )}
             {activeTab === "changelog" && (
-              <div className="max-w-[1080px] mx-auto w-full pt-4">
+              <div className="max-w-[820px] mx-auto w-full pt-4">
                 <ChangelogView />
               </div>
             )}
@@ -142,7 +146,7 @@ export default function App() {
       <Toast
         message={toastMessage}
         onClose={() => setToastMessage(null)}
-        bottomClassName="bottom-6"
+        bottomClassName="bottom-16 sm:bottom-6"
         onActiveChange={setToastActive}
       />
     </div>

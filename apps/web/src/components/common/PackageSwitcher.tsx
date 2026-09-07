@@ -3,6 +3,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { CopyMorphIcon } from "./CopyIconTransition";
 import { useSmoothCorners } from "../../hooks/useSmoothCorners";
 import { playClickSound } from "../../utils/sound";
+import { copyToClipboard } from "../../utils/clipboard";
 
 const INK = "var(--text-primary)";
 const MONO = "var(--font-mono), ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace";
@@ -65,6 +66,7 @@ function ScrambleCommand({ command }: { command: string }) {
 
   return (
     <pre
+      className="scrollbar-none"
       style={{
         margin: 0,
         padding: "16px 18px",
@@ -105,10 +107,12 @@ export function PackageSwitcher({
 
   const copy = () => {
     playClickSound();
-    void navigator.clipboard?.writeText(cur.command).then(() => {
-      setCopied(true);
-      if (onCopyNotice) onCopyNotice(`Copied "${cur.command}" to clipboard!`);
-      window.setTimeout(() => setCopied(false), 1400);
+    void copyToClipboard(cur.command).then((ok) => {
+      if (ok) {
+        setCopied(true);
+        if (onCopyNotice) onCopyNotice(`Copied "${cur.command}" to clipboard!`);
+        window.setTimeout(() => setCopied(false), 1400);
+      }
     });
   };
 
