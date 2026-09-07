@@ -10,7 +10,7 @@ import { SiteFooter } from "./components/layout/Footer";
 
 import agentData from "./data/agent.json";
 import { parseAgentJson } from "./views/HeroExplorerView";
-import { isValidColorForTheme, getDefaultColorForTheme } from "./utils/themeColors";
+import { getDefaultColor } from "./utils/themeColors";
 
 function getTabFromPath(path: string): NavTab {
   if (path.startsWith("/docs")) return "docs";
@@ -23,14 +23,7 @@ export default function App() {
     getTabFromPath(window.location.pathname)
   );
   const [cmdkOpen, setCmdkOpen] = useState(false);
-  const [theme, setTheme] = useState<"dark" | "light">(
-    () => (localStorage.getItem("reicon-theme") as "dark" | "light") || "dark"
-  );
-  const [color, setColor] = useState<string>(() =>
-    getDefaultColorForTheme(
-      (localStorage.getItem("reicon-theme") as "dark" | "light") || "dark"
-    )
-  );
+  const [color, setColor] = useState<string>(() => getDefaultColor());
   const [inspectedIcon, setInspectedIcon] = useState<{ name: string; category: string } | null>(null);
 
   const cmdkIcons = useMemo(() => parseAgentJson(agentData), []);
@@ -38,41 +31,9 @@ export default function App() {
   const [toastActive, setToastActive] = useState<boolean>(false);
   const [showTopBlur, setShowTopBlur] = useState<boolean>(false);
 
-  // Sync html element theme class and accent color on mount or theme change
-  const toggleTheme = () => {
-    const nextTheme = theme === "dark" ? "light" : "dark";
-    const nextColor = isValidColorForTheme(color, nextTheme)
-      ? color
-      : getDefaultColorForTheme(nextTheme);
-
-    // Synchronously update DOM before React re-renders for 0ms frame-perfect sync
-    const root = document.documentElement;
-    if (nextTheme === "light") {
-      root.classList.add("light");
-      root.classList.remove("dark");
-    } else {
-      root.classList.add("dark");
-      root.classList.remove("light");
-    }
-    root.style.setProperty("--accent-color", nextColor);
-    localStorage.setItem("reicon-theme", nextTheme);
-
-    // Batch React state updates synchronously
-    setTheme(nextTheme);
-    setColor(nextColor);
-  };
-
-  // Initial mount sync for root theme class and accent color variable
+  // Initial mount sync for accent color variable
   useEffect(() => {
-    const root = document.documentElement;
-    if (theme === "light") {
-      root.classList.add("light");
-      root.classList.remove("dark");
-    } else {
-      root.classList.add("dark");
-      root.classList.remove("light");
-    }
-    root.style.setProperty("--accent-color", color);
+    document.documentElement.style.setProperty("--accent-color", color);
   }, []);
 
   const handleColorChange = (newColor: string) => {
@@ -93,6 +54,7 @@ export default function App() {
     setActiveTab(tab);
     if (window.location.pathname !== href) {
       window.history.pushState({}, "", href);
+      window.dispatchEvent(new Event("popstate"));
     }
   };
 
@@ -125,16 +87,13 @@ export default function App() {
           <SiteHeader
             activeTab={activeTab}
             onTabChange={handleTabChange}
-            theme={theme}
             color={color}
-            onToggleTheme={toggleTheme}
           />
 
           {/* Main Content Router */}
           <main className="w-full">
             {activeTab === "explorer" && (
               <HeroExplorerView
-                theme={theme}
                 color={color}
                 onColorChange={handleColorChange}
                 onInspect={(name, category) => setInspectedIcon({ name, category })}
@@ -176,7 +135,6 @@ export default function App() {
         icons={cmdkIcons}
         onSelectIcon={(name, category) => setInspectedIcon({ name, category })}
         onSelectNav={(tab, href) => handleTabChange(tab, href)}
-        onToggleTheme={toggleTheme}
         onCopyNotice={handleCopyNotice}
       />
 

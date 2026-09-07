@@ -15,15 +15,11 @@ function formatStars(n: number): string {
 export function SiteHeader({
   activeTab,
   onTabChange,
-  theme = "dark",
   color,
-  onToggleTheme,
 }: {
   activeTab: NavTab;
   onTabChange: (tab: NavTab, href: string) => void;
-  theme?: "dark" | "light";
   color?: string;
-  onToggleTheme?: () => void;
 }) {
   const [stars, setStars] = useState<number | null>(1240);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -66,13 +62,8 @@ export function SiteHeader({
     setMenuOpen(false);
   };
 
-  const handleThemeToggleClick = () => {
-    playClickSound();
-    if (onToggleTheme) onToggleTheme();
-  };
-
   return (
-    <header className="sticky top-4 z-50 relative w-full">
+    <header className="sticky top-4 z-[100] relative w-full">
       {/* Top Header Bar */}
       <div className="flex items-center justify-between w-full rounded-[10px] py-0">
         {/* Brand Logo, left */}
@@ -113,33 +104,8 @@ export function SiteHeader({
           })}
         </nav>
 
-        {/* Right Actions: Theme Toggle + GitHub button + Circular Menu button */}
+        {/* Right Actions: GitHub button + Circular Menu button */}
         <div className="flex items-center gap-2">
-          {/* Theme Toggle Button */}
-          <button
-            type="button"
-            onClick={handleThemeToggleClick}
-            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
-            title={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
-            className="flex items-center justify-center size-9 rounded-full bg-[var(--bg-btn)] text-[var(--text-primary)] hover:bg-[var(--bg-btn-hover)] cursor-pointer motion-safe:active:scale-[0.95] overflow-hidden"
-          >
-            <AnimatePresence mode="wait" initial={false}>
-              <motion.div
-                key={theme}
-                initial={{ scale: 0.5, rotate: -90, opacity: 0 }}
-                animate={{ scale: 1, rotate: 0, opacity: 1 }}
-                exit={{ scale: 0.5, rotate: 90, opacity: 0 }}
-                transition={{ duration: 0.12, ease: "easeOut" }}
-                className="flex items-center justify-center"
-              >
-                {theme === "dark" ? (
-                  <IconRenderer name="Sun" size={17} strokeWidth={2} />
-                ) : (
-                  <IconRenderer name="Moon" size={17} strokeWidth={2} />
-                )}
-              </motion.div>
-            </AnimatePresence>
-          </button>
 
           {/* GitHub Action Button */}
           <a
@@ -183,7 +149,11 @@ export function SiteHeader({
             {menuOpen ? (
               <IconRenderer name="X" size={18} strokeWidth={2} />
             ) : (
-              <IconRenderer name="Menu" size={18} strokeWidth={2} />
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+              </svg>
             )}
           </button>
         </div>
@@ -197,7 +167,7 @@ export function SiteHeader({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -4 }}
             transition={{ duration: 0.15, ease: "easeOut" }}
-            className="sm:hidden absolute top-[calc(100%+8px)] left-0 right-0 z-50 rounded-[14px] bg-[var(--dropdown-bg)] p-2 backdrop-blur-2xl border border-[var(--border-subtle)] shadow-xl"
+            className="sm:hidden absolute top-[calc(100%+8px)] left-0 right-0 z-50 rounded-[14px] bg-[#171717] p-2 border-none shadow-2xl"
           >
             <nav className="flex flex-col gap-1">
               {NAV.map((item) => {

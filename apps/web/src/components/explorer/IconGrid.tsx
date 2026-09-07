@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { IconCard } from "./IconCard";
 import type { IconMetaItem } from "../../views/HeroExplorerView";
 
@@ -14,7 +14,7 @@ export interface IconGridWallProps {
   hasMoreToLoad: boolean;
 }
 
-export function IconGridWall(props: IconGridWallProps) {
+export const IconGridWall = memo(function IconGridWall(props: IconGridWallProps) {
   const {
     displayedIcons,
     size,
@@ -54,4 +54,4 @@ export function IconGridWall(props: IconGridWallProps) {
       )}
     </div>
   );
-}
+});

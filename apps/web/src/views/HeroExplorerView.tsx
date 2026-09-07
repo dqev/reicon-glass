@@ -1,4 +1,4 @@
-import { useState, useMemo, useRef, useEffect } from "react";
+import { useState, useMemo, useRef, useEffect, useCallback } from "react";
 import agentData from "../data/agent.json";
 import { HeroHeaderBanner } from "../components/layout/HeroBanner";
 import { CategoryControlBar } from "../components/explorer/CategoryBar";
@@ -34,7 +34,6 @@ export function parseAgentJson(data: any): IconMetaItem[] {
 const INITIAL_ICONS: IconMetaItem[] = parseAgentJson(agentData);
 
 export interface HeroExplorerViewProps {
-  theme?: "dark" | "light";
   color?: string;
   onColorChange?: (c: string) => void;
   onInspect: (iconName: string, category: string) => void;
@@ -44,7 +43,6 @@ export interface HeroExplorerViewProps {
 }
 
 export function HeroExplorerView({
-  theme = "dark",
   color = "#9B8AFB",
   onColorChange = () => {},
   onInspect,
@@ -173,6 +171,15 @@ export function HeroExplorerView({
     };
   }, [filteredIcons.length]);
 
+  const handleSelectCategory = useCallback((cat: string) => {
+    setSelectedCategory(cat);
+    setVisibleCount(100);
+  }, []);
+
+  const handleToggleShowAllCategories = useCallback(() => {
+    setShowAllCategories((prev) => !prev);
+  }, []);
+
   return (
     <div className="w-full flex flex-col items-center">
       {/* HERO Banner Header */}
@@ -188,15 +195,11 @@ export function HeroExplorerView({
       <div className="w-full flex flex-col gap-3">
         {/* Top Header Row: Category Filter Pills + Control Buttons */}
         <CategoryControlBar
-          theme={theme}
           categories={categories}
           selectedCategory={selectedCategory}
-          onSelectCategory={(cat) => {
-            setSelectedCategory(cat);
-            setVisibleCount(100);
-          }}
+          onSelectCategory={handleSelectCategory}
           showAllCategories={showAllCategories}
-          onToggleShowAllCategories={() => setShowAllCategories((prev) => !prev)}
+          onToggleShowAllCategories={handleToggleShowAllCategories}
           size={size}
           onSizeChange={setSize}
           color={color}

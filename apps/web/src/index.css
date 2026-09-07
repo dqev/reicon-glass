@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
 :root,
-html.dark {
+html {
+  color-scheme: dark;
   --background: #000000;
   --foreground: #ffffff;
   --font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'Geist Mono', ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace;
 
-  /* Theme Color System - Dark Defaults */
+  /* Theme Color System - Dark Theme Only */
   --bg-page: #0a0a0a;
   --bg-body-gradient: #0a0a0a;
   --top-blur-gradient: linear-gradient(to bottom, #0a0a0a 0%, transparent 100%);
@@ -15,8 +16,8 @@ html.dark {
   --bg-card: rgba(255, 255, 255, 0.05);
   --bg-card-hover: rgba(255, 255, 255, 0.09);
 
-  --bg-btn: var(--bg-card);
-  --bg-btn-hover: var(--bg-card-hover);
+  --bg-btn: #171717;
+  --bg-btn-hover: rgba(255, 255, 255, 0.09);
 
   --border-subtle: transparent;
   --border-medium: rgba(255, 255, 255, 0.08);
@@ -37,8 +38,8 @@ html.dark {
   --input-text: #ffffff;
   --input-placeholder: rgba(255, 255, 255, 0.4);
 
-  --modal-bg: #111113;
-  --dropdown-bg: #111113;
+  --modal-bg: #171717;
+  --dropdown-bg: #171717;
   --code-bg: var(--bg-card);
   --code-token-1: #38BDF8;
   --code-token-2: #34D399;
@@ -46,51 +47,6 @@ html.dark {
   --card-shadow: none;
   --range-track-bg: rgba(255, 255, 255, 0.12);
   --range-thumb-bg: #ffffff;
-}
-
-html.light {
-  --background: #ffffff;
-  --foreground: #0f172a;
-
-  /* Theme Color System - Light (#fff page background, #f3f3f5 card & button color) */
-  --bg-page: #ffffff;
-  --bg-body-gradient: #ffffff;
-  --top-blur-gradient: linear-gradient(to bottom, #ffffff 0%, transparent 100%);
-
-  --bg-card: #f3f3f5;
-  --bg-card-hover: #e5e5e8;
-
-  --bg-btn: var(--bg-card);
-  --bg-btn-hover: var(--bg-card-hover);
-
-  --border-subtle: transparent;
-  --border-medium: rgba(0, 0, 0, 0.08);
-
-  --text-primary: #0f172a;
-  --text-secondary: #3f3f46;
-  --text-muted: #71717a;
-  --text-dim: #a1a1aa;
-
-  --pill-active-bg: #0f172a;
-  --pill-active-text: #ffffff;
-  --pill-inactive-bg: var(--bg-card);
-  --pill-inactive-text: #52525b;
-  --pill-inactive-hover-bg: var(--bg-card-hover);
-
-  --input-bg: var(--bg-card);
-  --input-border: transparent;
-  --input-text: #0f172a;
-  --input-placeholder: #a1a1aa;
-
-  --modal-bg: #ffffff;
-  --dropdown-bg: #ffffff;
-  --code-bg: #f3f3f5;
-  --code-token-1: #0284c7;
-  --code-token-2: #059669;
-
-  --card-shadow: none;
-  --range-track-bg: rgba(0, 0, 0, 0.12);
-  --range-thumb-bg: #0f172a;
 }
 
 @theme inline {
@@ -163,18 +119,10 @@ body {
 [cmdk-overlay] {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   z-index: 50;
-}
-
-html.dark [cmdk-overlay] {
-  background-color: rgba(0, 0, 0, 0.75);
-}
-
-html.light [cmdk-overlay] {
-  background-color: rgba(0, 0, 0, 0.35);
 }
 
 /* 0ms Instant Opening for CMDK Modal */
@@ -184,4 +132,3 @@ html.light [cmdk-overlay] {
   animation-duration: 0s !important;
   transition-duration: 0s !important;
 }
-

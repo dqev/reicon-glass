@@ -2,10 +2,6 @@ import { WordmarkLogo } from "../common/BrandLogo";
 
 export function HeroHeaderBanner({
   color,
-  onCopyNotice: _onCopyNotice,
-  search: _search,
-  onSearchChange: _onSearchChange,
-  searchInputRef: _searchInputRef,
 }: {
   color?: string;
   onCopyNotice?: (msg: string) => void;
@@ -14,18 +10,35 @@ export function HeroHeaderBanner({
   searchInputRef?: React.RefObject<any>;
 }) {
   return (
-    <div className="flex flex-col items-center text-center gap-6 sm:gap-7 py-10 sm:py-16">
-      <h1 className="text-lg sm:text-2xl font-[550] leading-[1.35] tracking-[-0.3px] text-[var(--text-primary)] text-balance flex flex-col items-center gap-1.5 sm:gap-2">
-        <span>Open-Source Icon Library</span>
-        <span className="inline-flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 text-center">
-          <span>for Designers &amp; Developers by</span>
-          <span className="inline-flex items-center justify-center shrink-0 rounded-full bg-[var(--bg-btn)] py-1.5 px-3.5 sm:py-2 sm:px-4 leading-none hover:bg-[var(--bg-btn-hover)] border border-[var(--border-subtle)] my-0.5">
+    <div className="flex flex-col items-center text-center gap-6 sm:gap-7 py-10 sm:py-16 select-none">
+      <h1 className="text-lg sm:text-2xl font-[550] leading-[1.4] tracking-[-0.3px] text-[var(--text-primary)] flex flex-col items-center gap-1.5 sm:gap-2 text-center">
+        {/* DESKTOP LAYOUT */}
+        <div className="hidden sm:flex items-center justify-center gap-2">
+          <span>Open-Source Icon Library by</span>
+          <span className="inline-flex items-center justify-center shrink-0 rounded-full bg-[var(--bg-btn)] py-2 px-4 leading-none hover:bg-[var(--bg-btn-hover)] border border-[var(--border-subtle)]">
             <WordmarkLogo
               color={color || "var(--accent-color, currentColor)"}
-              className="h-[16px] sm:h-[18px] w-auto inline-block select-none pointer-events-none"
+              className="h-[18px] w-auto inline-block select-none pointer-events-none"
             />
           </span>
-        </span>
+        </div>
+        <span className="hidden sm:inline">for Designers &amp; Developers</span>
+
+        {/* MOBILE LAYOUT */}
+        {/* Line 1 */}
+        <span className="sm:hidden">Open-Source Icon Library by</span>
+        {/* Line 2: { Logo Pill } for Designers & */}
+        <div className="sm:hidden flex items-center justify-center gap-1.5">
+          <span className="inline-flex items-center justify-center shrink-0 rounded-full bg-[var(--bg-btn)] py-2 px-4 leading-none hover:bg-[var(--bg-btn-hover)] border border-[var(--border-subtle)]">
+            <WordmarkLogo
+              color={color || "var(--accent-color, currentColor)"}
+              className="h-[17px] w-auto inline-block select-none pointer-events-none"
+            />
+          </span>
+          <span>for Designers &amp;</span>
+        </div>
+        {/* Line 3: Developers */}
+        <span className="sm:hidden">Developers</span>
       </h1>
     </div>
   );

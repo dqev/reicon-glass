@@ -10,18 +10,16 @@ export function FloatingControlBar({
   onSizeChange,
   color,
   onColorChange,
-  theme = "dark",
   hidden = false,
 }: {
   size: number;
   onSizeChange: (s: number) => void;
   color: string;
   onColorChange: (c: string) => void;
-  theme?: "dark" | "light";
   hidden?: boolean;
 }) {
   const reduced = useReducedMotion();
-  const colorShades = getColorPalette(theme);
+  const colorShades = getColorPalette();
   const activeIndex = colorShades.findIndex(
     (s) => s.hex.toLowerCase() === color.toLowerCase()
   );

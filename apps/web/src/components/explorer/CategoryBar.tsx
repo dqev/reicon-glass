@@ -1,10 +1,9 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, memo } from "react";
 import { motion, useReducedMotion, AnimatePresence } from "framer-motion";
 import { getColorPalette } from "../../utils/themeColors";
 import { playClickSound } from "../../utils/sound";
 
 export interface CategoryControlBarProps {
-  theme?: "dark" | "light";
   categories: string[];
   selectedCategory: string;
   onSelectCategory: (cat: string) => void;
@@ -20,8 +19,7 @@ export interface CategoryControlBarProps {
   onOpenCmdk?: () => void;
 }
 
-export function CategoryControlBar({
-  theme = "dark",
+export const CategoryControlBar = memo(function CategoryControlBar({
   categories,
   selectedCategory,
   onSelectCategory,
@@ -51,7 +49,7 @@ export function CategoryControlBar({
     return () => window.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const colorShades = getColorPalette(theme);
+  const colorShades = getColorPalette();
   const activeColorIndex = colorShades.findIndex(
     (s) => s.hex.toLowerCase() === color.toLowerCase()
   );
@@ -301,4 +299,4 @@ export function CategoryControlBar({
       </div>
     </div>
   );
-}
+});

@@ -1,7 +1,6 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import { IconRenderer, toKebabCase } from "./IconRenderer";
 import { CopyMorphIcon } from "../common/CopyIconTransition";
-import { useSmoothCorners } from "../../hooks/useSmoothCorners";
 import { playClickSound } from "../../utils/sound";
 
 export interface IconCardProps {
@@ -16,7 +15,7 @@ export interface IconCardProps {
   onCopyNotice: (msg: string) => void;
 }
 
-export function IconCard({
+export const IconCard = memo(function IconCard({
   name,
   kebab,
   category,
@@ -27,7 +26,6 @@ export function IconCard({
   onInspect,
   onCopyNotice,
 }: IconCardProps) {
-  const cardRef = useSmoothCorners<HTMLDivElement>(20, 60);
   const [copiedJsx, setCopiedJsx] = useState(false);
 
   const kebabName = kebab || toKebabCase(name);
@@ -66,7 +64,6 @@ export function IconCard({
 
   return (
     <div
-      ref={cardRef}
       title={`${name} · ${category}`}
       onClick={() => {
         playClickSound();
@@ -124,4 +121,4 @@ export function IconCard({
       </div>
     </div>
   );
-}
+});

@@ -96,10 +96,10 @@ export function IconDetailModal({
       }}
     >
       <Drawer.Portal>
-        <Drawer.Overlay className="fixed inset-0 bg-black/40 dark:bg-black/65 backdrop-blur-md z-50 transition-opacity" />
-        <Drawer.Content className="bg-[var(--modal-bg)] h-fit fixed bottom-0 left-0 right-0 z-50 outline-none max-w-3xl lg:max-w-4xl mx-auto rounded-t-[28px] border-t border-[var(--border-medium)] px-6 pt-4 pb-8 sm:px-8 sm:pt-5 sm:pb-9 shadow-2xl overflow-hidden backdrop-blur-2xl">
+        <Drawer.Overlay className="fixed inset-0 bg-black/70 backdrop-blur-md z-50 transition-opacity" />
+        <Drawer.Content className="bg-[var(--modal-bg)] h-fit fixed bottom-0 left-0 right-0 z-50 outline-none max-w-3xl lg:max-w-4xl mx-auto rounded-t-[28px] border-none px-6 pt-4 pb-8 sm:px-8 sm:pt-5 sm:pb-9 shadow-2xl overflow-hidden backdrop-blur-2xl">
           {/* Top Drag Handle */}
-          <div className="w-12 h-1 bg-neutral-300 dark:bg-neutral-700 rounded-full mx-auto mb-4 shrink-0 cursor-grab active:cursor-grabbing" />
+          <div className="w-12 h-1 bg-[var(--bg-btn-hover)] rounded-full mx-auto mb-4 shrink-0 cursor-grab active:cursor-grabbing" />
 
           {iconName && (
             <div className="flex flex-col gap-4">

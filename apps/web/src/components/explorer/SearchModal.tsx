@@ -16,7 +16,6 @@ export interface CmdkSearchModalProps {
   icons: IconItem[];
   onSelectIcon: (name: string, category: string) => void;
   onSelectNav?: (tab: any, href: string) => void;
-  onToggleTheme?: () => void;
   onCopyNotice?: (msg: string) => void;
 }
 
@@ -26,7 +25,6 @@ export function CmdkSearchModal({
   icons,
   onSelectIcon,
   onSelectNav,
-  onToggleTheme,
   onCopyNotice,
 }: CmdkSearchModalProps) {
   const [search, setSearch] = useState("");
@@ -137,23 +135,6 @@ export function CmdkSearchModal({
               </div>
               <span className="font-mono text-[10px] text-[var(--text-muted)]">/changelog</span>
             </Command.Item>
-
-            {onToggleTheme && (
-              <Command.Item
-                onSelect={() => {
-                  playClickSound();
-                  onToggleTheme();
-                  onOpenChange(false);
-                }}
-                className="flex items-center justify-between p-2.5 rounded-[14px] text-xs font-medium text-[var(--text-primary)] hover:bg-[var(--bg-btn-hover)] cursor-pointer aria-selected:bg-[var(--bg-btn-hover)] transition-colors border-none"
-              >
-                <div className="flex items-center gap-2.5">
-                  <IconRenderer name="sun" size={16} />
-                  <span>Toggle Dark / Light Theme</span>
-                </div>
-                <span className="font-mono text-[10px] text-[var(--text-muted)]">⌘T</span>
-              </Command.Item>
-            )}
 
             {onCopyNotice && (
               <Command.Item
