@@ -156,7 +156,7 @@ function getDocFromPath(path: string): PlatformDoc {
   return PLATFORM_DOCS.find((d) => d.id !== "docs") || PLATFORM_DOCS[0];
 }
 
-export function PlatformDocViewer({ color, onCopyNotice }: { color?: string; onCopyNotice: (msg: string) => void }) {
+export function PlatformDocViewer({ onCopyNotice }: { color?: string; onCopyNotice: (msg: string) => void }) {
   const [activeDoc, setActiveDoc] = useState<PlatformDoc>(() =>
     getDocFromPath(window.location.pathname)
   );
