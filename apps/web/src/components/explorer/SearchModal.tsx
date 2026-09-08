@@ -137,6 +137,21 @@ export function CmdkSearchModal({
               <span className="font-mono text-[10px] text-[var(--text-muted)]">/changelog</span>
             </Command.Item>
 
+            <Command.Item
+              onSelect={() => {
+                playClickSound();
+                if (onSelectNav) onSelectNav("stargazers", "/stargazers");
+                onOpenChange(false);
+              }}
+              className="flex items-center justify-between p-2.5 rounded-[14px] text-xs font-medium text-[var(--text-primary)] hover:bg-[var(--bg-btn-hover)] cursor-pointer aria-selected:bg-[var(--bg-btn-hover)] transition-colors border-none"
+            >
+              <div className="flex items-center gap-2.5">
+                <IconRenderer name="star" size={16} />
+                <span>Stargazers</span>
+              </div>
+              <span className="font-mono text-[10px] text-[var(--text-muted)]">/stargazers</span>
+            </Command.Item>
+
             {onCopyNotice && (
               <Command.Item
                 onSelect={() => {

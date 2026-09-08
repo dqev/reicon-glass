@@ -4,7 +4,7 @@ import { IconRenderer } from "../explorer/IconRenderer";
 import { playClickSound } from "../../utils/sound";
 import { WordmarkLogo } from "../common/BrandLogo";
 
-export type NavTab = "explorer" | "docs" | "changelog";
+export type NavTab = "explorer" | "docs" | "changelog" | "contributors";
 
 function formatStars(n: number): string {
   if (n < 1000) return String(n);
@@ -70,6 +70,7 @@ export function SiteHeader({
     { id: "explorer", href: "/", label: "Home" },
     { id: "docs", href: "/docs", label: "Docs" },
     { id: "changelog", href: "/changelog", label: "Changelog" },
+    { id: "contributors", href: "/contributors", label: "Contributors" },
   ];
 
   const handleNavClick = (id: NavTab, href: string) => {

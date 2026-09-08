@@ -3,10 +3,13 @@ import { SiteHeader, type NavTab } from "./components/layout/Header";
 import { HeroExplorerView } from "./views/HeroExplorerView";
 import { DocsView } from "./views/DocsView";
 import { ChangelogView } from "./views/ChangelogView";
+import { ContributorsView } from "./views/ContributorsView";
 import { IconDetailModal } from "./components/modal/IconDetailModal";
 import { CmdkSearchModal } from "./components/explorer/SearchModal";
 import { Toast } from "./components/common/Toast";
 import { SiteFooter } from "./components/layout/Footer";
+import { usePageSEO } from "./hooks/usePageSEO";
+import { PAGE_SEO } from "./config/seo";
 
 import agentData from "./data/agent.json";
 import { parseAgentJson } from "./views/HeroExplorerView";
@@ -15,6 +18,7 @@ import { getDefaultColor } from "./utils/themeColors";
 function getTabFromPath(path: string): NavTab {
   if (path.startsWith("/docs")) return "docs";
   if (path.startsWith("/changelog")) return "changelog";
+  if (path.startsWith("/contributors")) return "contributors";
   return "explorer";
 }
 
@@ -30,6 +34,9 @@ export default function App() {
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [toastActive, setToastActive] = useState<boolean>(false);
   const [showTopBlur, setShowTopBlur] = useState<boolean>(false);
+
+  // SEO: update all head meta tags when active tab changes
+  usePageSEO(PAGE_SEO[activeTab] ?? PAGE_SEO["explorer"]);
 
   // Initial mount sync for accent color variable
   useEffect(() => {
@@ -115,6 +122,14 @@ export default function App() {
               <div className="max-w-[820px] mx-auto w-full pt-4">
                 <ChangelogView />
               </div>
+            )}
+            {activeTab === "contributors" && (
+              <ContributorsView
+                color={color}
+                onColorChange={handleColorChange}
+                onCopyNotice={handleCopyNotice}
+                onOpenCmdk={() => setCmdkOpen(true)}
+              />
             )}
           </main>
 

@@ -22,7 +22,7 @@ export function HeroDocsHeaderBanner({
           )}
           <span>{line1}</span>
         </span>
-        <span>{line2}</span>
+        <span className="text-[var(--text-secondary)]">{line2}</span>
       </h1>
     </div>
   );
