@@ -1,6 +1,6 @@
-import { useState, useRef, useEffect, memo } from "react";
+import { useState, useRef, useEffect, memo, type RefObject } from "react";
 import { motion, useReducedMotion, AnimatePresence } from "framer-motion";
-import { getColorPalette } from "../../utils/themeColors";
+import { HexColorPicker } from "react-colorful";
 import { playClickSound } from "../../utils/sound";
 
 export interface CategoryControlBarProps {
@@ -15,7 +15,7 @@ export interface CategoryControlBarProps {
   onColorChange: (c: string) => void;
   search?: string;
   onSearchChange?: (val: string) => void;
-  searchInputRef?: React.RefObject<any>;
+  searchInputRef?: RefObject<HTMLInputElement | null>;
   onOpenCmdk?: () => void;
 }
 
@@ -37,6 +37,8 @@ export const CategoryControlBar = memo(function CategoryControlBar({
   const reduced = useReducedMotion();
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
+  const [colorOpen, setColorOpen] = useState(false);
+  const colorRef = useRef<HTMLDivElement | null>(null);
 
   // Close dropdown on click outside
   useEffect(() => {
@@ -44,22 +46,25 @@ export const CategoryControlBar = memo(function CategoryControlBar({
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setDropdownOpen(false);
       }
+      if (colorRef.current && !colorRef.current.contains(e.target as Node)) {
+        setColorOpen(false);
+      }
     };
     window.addEventListener("mousedown", handleClickOutside);
     return () => window.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const colorShades = getColorPalette();
-  const activeColorIndex = colorShades.findIndex(
-    (s) => s.hex.toLowerCase() === color.toLowerCase()
-  );
-  const activeShade = activeColorIndex >= 0 ? colorShades[activeColorIndex] : colorShades[0];
+  // Close color picker on Escape
+  useEffect(() => {
+    if (!colorOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setColorOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [colorOpen]);
 
-  const handleCycleColor = () => {
-    playClickSound();
-    const nextIndex = (activeColorIndex + 1) % colorShades.length;
-    onColorChange(colorShades[nextIndex].hex);
-  };
+  const pickerColor = /^#[0-9a-fA-F]{6}$/.test(color) ? color : "#9B8AFB";
 
   return (
     <div className="flex flex-col gap-2.5 w-full pb-1 relative z-30">
@@ -184,7 +189,7 @@ export const CategoryControlBar = memo(function CategoryControlBar({
               type="text"
               value={search}
               onChange={(e) => onSearchChange(e.target.value)}
-              placeholder="Search 1,100+ icons... (⌘K)"
+              placeholder="Search 2,676+ icons... (⌘K)"
               spellCheck={false}
               autoComplete="off"
               className="w-full bg-transparent border-none text-xs sm:text-sm text-[var(--text-primary)] placeholder:text-[var(--input-placeholder)] focus:outline-none"
@@ -282,19 +287,54 @@ export const CategoryControlBar = memo(function CategoryControlBar({
             })}
           </div>
 
-          {/* Accent Color Swatch Toggle Pill (Compact h-8.5 w-8.5 on mobile, h-10 w-10 on desktop) */}
-          <button
-            type="button"
-            onClick={handleCycleColor}
-            aria-label={`Cycle accent color (current: ${activeShade.name})`}
-            className="h-8.5 w-8.5 sm:h-10 sm:w-10 rounded-full flex items-center justify-center bg-[var(--bg-btn)] hover:bg-[var(--bg-btn-hover)] border-none cursor-pointer shrink-0 motion-safe:active:scale-[0.97]"
-            title={`Click to cycle accent color (${activeShade.name})`}
-          >
-            <span
-              className="size-3.5 sm:size-4 rounded-full border border-[var(--border-medium)] shadow-sm"
-              style={{ backgroundColor: activeShade.hex }}
-            />
-          </button>
+          {/* Direct color picker (react-colorful) */}
+          <div className="relative" ref={colorRef}>
+            <button
+              type="button"
+              onClick={() => {
+                playClickSound();
+                setColorOpen((prev) => !prev);
+              }}
+              aria-label={`Pick accent color (current: ${color})`}
+              aria-expanded={colorOpen}
+              className="h-8.5 w-8.5 sm:h-10 sm:w-10 rounded-full flex items-center justify-center bg-[var(--bg-btn)] hover:bg-[var(--bg-btn-hover)] border-none cursor-pointer shrink-0 motion-safe:active:scale-[0.97]"
+              title={`Click to pick accent color (${color})`}
+            >
+              <span
+                className="size-3.5 sm:size-4 rounded-full border border-[var(--border-medium)] shadow-sm"
+                style={{ backgroundColor: color }}
+              />
+            </button>
+
+            <AnimatePresence>
+              {colorOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 6, scale: 0.96 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: 6, scale: 0.96 }}
+                  transition={{ duration: 0.15 }}
+                  className="absolute right-0 top-10 sm:top-12 z-50 rounded-2xl bg-[var(--dropdown-bg)] border border-[var(--border-medium)] backdrop-blur-2xl p-3 shadow-2xl flex flex-col gap-2.5"
+                >
+                  <HexColorPicker color={pickerColor} onChange={onColorChange} />
+                  <div className="flex items-center gap-2">
+                    <span
+                      className="size-5 rounded-full border border-[var(--border-medium)] shrink-0"
+                      style={{ backgroundColor: color }}
+                    />
+                    <input
+                      type="text"
+                      value={color}
+                      onChange={(e) => onColorChange(e.target.value)}
+                      spellCheck={false}
+                      autoComplete="off"
+                      maxLength={7}
+                      className="w-20 bg-transparent border border-[var(--border-medium)] rounded-lg px-2 py-1 font-mono text-[11px] text-[var(--text-primary)] focus:outline-none"
+                    />
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </div>
       </div>
     </div>

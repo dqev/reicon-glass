@@ -1,37 +1,20 @@
-import { useState, useMemo, useRef, useEffect, useCallback } from "react";
-import agentData from "../data/agent.json";
+import { useState, useMemo, useRef, useEffect, useCallback, useDeferredValue } from "react";
 import { HeroHeaderBanner } from "../components/layout/HeroBanner";
 import { CategoryControlBar } from "../components/explorer/CategoryBar";
 import { IconGridWall } from "../components/explorer/IconGrid";
-import { loadReiconCdn, getParsedIconsList } from "../utils/reiconCdn";
+import { getAllIcons, type IconMetaItem } from "../utils/iconDataLoader";
 
-export interface IconMetaItem {
-  name: string;
-  kebab: string;
-  category: string;
-  keywords: string[];
+const INITIAL_ICONS: IconMetaItem[] = getAllIcons();
+const PAGE_SIZE = 60;
+
+function shuffleArray<T>(arr: T[]): T[] {
+  const copy = [...arr];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j] as T, copy[i] as T];
+  }
+  return copy;
 }
-
-export function parseAgentJson(data: any): IconMetaItem[] {
-  if (!data || !data.icons) return [];
-  return Object.entries(data.icons).map(([key, val]: [string, any]) => {
-    const pascal =
-      val.pascal ||
-      key
-        .split("-")
-        .map((s) => s.charAt(0).toUpperCase() + s.slice(1))
-        .join("");
-    const category = !val.category
-      ? "General UI"
-      : val.category === "ui" || val.category === "newicons"
-      ? "General UI"
-      : val.category.charAt(0).toUpperCase() + val.category.slice(1);
-    const keywords = Array.isArray(val.description) ? val.description : [key];
-    return { name: pascal, kebab: key, category, keywords };
-  });
-}
-
-const INITIAL_ICONS: IconMetaItem[] = parseAgentJson(agentData);
 
 export interface HeroExplorerViewProps {
   color?: string;
@@ -49,7 +32,8 @@ export function HeroExplorerView({
   onCopyNotice,
   onOpenCmdk,
 }: HeroExplorerViewProps) {
-  const [icons, setIcons] = useState<IconMetaItem[]>(INITIAL_ICONS);
+  // Random order each page load instead of alphabetical — shuffled once, stable for session
+  const [icons] = useState<IconMetaItem[]>(() => shuffleArray(INITIAL_ICONS));
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [showAllCategories, setShowAllCategories] = useState<boolean>(false);
@@ -57,58 +41,24 @@ export function HeroExplorerView({
     typeof window !== "undefined" && window.innerWidth < 640 ? 38 : 48
   );
   const [strokeWidth] = useState<number | undefined>(undefined);
-  const [visibleCount, setVisibleCount] = useState<number>(100);
-
-  // Auto-adjust size state when resizing between mobile and desktop viewports
-  useEffect(() => {
-    const handleResize = () => {
-      const isMobile = window.innerWidth < 640;
-      if (isMobile && size > 58) {
-        setSize(38);
-      } else if (!isMobile && size < 48) {
-        setSize(48);
-      }
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [size]);
-
+  const [visibleCount, setVisibleCount] = useState<number>(PAGE_SIZE);
   const searchInputRef = useRef<HTMLInputElement | null>(null);
   const loadMoreRef = useRef<HTMLDivElement | null>(null);
 
-  // Dynamically load icons from window.ReiconAgent CDN script or agent.json fallback
-  useEffect(() => {
-    let cancelled = false;
-
-    loadReiconCdn().then(() => {
-      if (cancelled) return;
-      const cdnIcons = getParsedIconsList();
-      if (cdnIcons.length > 0) {
-        const formatted: IconMetaItem[] = cdnIcons.map((i) => ({
-          name: i.name || i.key,
-          kebab: i.key,
-          category: i.category,
-          keywords: i.description,
-        }));
-        setIcons(formatted);
-      }
-    });
-
-    fetch("/agent.json")
-      .then((r) => (r.ok ? r.json() : null))
-      .then((data) => {
-        if (cancelled || !data) return;
-        const parsed = parseAgentJson(data);
-        if (parsed.length > 0) {
-          setIcons((current) => (current.length === 0 ? parsed : current));
-        }
-      })
-      .catch(() => {});
-
-    return () => {
-      cancelled = true;
-    };
+  // Keep parent callbacks stable so IconGrid memo isn't busted every render
+  const inspectRef = useRef(onInspect);
+  inspectRef.current = onInspect;
+  const copyNoticeRef = useRef(onCopyNotice);
+  copyNoticeRef.current = onCopyNotice;
+  const stableInspect = useCallback((name: string, category: string) => {
+    inspectRef.current(name, category);
   }, []);
+  const stableCopyNotice = useCallback((msg: string) => {
+    copyNoticeRef.current(msg);
+  }, []);
+
+  // Deferred search keeps typing smooth — input stays instant, filtering yields
+  const deferredSearch = useDeferredValue(search);
 
   // Keyboard shortcut '/' focus search
   useEffect(() => {
@@ -125,12 +75,12 @@ export function HeroExplorerView({
   const categories = useMemo(() => {
     const set = new Set<string>();
     icons.forEach((i) => set.add(i.category));
-    return ["All", ...Array.from(set)];
+    return ["All", ...Array.from(set).sort((a, b) => a.localeCompare(b))];
   }, [icons]);
 
-  // Filter icons
+  // Filter icons (uses deferred value to avoid blocking keystrokes)
   const filteredIcons = useMemo(() => {
-    const q = search.trim().toLowerCase();
+    const q = deferredSearch.trim().toLowerCase();
     return icons.filter((icon) => {
       const matchesCategory = selectedCategory === "All" || icon.category === selectedCategory;
       if (!matchesCategory) return false;
@@ -141,39 +91,46 @@ export function HeroExplorerView({
         icon.keywords.some((k) => k.toLowerCase().includes(q))
       );
     });
-  }, [icons, search, selectedCategory]);
+  }, [icons, deferredSearch, selectedCategory]);
 
   const displayedIcons = useMemo(() => {
     return filteredIcons.slice(0, visibleCount);
   }, [filteredIcons, visibleCount]);
 
+  const hasMoreToLoad = visibleCount < filteredIcons.length;
+
   // Reset visible count on search or category filter change
   useEffect(() => {
-    setVisibleCount(100);
+    setVisibleCount(PAGE_SIZE);
   }, [search, selectedCategory]);
 
-  // Infinite Scroll Observer
+  // Infinite Scroll Observer — throttled via rAF, re-attaches when sentinel remounts
   useEffect(() => {
+    const el = loadMoreRef.current;
+    if (!el) return;
+    let ticking = false;
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0]?.isIntersecting) {
-          setVisibleCount((prev) => Math.min(prev + 120, filteredIcons.length));
+        if (entries[0]?.isIntersecting && !ticking) {
+          ticking = true;
+          requestAnimationFrame(() => {
+            setVisibleCount((prev) => Math.min(prev + PAGE_SIZE, filteredIcons.length));
+            window.setTimeout(() => {
+              ticking = false;
+            }, 120);
+          });
         }
       },
-      { rootMargin: "600px" }
+      { rootMargin: "800px", threshold: 0 },
     );
 
-    const el = loadMoreRef.current;
-    if (el) observer.observe(el);
-
-    return () => {
-      if (el) observer.unobserve(el);
-    };
-  }, [filteredIcons.length]);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [filteredIcons.length, displayedIcons.length, hasMoreToLoad]);
 
   const handleSelectCategory = useCallback((cat: string) => {
     setSelectedCategory(cat);
-    setVisibleCount(100);
+    setVisibleCount(PAGE_SIZE);
   }, []);
 
   const handleToggleShowAllCategories = useCallback(() => {
@@ -188,7 +145,7 @@ export function HeroExplorerView({
         search={search}
         onSearchChange={setSearch}
         searchInputRef={searchInputRef}
-        onCopyNotice={onCopyNotice}
+        onCopyNotice={stableCopyNotice}
       />
 
       {/* Main Grid Wall Section */}
@@ -210,16 +167,16 @@ export function HeroExplorerView({
           onOpenCmdk={onOpenCmdk}
         />
 
-        {/* Icon Cards Wall */}
+        {/* Icon Cards Wall — infinite scroll preserved via sentinel */}
         <IconGridWall
           displayedIcons={displayedIcons}
           size={size}
           color={color}
           strokeWidth={strokeWidth}
-          onInspect={onInspect}
-          onCopyNotice={onCopyNotice}
+          onInspect={stableInspect}
+          onCopyNotice={stableCopyNotice}
           loadMoreRef={loadMoreRef}
-          hasMoreToLoad={visibleCount < filteredIcons.length}
+          hasMoreToLoad={hasMoreToLoad}
         />
       </div>
     </div>

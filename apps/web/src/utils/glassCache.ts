@@ -1,0 +1,53 @@
+import Glass from "../vendor/glass/glass.js";
+
+const cache = new Map<string, string>();
+const MAX_CACHE = 800;
+
+function normalizeColor(color: string | undefined): string {
+  if (color && /^#[0-9a-fA-F]{3,8}$/.test(color)) return color;
+  return "#9B8AFB";
+}
+
+function hashStr(s: string): string {
+  let h = 5381;
+  for (let i = 0; i < s.length; i++) {
+    h = ((h << 5) + h + s.charCodeAt(i)) | 0;
+  }
+  return (h >>> 0).toString(36);
+}
+
+function stableId(rawCode: string, color: string, size: number): string {
+  const c = color.replace("#", "");
+  return `g${hashStr(rawCode)}_${c}_${size}`;
+}
+
+export function getGlassSvg(
+  rawCode: string,
+  _kebab: string,
+  color: string | undefined,
+  size: number,
+): string {
+  if (!rawCode) return "";
+  const safeColor = normalizeColor(color);
+  // Key includes a hash of the actual SVG code (not just kebab) so duplicate
+  // kebab names across categories never collide in cache or gradient IDs.
+  const codeHash = hashStr(rawCode);
+  const key = `${codeHash}|${safeColor}|${size}`;
+  const hit = cache.get(key);
+  if (hit) return hit;
+  const svg = Glass.convert(rawCode, {
+    color: safeColor,
+    size,
+    id: stableId(rawCode, safeColor, size),
+  });
+  if (cache.size >= MAX_CACHE) {
+    const first = cache.keys().next().value;
+    if (first) cache.delete(first);
+  }
+  cache.set(key, svg);
+  return svg;
+}
+
+export function clearGlassCache(): void {
+  cache.clear();
+}

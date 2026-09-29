@@ -1,9 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
-import { SiteHeader, type NavTab } from "./components/layout/Header";
+import { SiteHeader } from "./components/layout/Header";
 import { HeroExplorerView } from "./views/HeroExplorerView";
-import { DocsView } from "./views/DocsView";
-import { ChangelogView } from "./views/ChangelogView";
-import { ContributorsView } from "./views/ContributorsView";
 import { IconDetailModal } from "./components/modal/IconDetailModal";
 import { CmdkSearchModal } from "./components/explorer/SearchModal";
 import { Toast } from "./components/common/Toast";
@@ -11,32 +8,21 @@ import { SiteFooter } from "./components/layout/Footer";
 import { usePageSEO } from "./hooks/usePageSEO";
 import { PAGE_SEO } from "./config/seo";
 
-import agentData from "./data/agent.json";
-import { parseAgentJson } from "./views/HeroExplorerView";
+import { getAllIcons } from "./utils/iconDataLoader";
 import { getDefaultColor } from "./utils/themeColors";
 
-function getTabFromPath(path: string): NavTab {
-  if (path.startsWith("/docs")) return "docs";
-  if (path.startsWith("/changelog")) return "changelog";
-  if (path.startsWith("/contributors")) return "contributors";
-  return "explorer";
-}
-
 export default function App() {
-  const [activeTab, setActiveTab] = useState<NavTab>(() =>
-    getTabFromPath(window.location.pathname)
-  );
   const [cmdkOpen, setCmdkOpen] = useState(false);
   const [color, setColor] = useState<string>(() => getDefaultColor());
   const [inspectedIcon, setInspectedIcon] = useState<{ name: string; category: string } | null>(null);
 
-  const cmdkIcons = useMemo(() => parseAgentJson(agentData), []);
+  const cmdkIcons = useMemo(() => getAllIcons(), []);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [toastActive, setToastActive] = useState<boolean>(false);
   const [showTopBlur, setShowTopBlur] = useState<boolean>(false);
 
-  // SEO: update all head meta tags when active tab changes
-  usePageSEO(PAGE_SEO[activeTab] ?? PAGE_SEO["explorer"]);
+  // SEO: update head meta tags for home page
+  usePageSEO(PAGE_SEO["explorer"]);
 
   // Initial mount sync for accent color variable
   useEffect(() => {
@@ -46,24 +32,6 @@ export default function App() {
   const handleColorChange = (newColor: string) => {
     document.documentElement.style.setProperty("--accent-color", newColor);
     setColor(newColor);
-  };
-
-  // Sync state on popstate (browser back/forward)
-  useEffect(() => {
-    const handlePopState = () => {
-      setActiveTab(getTabFromPath(window.location.pathname));
-    };
-    window.addEventListener("popstate", handlePopState);
-    return () => window.removeEventListener("popstate", handlePopState);
-  }, []);
-
-  const handleTabChange = (tab: NavTab, href: string) => {
-    setActiveTab(tab);
-    window.scrollTo(0, 0);
-    if (window.location.pathname !== href) {
-      window.history.pushState({}, "", href);
-      window.dispatchEvent(new Event("popstate"));
-    }
   };
 
   useEffect(() => {
@@ -89,48 +57,22 @@ export default function App() {
         }}
       />
 
+      {/* Content — bottom toolbar overlays, so no padding shift when open */}
       <div className="flex flex-col items-center w-full pt-3 gap-6">
         <section className="w-full px-6 flex flex-col gap-3">
           {/* Header */}
-          <SiteHeader
-            activeTab={activeTab}
-            onTabChange={handleTabChange}
-            color={color}
-          />
+          <SiteHeader color={color} />
 
-          {/* Main Content Router */}
+          {/* Main Content: Home Icons Grid */}
           <main className="w-full">
-            {activeTab === "explorer" && (
-              <HeroExplorerView
-                color={color}
-                onColorChange={handleColorChange}
-                onInspect={(name, category) => setInspectedIcon({ name, category })}
-                onCopyNotice={handleCopyNotice}
-                toastActive={toastActive}
-                onOpenCmdk={() => setCmdkOpen(true)}
-              />
-            )}
-            {activeTab === "docs" && (
-              <DocsView
-                color={color}
-                onColorChange={handleColorChange}
-                onCopyNotice={handleCopyNotice}
-                onOpenCmdk={() => setCmdkOpen(true)}
-              />
-            )}
-            {activeTab === "changelog" && (
-              <div className="max-w-[820px] mx-auto w-full pt-4">
-                <ChangelogView />
-              </div>
-            )}
-            {activeTab === "contributors" && (
-              <ContributorsView
-                color={color}
-                onColorChange={handleColorChange}
-                onCopyNotice={handleCopyNotice}
-                onOpenCmdk={() => setCmdkOpen(true)}
-              />
-            )}
+            <HeroExplorerView
+              color={color}
+              onColorChange={handleColorChange}
+              onInspect={(name, category) => setInspectedIcon({ name, category })}
+              onCopyNotice={handleCopyNotice}
+              toastActive={toastActive}
+              onOpenCmdk={() => setCmdkOpen(true)}
+            />
           </main>
 
           {/* Site Footer */}
@@ -153,7 +95,6 @@ export default function App() {
         onOpenChange={setCmdkOpen}
         icons={cmdkIcons}
         onSelectIcon={(name, category) => setInspectedIcon({ name, category })}
-        onSelectNav={(tab, href) => handleTabChange(tab, href)}
         onCopyNotice={handleCopyNotice}
       />
 

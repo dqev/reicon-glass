@@ -25,7 +25,6 @@ export function CmdkSearchModal({
   onOpenChange,
   icons,
   onSelectIcon,
-  onSelectNav,
   onCopyNotice,
 }: CmdkSearchModalProps) {
   const [search, setSearch] = useState("");
@@ -75,7 +74,7 @@ export function CmdkSearchModal({
         <Command.Input
           value={search}
           onValueChange={setSearch}
-          placeholder="Search 1,100+ icons or commands... (⌘K)"
+          placeholder="Search 2,676+ icons or commands... (⌘K)"
           className="w-full bg-transparent border-none text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none font-sans"
         />
         <kbd className="hidden sm:inline-flex h-5 items-center gap-0.5 rounded-md bg-[var(--bg-btn-hover)] px-2 font-mono text-[10px] text-[var(--text-muted)] select-none shrink-0 border-none">
@@ -89,87 +88,25 @@ export function CmdkSearchModal({
           No matching icons or commands found.
         </Command.Empty>
 
-        {/* Quick Actions & Navigation (visible when search is empty) */}
-        {!search.trim() && (
-          <Command.Group heading="Navigation & Actions" className="px-2 text-[10px] font-mono uppercase tracking-wider text-[var(--text-muted)] pt-2 pb-1">
+        {/* Quick Actions (visible when search is empty) */}
+        {!search.trim() && onCopyNotice && (
+          <Command.Group heading="Quick Actions" className="px-2 text-[10px] font-mono uppercase tracking-wider text-[var(--text-muted)] pt-2 pb-1">
             <Command.Item
               onSelect={() => {
                 playClickSound();
-                if (onSelectNav) onSelectNav("explorer", "/");
+                void copyToClipboard('<script src="https://cdn.jsdelivr.net/npm/reicon-agent/cdn/reicon.js"></script>').then((ok) => {
+                  if (ok) onCopyNotice("Copied Reicon CDN Script!");
+                });
                 onOpenChange(false);
               }}
               className="flex items-center justify-between p-2.5 rounded-[14px] text-xs font-medium text-[var(--text-primary)] hover:bg-[var(--bg-btn-hover)] cursor-pointer aria-selected:bg-[var(--bg-btn-hover)] transition-colors border-none"
             >
               <div className="flex items-center gap-2.5">
-                <IconRenderer name="home" size={16} />
-                <span>Go to Home</span>
+                <IconRenderer name="code" size={16} />
+                <span>Copy CDN Setup Script</span>
               </div>
-              <span className="font-mono text-[10px] text-[var(--text-muted)]">/</span>
+              <span className="font-mono text-[10px] font-semibold text-[var(--accent-color,#9B8AFB)]">CDN</span>
             </Command.Item>
-
-            <Command.Item
-              onSelect={() => {
-                playClickSound();
-                if (onSelectNav) onSelectNav("docs", "/docs");
-                onOpenChange(false);
-              }}
-              className="flex items-center justify-between p-2.5 rounded-[14px] text-xs font-medium text-[var(--text-primary)] hover:bg-[var(--bg-btn-hover)] cursor-pointer aria-selected:bg-[var(--bg-btn-hover)] transition-colors border-none"
-            >
-              <div className="flex items-center gap-2.5">
-                <IconRenderer name="book-open" size={16} />
-                <span>Documentation</span>
-              </div>
-              <span className="font-mono text-[10px] text-[var(--text-muted)]">/docs</span>
-            </Command.Item>
-
-            <Command.Item
-              onSelect={() => {
-                playClickSound();
-                if (onSelectNav) onSelectNav("changelog", "/changelog");
-                onOpenChange(false);
-              }}
-              className="flex items-center justify-between p-2.5 rounded-[14px] text-xs font-medium text-[var(--text-primary)] hover:bg-[var(--bg-btn-hover)] cursor-pointer aria-selected:bg-[var(--bg-btn-hover)] transition-colors border-none"
-            >
-              <div className="flex items-center gap-2.5">
-                <IconRenderer name="history" size={16} />
-                <span>Changelog</span>
-              </div>
-              <span className="font-mono text-[10px] text-[var(--text-muted)]">/changelog</span>
-            </Command.Item>
-
-            <Command.Item
-              onSelect={() => {
-                playClickSound();
-                if (onSelectNav) onSelectNav("stargazers", "/stargazers");
-                onOpenChange(false);
-              }}
-              className="flex items-center justify-between p-2.5 rounded-[14px] text-xs font-medium text-[var(--text-primary)] hover:bg-[var(--bg-btn-hover)] cursor-pointer aria-selected:bg-[var(--bg-btn-hover)] transition-colors border-none"
-            >
-              <div className="flex items-center gap-2.5">
-                <IconRenderer name="star" size={16} />
-                <span>Stargazers</span>
-              </div>
-              <span className="font-mono text-[10px] text-[var(--text-muted)]">/stargazers</span>
-            </Command.Item>
-
-            {onCopyNotice && (
-              <Command.Item
-                onSelect={() => {
-                  playClickSound();
-                  void copyToClipboard('<script src="https://cdn.jsdelivr.net/npm/reicon-agent/cdn/reicon.js"></script>').then((ok) => {
-                    if (ok) onCopyNotice("Copied Reicon CDN Script!");
-                  });
-                  onOpenChange(false);
-                }}
-                className="flex items-center justify-between p-2.5 rounded-[14px] text-xs font-medium text-[var(--text-primary)] hover:bg-[var(--bg-btn-hover)] cursor-pointer aria-selected:bg-[var(--bg-btn-hover)] transition-colors border-none"
-              >
-                <div className="flex items-center gap-2.5">
-                  <IconRenderer name="code" size={16} />
-                  <span>Copy CDN Setup Script</span>
-                </div>
-                <span className="font-mono text-[10px] font-semibold text-[var(--accent-color,#9B8AFB)]">CDN</span>
-              </Command.Item>
-            )}
           </Command.Group>
         )}
 

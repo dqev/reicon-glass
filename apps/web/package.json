@@ -13,6 +13,7 @@
     "cmdk": "^1.1.1",
     "framer-motion": "^13.2.0",
     "react": "^19.2.8",
+    "react-colorful": "^5.8.1",
     "react-dom": "^19.2.8",
     "reicon-react": "^1.2.5",
     "tailwind-merge": "^3.6.0",

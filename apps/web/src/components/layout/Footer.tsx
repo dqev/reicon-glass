@@ -27,7 +27,7 @@ export function SiteFooter() {
           </p>
         </div>
 
-        {/* Action / Documentation Links */}
+        {/* Action Links */}
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs font-[550]">
           <a
             href="https://github.com/dqev/reicon"
@@ -44,12 +44,6 @@ export function SiteFooter() {
             className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition"
           >
             npm package
-          </a>
-          <a
-            href="/docs"
-            className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition"
-          >
-            Documentation
           </a>
           <a
             href="https://github.com/dqev/reicon/blob/main/LICENSE"

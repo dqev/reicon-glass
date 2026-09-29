@@ -1,18 +1,20 @@
-import { useState, memo } from "react";
+import { useState, memo, useCallback } from "react";
 import { IconRenderer, toKebabCase } from "./IconRenderer";
 import { CopyMorphIcon } from "../common/CopyIconTransition";
 import { playClickSound } from "../../utils/sound";
 import { copyToClipboard } from "../../utils/clipboard";
+import { getGlassSvg } from "../../utils/glassCache";
 
 export interface IconCardProps {
   name: string;
   kebab?: string;
   category: string;
+  code?: string;
   size: number;
   weight: "outline" | "filled";
   color: string;
   strokeWidth?: number;
-  onInspect: (name: string) => void;
+  onInspect: (name: string, category: string) => void;
   onCopyNotice: (msg: string) => void;
 }
 
@@ -20,6 +22,7 @@ export const IconCard = memo(function IconCard({
   name,
   kebab,
   category,
+  code,
   size,
   weight,
   color,
@@ -31,6 +34,11 @@ export const IconCard = memo(function IconCard({
 
   const kebabName = kebab || toKebabCase(name);
   const jsxCode = `<re-icon icon="${kebabName}" size={${size}} color="${color}"></re-icon>`;
+
+  const handleInspect = useCallback(() => {
+    playClickSound();
+    onInspect(name, category);
+  }, [onInspect, name, category]);
 
   const handleCopyJsx = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -47,12 +55,12 @@ export const IconCard = memo(function IconCard({
   const handleDownloadSvg = (e: React.MouseEvent) => {
     e.stopPropagation();
     playClickSound();
-    const rawCode = window.ReiconAgent?.getIconCode ? window.ReiconAgent.getIconCode(kebabName) : null;
-    let finalCode = rawCode || "";
-    if (strokeWidth != null && finalCode) {
-      finalCode = finalCode.replace(/stroke-width="[^"]*"/g, `stroke-width="${strokeWidth}"`);
-    }
-    const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${finalCode}</svg>`;
+    // Prefer this card's own code so duplicate kebab names across
+    // categories download the correct SVG.
+    const rawCode = code || "";
+    const svgContent = rawCode
+      ? getGlassSvg(rawCode, kebabName, color, size)
+      : `<re-icon icon="${kebabName}" size="${size}" color="${color}"></re-icon>`;
     const blob = new Blob([svgContent], { type: "image/svg+xml;charset=utf-8" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -68,16 +76,15 @@ export const IconCard = memo(function IconCard({
   return (
     <div
       title={`${name} · ${category}`}
-      onClick={() => {
-        playClickSound();
-        onInspect(name);
-      }}
+      onClick={handleInspect}
       className="aspect-square relative flex flex-col items-center justify-between p-3.5 rounded-[18px] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] group cursor-pointer select-none"
+      style={{ contentVisibility: "auto", containIntrinsicSize: "auto 180px" }}
     >
       {/* Main Icon Display */}
       <div className="my-auto py-2 flex items-center justify-center transition-transform duration-150 group-hover:scale-105">
         <IconRenderer
           name={kebabName}
+          code={code}
           size={size}
           weight={weight}
           color={color}

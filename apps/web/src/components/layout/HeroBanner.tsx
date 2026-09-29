@@ -1,9 +1,11 @@
+import type { RefObject } from "react";
+
 export function HeroHeaderBanner(_props?: {
   color?: string;
   onCopyNotice?: (msg: string) => void;
   search?: string;
   onSearchChange?: (val: string) => void;
-  searchInputRef?: React.RefObject<any>;
+  searchInputRef?: RefObject<HTMLInputElement | null>;
 }) {
   return (
     <div className="flex flex-col items-center text-center gap-6 sm:gap-7 py-10 sm:py-16 select-none">
