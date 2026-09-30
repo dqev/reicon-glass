@@ -1,25 +1,29 @@
-// Pure ESM build of the Glass icon renderer.
-// Previously this file mixed a UMD wrapper (module.exports / define / globalThis)
-// with `export` statements, which causes Vite/Rolldown to warn:
-// "The CommonJS `module` variable is treated as a global variable in an
-// ECMAScript module". This file is now ESM-only — import it via
-// `import Glass from "../vendor/glass/glass.js"`.
-
-// Preset Base Colors
-const themes = {
-  slate: { name: 'Slate', color: '#64748B' },
-  ocean: { name: 'Ocean Blue', color: '#2563EB' },
-  ice: { name: 'Ice Blue', color: '#0284C7' },
-  midnight: { name: 'Onyx Midnight', color: '#27272A' },
-  indigo: { name: 'Indigo Pulse', color: '#4F46E5' },
-  violet: { name: 'Deep Violet', color: '#7C3AED' },
-  emerald: { name: 'Emerald Teal', color: '#059669' },
-  sunset: { name: 'Sunset Berry', color: '#E11D48' },
-  amber: { name: 'Warm Amber', color: '#D97706' },
-  frost: { name: 'Silver Frost', color: '#94A3B8' }
-};
-
-// Color conversion helpers (RGB <-> HSL)
+// glass.js — Glass icon renderer (pure ESM, no dependencies).
+//
+// What it does:
+//   Converts any raw icon markup (24x24 paths/shapes from icon-data.json,
+//   or bare `d` path data) into a standalone 240x240 glassy SVG string with
+//   a 3-stop ink gradient + engrave filter for thickness. All shading is
+//   clipped to the glyph alpha via an outer mask, so nothing bleeds onto
+//   card backgrounds (no outer drop-shadow by design).
+//
+// How it connects:
+//   glassCache.ts --imports--> Glass.convert(rawCode, { color, size, id })
+//     ^-- IconRenderer.tsx (cards + modal preview via getGlassSvg)
+//     ^-- IconDetailModal.tsx (copy-SVG snippet + download-SVG file)
+//   warmGlassCache() pre-converts the first page during idle so scrolling
+//   shows glass immediately. Cache key = codeHash|color|size.
+//
+// Pieces in this file:
+//   hexToRgb / rgbToHex / rgbToHsl / hslToRgb — color math for auto-shading.
+//   createPalette(baseHex) -> { gradient: [light, mid, deep] }.
+//   generateId(prefix) — unique gradient/filter/mask ids per SVG instance.
+//   toMaskMarkup(src) — normalises raw markup for the glyph mask: strokes
+//     stay strokes (fill="none"), fills turn white, fill="none" preserved.
+//   convert(input, options) — main entry ({ color | colors, size, id }).
+//   render(target, input, options) — convert + inject into a DOM node.
+//   Default export Glass + named exports { Glass, createPalette, convert,
+//   render }. NOTE: `themes` was removed; pass options.color instead.
 function hexToRgb(hex) {
   let clean = hex.replace('#', '');
   if (clean.length === 3) {
@@ -44,7 +48,7 @@ function rgbToHsl(r, g, b) {
   let h, s, l = (max + min) / 2;
 
   if (max === min) {
-    h = s = 0; // achromatic
+    h = s = 0;
   } else {
     const d = max - min;
     s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
@@ -81,46 +85,27 @@ function hslToRgb(h, s, l) {
   return { r: r * 255, g: g * 255, b: b * 255 };
 }
 
-/**
- * Single-Color Auto-Shading Algorithm
- * Given any single base hex color, computes:
- * - Light Highlight Stop (top specular fill)
- * - Mid Tone Stop (core fill)
- * - Deep Shade Stop (bottom cavity gradient)
- * - Shadow Color (RGBA ambient shadow)
- */
 function createPalette(baseHex) {
   const rgb = hexToRgb(baseHex || '#2563EB');
   const { h, s, l } = rgbToHsl(rgb.r, rgb.g, rgb.b);
 
-  // 1. Light Highlight Stop (lighten towards top specular light)
   const lLight = Math.min(0.96, l + (1.0 - l) * 0.65);
   const sLight = Math.max(0.15, s * 0.75);
   const rgbLight = hslToRgb(h, sLight, lLight);
 
-  // 2. Mid Tone Stop
   const lMid = Math.max(0.25, Math.min(0.85, l * 1.02));
   const rgbMid = hslToRgb(h, s, lMid);
 
-  // 3. Deep Shade Stop (darker bottom shade)
   const lDark = Math.max(0.1, l * 0.45);
   const sDark = Math.min(1.0, s * 1.25);
   const rgbDark = hslToRgb(h, sDark, lDark);
-
-  // 4. Ambient Drop Shadow Color
-  const lShadow = Math.max(0.04, l * 0.2);
-  const sShadow = Math.min(1.0, s * 1.3);
-  const rgbShadow = hslToRgb(h, sShadow, lShadow);
-  const shadowRgba = `rgba(${Math.round(rgbShadow.r)}, ${Math.round(rgbShadow.g)}, ${Math.round(rgbShadow.b)}, 0.65)`;
 
   return {
     gradient: [
       rgbToHex(rgbLight.r, rgbLight.g, rgbLight.b),
       rgbToHex(rgbMid.r, rgbMid.g, rgbMid.b),
       rgbToHex(rgbDark.r, rgbDark.g, rgbDark.b)
-    ],
-    shadow: shadowRgba,
-    baseColor: baseHex
+    ]
   };
 }
 
@@ -128,24 +113,31 @@ function generateId(prefix = 'glass') {
   return `${prefix}_${Math.random().toString(36).substring(2, 9)}`;
 }
 
-/**
- * Main function to convert any path/SVG code to standalone 3D glassy SVG
- * Accepts:
- * - `options.color`: Single hex color string e.g. '#EF4444' (calculates auto-shading)
- * - `options.theme`: Preset theme key string e.g. 'ocean'
- * - `options.colors`: Explicit 3-stop array [light, mid, deep]
- */
+function toMaskMarkup(src) {
+  const input = String(src).trim();
+  if (!/<(path|circle|ellipse|rect|line|polyline|polygon|g)\b/i.test(input)) {
+    return `<path d="${input}" fill="white"/>`;
+  }
+  return input.replace(/<[a-zA-Z][^<>]*\/?>/g, (tag) => {
+    const name = (/^<([a-zA-Z][a-zA-Z0-9]*)/.exec(tag) || [])[1] || '';
+    const isShape = /^(path|circle|ellipse|rect|line|polyline|polygon)$/i.test(name);
+    let out = tag
+      .replace(/stroke\s*=\s*(['"])[^'"]*\1/gi, 'stroke="white"')
+      .replace(/(fill|stroke)-opacity\s*=\s*(['"])[^'"]*\2/gi, '$1-opacity="1"')
+      .replace(/fill\s*=\s*(['"])([^'"]*)\1/gi, (m, _q, v) =>
+        /^none$/i.test(v.trim()) ? m : 'fill="white"');
+    if (isShape && /stroke(\s|=|\/|>)/i.test(out) && !/fill\s*=/i.test(out)) {
+      out = out.replace(/^<([a-zA-Z][a-zA-Z0-9]*)/, '<$1 fill="none"');
+    }
+    return out;
+  });
+}
+
 function convert(input, options = {}) {
   if (!input) return '';
 
-  let cleanPath = input.trim();
-  if (!cleanPath.includes('<path')) {
-    cleanPath = `<path d="${cleanPath}" fill="currentColor"/>`;
-  } else if (!cleanPath.includes('fill=')) {
-    cleanPath = cleanPath.replace('<path', '<path fill="currentColor"');
-  }
+  const cleanPath = toMaskMarkup(input);
 
-  // Determine base color & calculate auto palette
   let palette;
   if (options.color) {
     palette = createPalette(options.color);
@@ -155,18 +147,13 @@ function convert(input, options = {}) {
       shadow: options.shadow || 'rgba(50, 46, 75, 0.55)'
     };
   } else {
-    const themeKey = options.theme || 'slate';
-    const themeObj = themes[themeKey] || themes.slate;
-    palette = createPalette(themeObj.color);
+    palette = createPalette('#64748B');
   }
 
   const uid = options.id || generateId('glass');
   const size = options.size || 240;
   const colors = palette.gradient;
 
-  // NOTE: no outer drop-shadow on purpose — all shading stays clipped to the
-  // glyph alpha via the outer mask, so nothing bleeds onto card backgrounds.
-  // Depth comes from the engrave filter (inner cavity + edge light) only.
   return `<svg width="${size}" height="${size}" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" class="glass-icon-glyph">
   <mask id="glyph_${uid}" maskUnits="userSpaceOnUse" x="0" y="0" width="240" height="240" style="mask-type: alpha;">
     <g transform="translate(24 24) scale(8)">
@@ -231,11 +218,10 @@ function render(target, input, options = {}) {
 }
 
 const Glass = {
-  themes: themes,
   createPalette: createPalette,
   convert: convert,
   render: render
 };
 
 export default Glass;
-export { Glass, themes, createPalette, convert, render };
+export { Glass, createPalette, convert, render };

@@ -1,7 +1,8 @@
 // Builds the single compact icon bundle the web app loads directly.
 // Reads the human-readable source (icon-data.json), validates it, and emits
 // a minified bundle next to it. Run: npm run build:icons --workspace @reicon/web
-// It also runs automatically as part of `npm run build`.
+// (or root `npm run build:icons`). Only needed when icon-data.json changes;
+// `npm run build` assumes the bundle already exists.
 import { readFileSync, writeFileSync, statSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";

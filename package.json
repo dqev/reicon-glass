@@ -9,8 +9,10 @@
   ],
   "scripts": {
     "dev": "npm --workspace=@reicon/web run dev",
-    "build": "npm run build --workspaces --if-present",
-    "generate:assets": "node tools/generate-assets.cjs",
+    "build": "npm --workspace=@reicon/web run build",
+    "build:all": "npm --workspace=@reicon/web run build:all",
+    "build:icons": "npm --workspace=@reicon/web run build:icons",
+    "build:assets": "npm --workspace=@reicon/web run build:assets",
     "lint": "oxlint",
     "preview": "npm --workspace=@reicon/web run preview"
   },

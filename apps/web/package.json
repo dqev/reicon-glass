@@ -4,10 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "npm run build:icons && npm run build:assets && vite",
+    "dev": "vite",
     "build:icons": "node ../../tools/build-icon-data.mjs",
     "build:assets": "node ../../tools/generate-assets.cjs",
-    "build": "npm run build:icons && npm run build:assets && tsc -b && vite build",
+    "build:all": "npm run build:icons && npm run build:assets && npm run build",
+    "build": "tsc -b && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
