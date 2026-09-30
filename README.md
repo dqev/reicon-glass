@@ -1,8 +1,7 @@
 <div align="center">
 
-<img src="apps/web/public/assets/reicon.svg" alt="Reicon" width="64" height="64" />
+<img src="apps/web/public/assets/reicon-glass.svg" alt="Reicon" width="64" height="64" />
 
-# Reicon
 
 ### Beautiful, curated glass SVG icons for designers & developers.
 
@@ -16,12 +15,6 @@
 
 [**Browse icons →**](https://glass.reicon.dev) · [**LLM Spec →**](https://glass.reicon.dev/llms.txt)
 
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="apps/web/public/assets/og-image.png" alt="A preview of Reicon Glass" width="100%" />
 </div>
 
 <br/>
