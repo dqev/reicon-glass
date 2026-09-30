@@ -1,182 +1,171 @@
+// Pure ESM build of the Glass icon renderer.
+// Previously this file mixed a UMD wrapper (module.exports / define / globalThis)
+// with `export` statements, which causes Vite/Rolldown to warn:
+// "The CommonJS `module` variable is treated as a global variable in an
+// ECMAScript module". This file is now ESM-only — import it via
+// `import Glass from "../vendor/glass/glass.js"`.
 
-(function (root, factory) {
-  const instance = factory();
-  if (typeof exports === 'object' && typeof module !== 'undefined') {
-    module.exports = instance;
-    module.exports.default = instance;
-    module.exports.Glass = instance;
-  }
-  if (typeof define === 'function' && define.amd) {
-    define([], function () { return instance; });
-  }
-  if (root) {
-    root.Glass = instance;
-  } else if (typeof globalThis !== 'undefined') {
-    globalThis.Glass = instance;
-  }
-}(typeof self !== 'undefined' ? self : (typeof window !== 'undefined' ? window : (typeof globalThis !== 'undefined' ? globalThis : this)), function () {
+// Preset Base Colors
+const themes = {
+  slate: { name: 'Slate', color: '#64748B' },
+  ocean: { name: 'Ocean Blue', color: '#2563EB' },
+  ice: { name: 'Ice Blue', color: '#0284C7' },
+  midnight: { name: 'Onyx Midnight', color: '#27272A' },
+  indigo: { name: 'Indigo Pulse', color: '#4F46E5' },
+  violet: { name: 'Deep Violet', color: '#7C3AED' },
+  emerald: { name: 'Emerald Teal', color: '#059669' },
+  sunset: { name: 'Sunset Berry', color: '#E11D48' },
+  amber: { name: 'Warm Amber', color: '#D97706' },
+  frost: { name: 'Silver Frost', color: '#94A3B8' }
+};
 
-  // Preset Base Colors
-  const themes = {
-    slate: { name: 'Slate', color: '#64748B' },
-    ocean: { name: 'Ocean Blue', color: '#2563EB' },
-    ice: { name: 'Ice Blue', color: '#0284C7' },
-    midnight: { name: 'Onyx Midnight', color: '#27272A' },
-    indigo: { name: 'Indigo Pulse', color: '#4F46E5' },
-    violet: { name: 'Deep Violet', color: '#7C3AED' },
-    emerald: { name: 'Emerald Teal', color: '#059669' },
-    sunset: { name: 'Sunset Berry', color: '#E11D48' },
-    amber: { name: 'Warm Amber', color: '#D97706' },
-    frost: { name: 'Silver Frost', color: '#94A3B8' }
+// Color conversion helpers (RGB <-> HSL)
+function hexToRgb(hex) {
+  let clean = hex.replace('#', '');
+  if (clean.length === 3) {
+    clean = clean.split('').map(c => c + c).join('');
+  }
+  const num = parseInt(clean, 16);
+  return {
+    r: (num >> 16) & 255,
+    g: (num >> 8) & 255,
+    b: num & 255
   };
+}
 
-  // Color conversion helpers (RGB <-> HSL)
-  function hexToRgb(hex) {
-    let clean = hex.replace('#', '');
-    if (clean.length === 3) {
-      clean = clean.split('').map(c => c + c).join('');
+function rgbToHex(r, g, b) {
+  const toHex = c => Math.max(0, Math.min(255, Math.round(c))).toString(16).padStart(2, '0');
+  return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
+}
+
+function rgbToHsl(r, g, b) {
+  r /= 255; g /= 255; b /= 255;
+  const max = Math.max(r, g, b), min = Math.min(r, g, b);
+  let h, s, l = (max + min) / 2;
+
+  if (max === min) {
+    h = s = 0; // achromatic
+  } else {
+    const d = max - min;
+    s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+    switch (max) {
+      case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+      case g: h = (b - r) / d + 2; break;
+      case b: h = (r - g) / d + 4; break;
     }
-    const num = parseInt(clean, 16);
-    return {
-      r: (num >> 16) & 255,
-      g: (num >> 8) & 255,
-      b: num & 255
+    h /= 6;
+  }
+  return { h: h * 360, s, l };
+}
+
+function hslToRgb(h, s, l) {
+  h /= 360;
+  let r, g, b;
+  if (s === 0) {
+    r = g = b = l;
+  } else {
+    const hue2rgb = (p, q, t) => {
+      if (t < 0) t += 1;
+      if (t > 1) t -= 1;
+      if (t < 1 / 6) return p + (q - p) * 6 * t;
+      if (t < 1 / 2) return q;
+      if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
+      return p;
     };
+    const q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+    const p = 2 * l - q;
+    r = hue2rgb(p, q, h + 1 / 3);
+    g = hue2rgb(p, q, h);
+    b = hue2rgb(p, q, h - 1 / 3);
+  }
+  return { r: r * 255, g: g * 255, b: b * 255 };
+}
+
+/**
+ * Single-Color Auto-Shading Algorithm
+ * Given any single base hex color, computes:
+ * - Light Highlight Stop (top specular fill)
+ * - Mid Tone Stop (core fill)
+ * - Deep Shade Stop (bottom cavity gradient)
+ * - Shadow Color (RGBA ambient shadow)
+ */
+function createPalette(baseHex) {
+  const rgb = hexToRgb(baseHex || '#2563EB');
+  const { h, s, l } = rgbToHsl(rgb.r, rgb.g, rgb.b);
+
+  // 1. Light Highlight Stop (lighten towards top specular light)
+  const lLight = Math.min(0.96, l + (1.0 - l) * 0.65);
+  const sLight = Math.max(0.15, s * 0.75);
+  const rgbLight = hslToRgb(h, sLight, lLight);
+
+  // 2. Mid Tone Stop
+  const lMid = Math.max(0.25, Math.min(0.85, l * 1.02));
+  const rgbMid = hslToRgb(h, s, lMid);
+
+  // 3. Deep Shade Stop (darker bottom shade)
+  const lDark = Math.max(0.1, l * 0.45);
+  const sDark = Math.min(1.0, s * 1.25);
+  const rgbDark = hslToRgb(h, sDark, lDark);
+
+  // 4. Ambient Drop Shadow Color
+  const lShadow = Math.max(0.04, l * 0.2);
+  const sShadow = Math.min(1.0, s * 1.3);
+  const rgbShadow = hslToRgb(h, sShadow, lShadow);
+  const shadowRgba = `rgba(${Math.round(rgbShadow.r)}, ${Math.round(rgbShadow.g)}, ${Math.round(rgbShadow.b)}, 0.65)`;
+
+  return {
+    gradient: [
+      rgbToHex(rgbLight.r, rgbLight.g, rgbLight.b),
+      rgbToHex(rgbMid.r, rgbMid.g, rgbMid.b),
+      rgbToHex(rgbDark.r, rgbDark.g, rgbDark.b)
+    ],
+    shadow: shadowRgba,
+    baseColor: baseHex
+  };
+}
+
+function generateId(prefix = 'glass') {
+  return `${prefix}_${Math.random().toString(36).substring(2, 9)}`;
+}
+
+/**
+ * Main function to convert any path/SVG code to standalone 3D glassy SVG
+ * Accepts:
+ * - `options.color`: Single hex color string e.g. '#EF4444' (calculates auto-shading)
+ * - `options.theme`: Preset theme key string e.g. 'ocean'
+ * - `options.colors`: Explicit 3-stop array [light, mid, deep]
+ */
+function convert(input, options = {}) {
+  if (!input) return '';
+
+  let cleanPath = input.trim();
+  if (!cleanPath.includes('<path')) {
+    cleanPath = `<path d="${cleanPath}" fill="currentColor"/>`;
+  } else if (!cleanPath.includes('fill=')) {
+    cleanPath = cleanPath.replace('<path', '<path fill="currentColor"');
   }
 
-  function rgbToHex(r, g, b) {
-    const toHex = c => Math.max(0, Math.min(255, Math.round(c))).toString(16).padStart(2, '0');
-    return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
-  }
-
-  function rgbToHsl(r, g, b) {
-    r /= 255; g /= 255; b /= 255;
-    const max = Math.max(r, g, b), min = Math.min(r, g, b);
-    let h, s, l = (max + min) / 2;
-
-    if (max === min) {
-      h = s = 0; // achromatic
-    } else {
-      const d = max - min;
-      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-      switch (max) {
-        case r: h = (g - b) / d + (g < b ? 6 : 0); break;
-        case g: h = (b - r) / d + 2; break;
-        case b: h = (r - g) / d + 4; break;
-      }
-      h /= 6;
-    }
-    return { h: h * 360, s, l };
-  }
-
-  function hslToRgb(h, s, l) {
-    h /= 360;
-    let r, g, b;
-    if (s === 0) {
-      r = g = b = l;
-    } else {
-      const hue2rgb = (p, q, t) => {
-        if (t < 0) t += 1;
-        if (t > 1) t -= 1;
-        if (t < 1 / 6) return p + (q - p) * 6 * t;
-        if (t < 1 / 2) return q;
-        if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
-        return p;
-      };
-      const q = l < 0.5 ? l * (1 + s) : l + s - l * s;
-      const p = 2 * l - q;
-      r = hue2rgb(p, q, h + 1 / 3);
-      g = hue2rgb(p, q, h);
-      b = hue2rgb(p, q, h - 1 / 3);
-    }
-    return { r: r * 255, g: g * 255, b: b * 255 };
-  }
-
-  /**
-   * Single-Color Auto-Shading Algorithm
-   * Given any single base hex color, computes:
-   * - Light Highlight Stop (top specular fill)
-   * - Mid Tone Stop (core fill)
-   * - Deep Shade Stop (bottom cavity gradient)
-   * - Shadow Color (RGBA ambient shadow)
-   */
-  function createPalette(baseHex) {
-    const rgb = hexToRgb(baseHex || '#2563EB');
-    const { h, s, l } = rgbToHsl(rgb.r, rgb.g, rgb.b);
-
-    // 1. Light Highlight Stop (lighten towards top specular light)
-    const lLight = Math.min(0.96, l + (1.0 - l) * 0.65);
-    const sLight = Math.max(0.15, s * 0.75);
-    const rgbLight = hslToRgb(h, sLight, lLight);
-
-    // 2. Mid Tone Stop
-    const lMid = Math.max(0.25, Math.min(0.85, l * 1.02));
-    const rgbMid = hslToRgb(h, s, lMid);
-
-    // 3. Deep Shade Stop (darker bottom shade)
-    const lDark = Math.max(0.1, l * 0.45);
-    const sDark = Math.min(1.0, s * 1.25);
-    const rgbDark = hslToRgb(h, sDark, lDark);
-
-    // 4. Ambient Drop Shadow Color
-    const lShadow = Math.max(0.04, l * 0.2);
-    const sShadow = Math.min(1.0, s * 1.3);
-    const rgbShadow = hslToRgb(h, sShadow, lShadow);
-    const shadowRgba = `rgba(${Math.round(rgbShadow.r)}, ${Math.round(rgbShadow.g)}, ${Math.round(rgbShadow.b)}, 0.65)`;
-
-    return {
-      gradient: [
-        rgbToHex(rgbLight.r, rgbLight.g, rgbLight.b),
-        rgbToHex(rgbMid.r, rgbMid.g, rgbMid.b),
-        rgbToHex(rgbDark.r, rgbDark.g, rgbDark.b)
-      ],
-      shadow: shadowRgba,
-      baseColor: baseHex
+  // Determine base color & calculate auto palette
+  let palette;
+  if (options.color) {
+    palette = createPalette(options.color);
+  } else if (options.colors && Array.isArray(options.colors)) {
+    palette = {
+      gradient: options.colors,
+      shadow: options.shadow || 'rgba(50, 46, 75, 0.55)'
     };
+  } else {
+    const themeKey = options.theme || 'slate';
+    const themeObj = themes[themeKey] || themes.slate;
+    palette = createPalette(themeObj.color);
   }
 
-  function generateId(prefix = 'glass') {
-    return `${prefix}_${Math.random().toString(36).substring(2, 9)}`;
-  }
+  const uid = options.id || generateId('glass');
+  const size = options.size || 240;
+  const shadowColor = options.shadow || palette.shadow;
+  const colors = palette.gradient;
 
-  /**
-   * Main function to convert any path/SVG code to standalone 3D glassy SVG
-   * Accepts:
-   * - `options.color`: Single hex color string e.g. '#EF4444' (calculates auto-shading)
-   * - `options.theme`: Preset theme key string e.g. 'ocean'
-   * - `options.colors`: Explicit 3-stop array [light, mid, deep]
-   */
-  function convert(input, options = {}) {
-    if (!input) return '';
-
-    let cleanPath = input.trim();
-    if (!cleanPath.includes('<path')) {
-      cleanPath = `<path d="${cleanPath}" fill="currentColor"/>`;
-    } else if (!cleanPath.includes('fill=')) {
-      cleanPath = cleanPath.replace('<path', '<path fill="currentColor"');
-    }
-
-    // Determine base color & calculate auto palette
-    let palette;
-    if (options.color) {
-      palette = createPalette(options.color);
-    } else if (options.colors && Array.isArray(options.colors)) {
-      palette = {
-        gradient: options.colors,
-        shadow: options.shadow || 'rgba(50, 46, 75, 0.55)'
-      };
-    } else {
-      const themeKey = options.theme || 'slate';
-      const themeObj = themes[themeKey] || themes.slate;
-      palette = createPalette(themeObj.color);
-    }
-
-    const uid = options.id || generateId('glass');
-    const size = options.size || 240;
-    const shadowColor = options.shadow || palette.shadow;
-    const colors = palette.gradient;
-
-    return `<svg width="${size}" height="${size}" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" class="glass-icon-glyph">
+  return `<svg width="${size}" height="${size}" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" class="glass-icon-glyph">
   <g style="filter: drop-shadow(${shadowColor} 0px 9px 8px);">
     <g filter="url(#engrave_${uid})">
       <mask id="glyph_${uid}" maskUnits="userSpaceOnUse" x="0" y="0" width="240" height="240" style="mask-type: alpha;">
@@ -228,31 +217,23 @@
     </radialGradient>
   </defs>
 </svg>`;
+}
+
+function render(target, input, options = {}) {
+  const svgMarkup = convert(input, options);
+  let el = typeof target === 'string' ? document.querySelector(target) : target;
+  if (el && el.nodeType) {
+    el.innerHTML = svgMarkup;
   }
+  return svgMarkup;
+}
 
-  function render(target, input, options = {}) {
-    const svgMarkup = convert(input, options);
-    let el = typeof target === 'string' ? document.querySelector(target) : target;
-    if (el && el.nodeType) {
-      el.innerHTML = svgMarkup;
-    }
-    return svgMarkup;
-  }
-
-  const Glass = {
-    themes: themes,
-    createPalette: createPalette,
-    convert: convert,
-    render: render
-  };
-  return Glass;
-}));
-
-const Glass = typeof globalThis !== 'undefined' && globalThis.Glass ? globalThis.Glass : {};
-const themes = Glass.themes;
-const createPalette = Glass.createPalette;
-const convert = Glass.convert;
-const render = Glass.render;
+const Glass = {
+  themes: themes,
+  createPalette: createPalette,
+  convert: convert,
+  render: render
+};
 
 export default Glass;
 export { Glass, themes, createPalette, convert, render };

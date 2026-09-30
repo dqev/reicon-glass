@@ -43,3 +43,43 @@ export function CopyMorphIcon({ copied }: { copied: boolean }) {
     </span>
   );
 }
+
+export function DownloadMorphIcon({ done }: { done: boolean }) {
+  const reduced = useReducedMotion() ?? false;
+  const t = reduced ? { duration: 0 } : { duration: 0.16, ease: [0.16, 1, 0.3, 1] as const };
+
+  return (
+    <span aria-hidden="true" className="relative size-[16px] grid place-items-center overflow-hidden">
+      <AnimatePresence initial={false} mode="popLayout">
+        {done ? (
+          <motion.span
+            key="check"
+            className="absolute flex items-center justify-center"
+            style={{ color: "var(--accent-color, #9B8AFB)" }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={t}
+          >
+            <IconRenderer name="check" size={15} />
+          </motion.span>
+        ) : (
+          <motion.span
+            key="download"
+            className="absolute text-current flex items-center justify-center"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={t}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+          </motion.span>
+        )}
+      </AnimatePresence>
+    </span>
+  );
+}

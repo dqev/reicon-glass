@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 import { SiteHeader } from "./components/layout/Header";
 import { HeroExplorerView } from "./views/HeroExplorerView";
 import { IconDetailModal } from "./components/modal/IconDetailModal";
@@ -8,7 +8,7 @@ import { SiteFooter } from "./components/layout/Footer";
 import { usePageSEO } from "./hooks/usePageSEO";
 import { PAGE_SEO } from "./config/seo";
 
-import { getAllIcons } from "./utils/iconDataLoader";
+import { getAllIcons, initIcons, type IconMetaItem } from "./utils/iconDataLoader";
 import { getDefaultColor } from "./utils/themeColors";
 
 export default function App() {
@@ -16,7 +16,16 @@ export default function App() {
   const [color, setColor] = useState<string>(() => getDefaultColor());
   const [inspectedIcon, setInspectedIcon] = useState<{ name: string; category: string } | null>(null);
 
-  const cmdkIcons = useMemo(() => getAllIcons(), []);
+  const [cmdkIcons, setCmdkIcons] = useState<IconMetaItem[]>(() => getAllIcons());
+  useEffect(() => {
+    let alive = true;
+    void initIcons().then(() => {
+      if (alive) setCmdkIcons(getAllIcons());
+    });
+    return () => {
+      alive = false;
+    };
+  }, []);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [toastActive, setToastActive] = useState<boolean>(false);
   const [showTopBlur, setShowTopBlur] = useState<boolean>(false);
@@ -24,13 +33,12 @@ export default function App() {
   // SEO: update head meta tags for home page
   usePageSEO(PAGE_SEO["explorer"]);
 
-  // Initial mount sync for accent color variable
+  // Sync accent color variable to root
   useEffect(() => {
     document.documentElement.style.setProperty("--accent-color", color);
-  }, []);
+  }, [color]);
 
   const handleColorChange = (newColor: string) => {
-    document.documentElement.style.setProperty("--accent-color", newColor);
     setColor(newColor);
   };
 
@@ -61,7 +69,7 @@ export default function App() {
       <div className="flex flex-col items-center w-full pt-3 gap-6">
         <section className="w-full px-6 flex flex-col gap-3">
           {/* Header */}
-          <SiteHeader color={color} />
+          <SiteHeader />
 
           {/* Main Content: Home Icons Grid */}
           <main className="w-full">
@@ -80,13 +88,12 @@ export default function App() {
         </section>
       </div>
 
-      {/* Detail Modal Inspector */}
+      {/* Detail Toolbar Inspector */}
       <IconDetailModal
         iconName={inspectedIcon?.name || null}
         category={inspectedIcon?.category || "General UI"}
         color={color}
         onClose={() => setInspectedIcon(null)}
-        onCopyNotice={handleCopyNotice}
       />
 
       {/* Global CMDK Command Palette Search Modal */}
@@ -95,7 +102,7 @@ export default function App() {
         onOpenChange={setCmdkOpen}
         icons={cmdkIcons}
         onSelectIcon={(name, category) => setInspectedIcon({ name, category })}
-        onCopyNotice={handleCopyNotice}
+        color={color}
       />
 
       {/* Toast Notification */}

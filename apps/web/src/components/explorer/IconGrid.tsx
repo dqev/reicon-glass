@@ -9,7 +9,6 @@ export interface IconGridWallProps {
   color: string;
   strokeWidth?: number;
   onInspect: (name: string, category: string) => void;
-  onCopyNotice: (msg: string) => void;
   loadMoreRef: RefObject<HTMLDivElement | null>;
   hasMoreToLoad: boolean;
 }
@@ -22,7 +21,6 @@ export const IconGridWall = memo(function IconGridWall(props: IconGridWallProps)
     color,
     strokeWidth,
     onInspect,
-    onCopyNotice,
     loadMoreRef,
     hasMoreToLoad,
   } = props;
@@ -44,7 +42,6 @@ export const IconGridWall = memo(function IconGridWall(props: IconGridWallProps)
             color={color}
             strokeWidth={strokeWidth}
             onInspect={onInspect}
-            onCopyNotice={onCopyNotice}
           />
         ))}
       </div>

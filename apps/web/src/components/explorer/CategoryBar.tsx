@@ -231,14 +231,14 @@ export const CategoryControlBar = memo(function CategoryControlBar({
                     onSizeChange(s);
                   }}
                   className={`relative h-7.5 flex cursor-pointer items-center justify-center gap-1 rounded-full px-2 text-[11px] font-mono font-[550] leading-none motion-safe:active:scale-[0.97] ${
-                    active ? "text-[var(--text-primary)] font-semibold" : "text-[var(--text-muted)] hover:text-[var(--text-primary)]"
+                    active ? "text-[var(--pill-active-text)] font-semibold" : "text-[var(--text-muted)] hover:text-[var(--text-primary)]"
                   }`}
                 >
                   {active && (
                     <motion.span
                       layoutId="size-pill-active-mobile"
                       aria-hidden="true"
-                      className="absolute inset-[2px] rounded-full bg-[var(--bg-btn-hover)]"
+                      className="absolute inset-[2px] rounded-full bg-[var(--pill-active-bg)]"
                       transition={
                         reduced
                           ? { duration: 0 }
@@ -266,14 +266,14 @@ export const CategoryControlBar = memo(function CategoryControlBar({
                     onSizeChange(s);
                   }}
                   className={`relative h-8 flex cursor-pointer items-center justify-center gap-1 rounded-full px-3 text-xs font-mono font-[550] leading-none motion-safe:active:scale-[0.97] ${
-                    active ? "text-[var(--text-primary)] font-semibold" : "text-[var(--text-muted)] hover:text-[var(--text-primary)]"
+                    active ? "text-[var(--pill-active-text)] font-semibold" : "text-[var(--text-muted)] hover:text-[var(--text-primary)]"
                   }`}
                 >
                   {active && (
                     <motion.span
                       layoutId="size-pill-active-desktop"
                       aria-hidden="true"
-                      className="absolute inset-[2px] rounded-full bg-[var(--bg-btn-hover)]"
+                      className="absolute inset-[2px] rounded-full bg-[var(--pill-active-bg)]"
                       transition={
                         reduced
                           ? { duration: 0 }

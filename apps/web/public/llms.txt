@@ -1,30 +1,27 @@
-# Agentic Library of Beautiful Icons by Reicon
+# Reicon — Free Glass SVG Icons for Designers & Developers
 
-> Official 1100+ curated rounded SVG icon library built for AI Coding Agents (Cursor, Claude, Copilot, ChatGPT, Antigravity) & modern web developers.
+> Official curated rounded SVG & glass icon library built for AI Coding Agents (Cursor, Claude, Copilot, ChatGPT, Antigravity) & modern web developers.
 
-## How Agentic Icon Selection & Integration Works
-When generating UI code, AI agents automatically select, render, and style Reicon icons using zero-setup CDN Web Components or NPM ESM modules.
+## How Icon Integration Works
+Reicon provides free, beautifully designed SVG icons rendered with real-time 3D glass aesthetics. You can copy SVG markup, React JSX components, or CSS styles directly.
 
-### CDN Quickstart
-Include script in HTML `<head>`:
+### 1. Direct SVG Usage
+Embed SVG markup directly into HTML:
 ```html
-<script src="https://cdn.jsdelivr.net/npm/reicon-agent/cdn/reicon.js"></script>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+  <!-- Icon path code -->
+</svg>
 ```
 
-Render any icon anywhere in your HTML:
-```html
-<re-icon icon="home" size="24" color="currentColor"></re-icon>
-<re-icon icon="search" size="20" color="#9B8AFB"></re-icon>
-<re-icon icon="arrow-right" size="24" color="currentColor"></re-icon>
-```
-
-### NPM Installation
-```bash
-npm install reicon-agent
-```
-Import in JavaScript / React / Frameworks:
-```javascript
-import { Home, Search, ArrowRight } from 'reicon-agent';
+### 2. React JSX Component Pattern
+```jsx
+export function Icon({ size = 24, color = "currentColor", className = "", ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill={color} className={className} {...props}>
+      {/* Icon path code */}
+    </svg>
+  );
+}
 ```
 
 ## Icon Styling Rules for AI Agents
@@ -36,65 +33,60 @@ import { Home, Search, ArrowRight } from 'reicon-agent';
    - `48`: Empty states, landing page hero illustrations.
 
 2. **Coloring Strategy**:
-   - `color="currentColor"` (Recommended): Inherits parent element CSS font color automatically. Perfect for dark mode, hover states, and theme switching.
-   - Custom hex/hsl: `color="#9B8AFB"` or CSS variables `color="var(--accent)"`.
+   - `fill="currentColor"` (Recommended): Inherits parent element CSS font color automatically. Perfect for dark mode, hover states, and theme switching.
+   - Custom hex/hsl: `fill="#9B8AFB"` or CSS variables `fill="var(--accent-color)"`.
 
 3. **Flex Layout Alignment**:
    ```html
    <button class="btn">
-     <re-icon icon="download" size="20" color="currentColor"></re-icon>
+     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><!-- ... --></svg>
      <span>Download File</span>
    </button>
    ```
    CSS: `.btn { display: inline-flex; align-items: center; gap: 8px; }`
 
-4. **Animations & Interactive States**:
-   - Loading state: Add CSS spin animation `re-icon[icon="loader"] { animation: spin 1s linear infinite; }`
-   - Hover scaling: `re-icon:hover { transform: scale(1.1); transition: transform 0.2s ease; }`
-
-## Categories Directory (38 Categories, 1104 Total Icons)
-- **arrows** (19): `arrow-down`, `arrow-left`, `arrow-left-down`, `arrow-left-up`, `arrow-right`, `arrow-right-down`, `arrow-right-up`, `arrow-up` +11 more
-- **arrows-action** (27): `refresh2`, `arrow-to-down-left`, `arrow-to-down-right`, `arrow-to-top-left`, `arrow-to-top-right`, `download`, `download2`, `exit` +19 more
-- **astronomy** (21): `asteroid`, `atom`, `black-hole`, `black-hole2`, `black-hole3`, `earth`, `infinite`, `male` +13 more
-- **building** (4): `city`, `garage`, `hospital`, `tower`
-- **business** (19): `chart2`, `course-down`, `course-up`, `diagram-down`, `award-certificate`, `award`, `nodes`, `sitemap` +11 more
-- **call** (3): `phone2`, `phone-chat`, `record-circle`
-- **devices** (53): `phone`, `earbuds`, `earbuds-case`, `earbuds-case2`, `earbuds-case-open`, `earbuds-charge`, `bluetooth`, `bluetooth-wave` +45 more
-- **faces** (4): `sticker-smile`, `face-smile`, `sleeping-circle`, `sleeping-square`
-- **files** (9): `code-file`, `file`, `cloud-file`, `file-download`, `file-star`, `figma-file`, `zip`, `file-pdf` +1 more
-- **folders** (6): `folder-add`, `folder`, `folder-files`, `folder-cloud`, `folder-star`, `folder-lock`
-- **food** (18): `bottle`, `chef-hat`, `chef-hat2`, `corkscrew`, `donut`, `donut2`, `ladle`, `mug` +10 more
-- **hands** (3): `hand-heart`, `hand-stars`, `hand-dollar`
-- **home** (20): `armchair`, `armchair2`, `bar-stool`, `bath`, `bed`, `chair`, `chair2`, `chandelier` +12 more
-- **it** (24): `bug`, `code2`, `code3`, `command`, `hashtag`, `sidebar`, `structure`, `bug-slash` +16 more
-- **like** (20): `heart2`, `heart3`, `gamepad-buttons`, `bookmark-x`, `heart-off`, `heart-lock`, `heart-unlock`, `medal-star` +12 more
-- **list** (7): `list-down`, `list-up`, `list`, `playlist`, `sort-alpha`, `sort-asc`, `sort-desc`
-- **map** (33): `compass`, `gps`, `pin`, `routing`, `routing2`, `globe-pointer`, `compass-square`, `map-arrow-down` +25 more
-- **medicine** (15): `bandage`, `bandage2`, `benzene`, `bone`, `bone-broken`, `bone-crack`, `dna`, `dropper` +7 more
-- **messages** (48): `chat-dots`, `chat-line`, `chat-square-arrow`, `chat-square-call`, `chat-square-code`, `chat-square-like`, `mailbox`, `forward-left` +40 more
-- **money** (39): `banknote`, `banknote2`, `bill`, `bill-check`, `bill-list`, `card`, `cash-out`, `dollar` +31 more
-- **nature** (10): `bonfire`, `fire`, `flame`, `suitcase`, `bolt-off`, `suitcase-tag`, `bolt-slash`, `cloud-down` +2 more
-- **newicons** (312): `maximize`, `maximize3`, `chart`, `bluetooth2`, `lamp`, `mirror2`, `code`, `radar2` +304 more
-- **notes** (11): `archive`, `archive-down`, `archive-up`, `clipboard`, `doc`, `doc-add`, `notebook2`, `check-list` +3 more
-- **notifications** (6): `bell`, `bell-off`, `bell-off2`, `bell-ring`, `notification`, `bell-alert`
-- **parts** (12): `accumulator`, `bus`, `gas-station`, `shock-absorber`, `tram`, `wheel`, `suspension-bolt`, `scooter` +4 more
-- **school** (9): `notebook`, `backpack`, `book`, `bookmark2`, `calculator`, `briefcase`, `diploma`, `mortarboard-square` +1 more
-- **search** (6): `search`, `search2`, `search3`, `search-bug`, `search-plus`, `search-minus`
-- **security** (33): `bomb`, `bomb2`, `code-scan`, `lock`, `lock-open`, `qr`, `shield`, `shield2` +25 more
-- **settings** (6): `tuning`, `tuning2`, `widget`, `gear`, `sliders`, `toggle`
-- **shopping** (14): `bag`, `bag3`, `bag-check`, `bag-x`, `shop`, `shop2`, `cart-check`, `cart-add` +6 more
-- **sports** (25): `balls`, `basketball`, `cycling`, `body-shape`, `bowling`, `dumbbell`, `dumbbell2`, `dumbbells` +17 more
-- **text-formatting** (13): `eraser`, `link`, `bold`, `pen-writing`, `pen-writing2`, `pen-nib`, `backspace`, `text-x` +5 more
-- **time** (22): `alarm`, `alarm-add`, `alarm-pause`, `alarm-play`, `alarm-off`, `calendar`, `calendar-add`, `calendar-search` +14 more
-- **tools** (21): `align-bottom`, `align-left`, `align-right`, `align-top`, `color-tuning`, `crop`, `filters`, `layers` +13 more
-- **ui** (126): `plug`, `heart`, `bookmark`, `ar`, `body`, `bolt`, `box2`, `box3` +118 more
-- **users** (11): `user-laptop`, `user-off`, `user-scan`, `users`, `users2`, `user-block`, `user-check`, `user2` +3 more
-- **video** (50): `album`, `camera`, `camera2`, `camera-rotate`, `clapperboard`, `clapperboard-edit`, `clapperboard-open`, `clapperboard-open-play` +42 more
-- **weather** (25): `stars`, `cloud`, `moon`, `temperature`, `tornado`, `drops`, `cloud-bolt`, `cloud-check` +17 more
+## Categories Directory (38 Categories, 2676 Total Icons, 2630 Unique)
+- **arrows** (124): `arrow-down2`, `arrow-left2`, `arrow-right2`, `arrow-up2`, `arrow-down`, `arrow-left`, `arrow-left-down`, `arrow-left-up` +116 more
+- **arrows-action** (60): `arrow-to-down-left`, `arrow-to-down-right`, `arrow-to-top-left`, `arrow-to-top-right`, `circle-bottom-down`, `circle-bottom-up`, `circle-top-down`, `circle-top-up` +52 more
+- **astronomy** (32): `asteroid`, `atom`, `black-hole`, `black-hole2`, `black-hole3`, `earth`, `infinite`, `male` +24 more
+- **building** (11): `buildings`, `buildings2`, `buildings3`, `city`, `garage`, `hospital`, `home5`, `building` +3 more
+- **business** (36): `chart`, `chart2`, `chart-square`, `chat-square2`, `course-down`, `course-up`, `diagram-down`, `diagram-up` +28 more
+- **call** (24): `phone-cancel`, `phone-cancel2`, `phone-chat`, `phone-chat2`, `phone-dropped`, `phone-dropped2`, `phone-medical`, `phone-medical2` +16 more
+- **devices** (103): `earbuds`, `earbuds-case`, `earbuds-case-charge`, `earbuds-case2`, `earbuds-case-open`, `earbuds-charge`, `earbuds-check`, `earbuds-left` +95 more
+- **faces** (23): `confused-circle`, `confused-square`, `emoji-circle`, `emoji-square`, `meh-circle`, `meh-square`, `face-scan-circle`, `face-scan-square` +15 more
+- **files** (25): `cloud-file`, `code-file`, `figma-file`, `file`, `file-check`, `file-error`, `file-download`, `file-star` +17 more
+- **folders** (19): `folder-add`, `folder`, `folder2`, `folder-check`, `folder-cloud`, `folder-error`, `folder-bookmark`, `folder-star` +11 more
+- **food** (23): `bottle`, `chef-hat`, `chef-hat-heart`, `chef-hat2`, `corkscrew`, `cup-hot`, `cup-paper`, `donut` +15 more
+- **hands** (6): `hand-heart`, `hand-money`, `hand-pills`, `handshake`, `hand-stars`, `hand-dollar`
+- **home** (40): `armchair`, `armchair2`, `bar-stool`, `bath`, `bed`, `nightstand`, `nightstand2`, `nightstand3` +32 more
+- **it** (39): `bug`, `bug2`, `code`, `code2`, `code-circle`, `code-square`, `command`, `hashtag` +31 more
+- **like** (39): `dislike`, `heart`, `heart2`, `heart-broken`, `heart-lock`, `heart-shine`, `heart-unlock`, `hearts` +31 more
+- **list** (30): `bill2`, `checklist`, `list3`, `list-arrow-down`, `list-arrow-down2`, `list-arrow-up`, `list-arrow-up2`, `list-check` +22 more
+- **map** (45): `branch-down`, `branch-up`, `compass`, `compass2`, `compass-square`, `globe`, `globe2`, `gps` +37 more
+- **medicine** (33): `bandage`, `bandage2`, `bacteria`, `benzene`, `bone`, `bone-broken`, `bone-crack`, `bones` +25 more
+- **messages** (80): `chat-dots`, `chat-line`, `chat-round`, `chat-round-call`, `chat-round-check`, `chat-round-dots`, `chat-round-like`, `chat-round-line` +72 more
+- **money** (67): `banknote`, `banknote2`, `bill`, `bill-check`, `bill-x`, `bill-list`, `card`, `card2` +59 more
+- **nature** (15): `bonfire`, `fire`, `fire2`, `fire-square`, `flame`, `leaf`, `suitcase`, `suitcase2` +7 more
+- **newicons** (938): `twenty-four-hour-support`, `three-d-cube-scan`, `three-d-rotate`, `three-d-square`, `three-d-cube`, `three-square`, `activity`, `add` +930 more
+- **notes** (33): `archive`, `archive-check`, `archive-down`, `archive-down2`, `archive2`, `archive-up`, `archive-up2`, `clipboard` +25 more
+- **notifications** (10): `bell`, `bell-ring`, `bell-off`, `notif-remove2`, `notif-remove`, `notif-unread`, `notif-unread2`, `notification` +2 more
+- **parts** (19): `accumulator`, `bus`, `ev-charge`, `gas-station`, `scooter2`, `scooter`, `shock-absorber`, `speed-low` +11 more
+- **school** (31): `backpack`, `book`, `book2`, `book-bookmark`, `book-bookmark2`, `book3`, `bookmark`, `bookmark-circle` +23 more
+- **search** (15): `search`, `search-bug`, `search-plus`, `search-minus`, `search2`, `search-bug2`, `search-plus2`, `search-minus2` +7 more
+- **security** (52): `bomb`, `bomb2`, `bomb3`, `code-scan`, `eye`, `eye-off`, `eye-scan`, `incognito` +44 more
+- **settings** (20): `settings2`, `settings`, `tuning`, `tuning2`, `tuning3`, `tuning4`, `tuning-square`, `tuning-square2` +12 more
+- **shopping** (43): `bag`, `bag2`, `bag3`, `bag4`, `bag5`, `bag-check`, `bag-x`, `bag-heart` +35 more
+- **sports** (44): `balls`, `basketball`, `cycling`, `cycling2`, `body-shape`, `body-shape2`, `bowling`, `dumbbell` +36 more
+- **text-formatting** (50): `backspace`, `eraser`, `eraser-circle`, `eraser-square`, `link`, `link-broken`, `link-broken2`, `link-circle` +42 more
+- **time** (44): `alarm`, `alarm-add`, `alarm-pause`, `alarm-play`, `alarm-remove`, `alarm-sleep`, `alarm-off`, `calendar` +36 more
+- **tools** (38): `align-bottom`, `align-h-center`, `align-h-spacing`, `align-left`, `align-right`, `align-top`, `align-v-center`, `align-v-spacing` +30 more
+- **ui** (272): `accessibility`, `plus-circle`, `plus-square`, `ar`, `balloon`, `battery-charge`, `battery-charge2`, `battery-full` +264 more
+- **users** (33): `user`, `user-block`, `user-block2`, `user-check`, `user-check2`, `user-circle`, `user-x`, `user-x2` +25 more
+- **video** (122): `album`, `camera`, `camera-add`, `camera-rotate`, `camera-square`, `clapperboard`, `clapperboard-edit`, `clapperboard-open` +114 more
+- **weather** (38): `cloud`, `cloud-bolt`, `cloud-bolt2`, `cloud-check`, `cloud-x`, `cloud-download`, `cloud-minus`, `cloud-plus` +30 more
 
 ## Links & Resources
-- Website: https://agent.reicon.dev/
-- Full Agent Specifications: https://agent.reicon.dev/llms-full.txt
-- Documentation: https://agent.reicon.dev/docs/
-- GitHub: https://github.com/dqev/reicon-agent
+- Website: https://glass.reicon.dev/
+- Full Specifications: https://glass.reicon.dev/llms-full.txt
+- GitHub: https://github.com/dqev/reicon-glass
 - License: MIT

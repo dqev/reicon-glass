@@ -1,5 +1,5 @@
-# robots.txt for https://agent.reicon.dev/
+# robots.txt for https://glass.reicon.dev/
 User-agent: *
 Allow: /
 
-Sitemap: https://agent.reicon.dev/sitemap.xml
+Sitemap: https://glass.reicon.dev/sitemap.xml

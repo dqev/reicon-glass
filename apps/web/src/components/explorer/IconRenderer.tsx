@@ -1,5 +1,5 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
-import { getIconCode } from "../../utils/iconDataLoader";
+import React, { useEffect, useLayoutEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { getIconCode, subscribeIcons, iconsLoaded, toKebabCase } from "../../utils/iconDataLoader";
 import { getGlassSvg } from "../../utils/glassCache";
 
 export interface IconRendererProps {
@@ -17,28 +17,27 @@ export interface IconRendererProps {
   lazy?: boolean;
 }
 
-export function toKebabCase(str: string): string {
-  if (!str) return "";
-  if (str.includes("-")) return str.toLowerCase();
-  return str
-    .replace(/([a-z])([A-Z0-9])/g, "$1-$2")
-    .replace(/([0-9])([a-zA-Z])/g, "$1-$2")
-    .replace(/([A-Z])([A-Z][a-z])/g, "$1-$2")
-    .toLowerCase();
-}
-
 function useInView<T extends HTMLElement>(enabled: boolean, rootMargin = "400px"): [React.RefObject<T | null>, boolean] {
   const ref = useRef<T | null>(null);
-  const [inView, setInView] = useState(() => !enabled);
-  useEffect(() => {
-    if (!enabled) return;
+  const [inView, setInView] = useState(() => !enabled || typeof window === "undefined" || typeof IntersectionObserver === "undefined");
+
+  // Above-the-fold icons: mark visible BEFORE first paint so glass renders
+  // immediately with no placeholder flash.
+  useLayoutEffect(() => {
+    if (!enabled || inView) return;
     const el = ref.current;
-    if (!el) return;
-    if (typeof IntersectionObserver === "undefined") {
+    if (!el || typeof window === "undefined") return;
+    const rect = el.getBoundingClientRect();
+    const margin = 400;
+    if (rect.top < window.innerHeight + margin && rect.bottom > -margin) {
       setInView(true);
-      return;
     }
-    if (inView) return;
+  }, [enabled, inView]);
+
+  useEffect(() => {
+    if (!enabled || inView) return;
+    const el = ref.current;
+    if (!el || typeof IntersectionObserver === "undefined") return;
     const obs = new IntersectionObserver(
       (entries) => {
         if (entries[0]?.isIntersecting) {
@@ -67,7 +66,8 @@ export const IconRenderer = React.memo(function IconRenderer({
   lazy = true,
 }: IconRendererProps) {
   const kebabName = toKebabCase(name);
-  const rawCode = code || getIconCode(kebabName);
+  const dataReady = useSyncExternalStore(subscribeIcons, iconsLoaded);
+  const rawCode = code || (dataReady ? getIconCode(kebabName) : "");
   const [viewRef, inView] = useInView<HTMLDivElement>(lazy);
 
   const glassSvg = useMemo(() => {
@@ -94,10 +94,38 @@ export const IconRenderer = React.memo(function IconRenderer({
     [rotation, flipH, flipV, size, JSON.stringify(style)],
   );
 
-  if (!glassSvg) {
+  if (!rawCode) {
+    // Data still loading: shimmer. Data loaded but unknown icon: CDN fallback.
+    if (!dataReady) {
+      const dot = Math.max(12, Math.round(size * 0.45));
+      return (
+        <div ref={viewRef} style={combinedStyle} className={className}>
+          <span
+            aria-hidden="true"
+            className="animate-pulse rounded-full bg-[var(--bg-card-hover)]"
+            style={{ width: dot, height: dot }}
+          />
+        </div>
+      );
+    }
     return (
       <div ref={viewRef} style={combinedStyle} className={className}>
         <re-icon icon={kebabName} size={size} color={color} />
+      </div>
+    );
+  }
+
+  if (!glassSvg) {
+    // Not near the viewport yet: neutral shimmer at final size (no layout
+    // shift, never a half-styled icon).
+    const dot = Math.max(12, Math.round(size * 0.45));
+    return (
+      <div ref={viewRef} style={combinedStyle} className={className}>
+        <span
+          aria-hidden="true"
+          className="animate-pulse rounded-full bg-[var(--bg-card-hover)]"
+          style={{ width: dot, height: dot }}
+        />
       </div>
     );
   }

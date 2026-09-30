@@ -20,7 +20,7 @@ export function SiteHeader({
 
   useEffect(() => {
     let cancelled = false;
-    fetch(`https://api.github.com/repos/dqev/reicon`, {
+    fetch(`https://api.github.com/repos/dqev/reicon-glass`, {
       headers: { Accept: "application/vnd.github+json" },
     })
       .then((r) => (r.ok ? r.json() : null))
@@ -56,7 +56,7 @@ export function SiteHeader({
         {/* Right Actions: GitHub button */}
         <div className="flex items-center gap-2">
           <a
-            href="https://github.com/dqev/reicon"
+            href="https://github.com/dqev/reicon-glass"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub repository"

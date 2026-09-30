@@ -9,14 +9,17 @@ export interface PageSEOConfig {
   canonical?: string;
   /** Open Graph / Twitter image URL */
   ogImage?: string;
+  /** Open Graph image alt text */
+  ogImageAlt?: string;
   /** Open Graph type (default: "website") */
   ogType?: string;
   /** Extra keywords for meta keywords tag */
   keywords?: string;
 }
 
-const BASE_URL = "https://agent.reicon.dev";
+const BASE_URL = "https://glass.reicon.dev";
 const DEFAULT_OG_IMAGE = `${BASE_URL}/assets/og-image.png`;
+const DEFAULT_OG_IMAGE_ALT = "Reicon — Free Glass SVG Icons for Designers & Developers";
 
 function setMeta(selector: string, attribute: string, value: string) {
   let el = document.querySelector<HTMLMetaElement>(selector);
@@ -53,12 +56,13 @@ export function usePageSEO(config: PageSEOConfig) {
     description,
     canonical,
     ogImage = DEFAULT_OG_IMAGE,
+    ogImageAlt = DEFAULT_OG_IMAGE_ALT,
     ogType = "website",
     keywords,
   } = config;
 
   useEffect(() => {
-    const fullTitle = `${title} — Reicon Agent`;
+    const fullTitle = `${title} — Reicon`;
 
     // Title tag
     document.title = fullTitle;
@@ -81,6 +85,7 @@ export function usePageSEO(config: PageSEOConfig) {
     setMeta('meta[property="og:description"]', "content", description);
     setMeta('meta[property="og:type"]', "content", ogType);
     setMeta('meta[property="og:image"]', "content", ogImage);
+    setMeta('meta[property="og:image:alt"]', "content", ogImageAlt);
     if (canonical) {
       setMeta('meta[property="og:url"]', "content", canonical);
     }
@@ -89,8 +94,9 @@ export function usePageSEO(config: PageSEOConfig) {
     setMeta('meta[name="twitter:title"]', "content", fullTitle);
     setMeta('meta[name="twitter:description"]', "content", description);
     setMeta('meta[name="twitter:image"]', "content", ogImage);
+    setMeta('meta[name="twitter:image:alt"]', "content", ogImageAlt);
     if (canonical) {
       setMeta('meta[name="twitter:url"]', "content", canonical);
     }
-  }, [title, description, canonical, ogImage, ogType, keywords]);
+  }, [title, description, canonical, ogImage, ogImageAlt, ogType, keywords]);
 }

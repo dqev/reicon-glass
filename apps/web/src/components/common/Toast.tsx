@@ -27,7 +27,9 @@ function SingleToast({
   const zIndex = total - depth;
 
   const onDismissRef = useRef(onDismiss);
-  onDismissRef.current = onDismiss;
+  useEffect(() => {
+    onDismissRef.current = onDismiss;
+  });
 
   useEffect(() => {
     const timer = setTimeout(() => onDismissRef.current(), TOAST_DURATION);

@@ -2,9 +2,9 @@ import { useState, useMemo, useRef, useEffect, useCallback, useDeferredValue } f
 import { HeroHeaderBanner } from "../components/layout/HeroBanner";
 import { CategoryControlBar } from "../components/explorer/CategoryBar";
 import { IconGridWall } from "../components/explorer/IconGrid";
-import { getAllIcons, type IconMetaItem } from "../utils/iconDataLoader";
+import { getAllIcons, initIcons, iconsLoaded, type IconMetaItem } from "../utils/iconDataLoader";
+import { warmGlassCache } from "../utils/glassCache";
 
-const INITIAL_ICONS: IconMetaItem[] = getAllIcons();
 const PAGE_SIZE = 60;
 
 function shuffleArray<T>(arr: T[]): T[] {
@@ -32,13 +32,27 @@ export function HeroExplorerView({
   onCopyNotice,
   onOpenCmdk,
 }: HeroExplorerViewProps) {
-  // Random order each page load instead of alphabetical — shuffled once, stable for session
-  const [icons] = useState<IconMetaItem[]>(() => shuffleArray(INITIAL_ICONS));
+  // Random order each page load instead of alphabetical — shuffled once data arrives
+  const [dataReady, setDataReady] = useState(() => iconsLoaded());
+  useEffect(() => {
+    if (dataReady) return;
+    let alive = true;
+    void initIcons().then(() => {
+      if (alive) setDataReady(true);
+    });
+    return () => {
+      alive = false;
+    };
+  }, [dataReady]);
+  const icons = useMemo<IconMetaItem[]>(
+    () => (dataReady ? shuffleArray(getAllIcons()) : []),
+    [dataReady],
+  );
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [showAllCategories, setShowAllCategories] = useState<boolean>(false);
   const [size, setSize] = useState<number>(() =>
-    typeof window !== "undefined" && window.innerWidth < 640 ? 38 : 48
+    typeof window !== "undefined" && window.innerWidth < 640 ? 38 : 64
   );
   const [strokeWidth] = useState<number | undefined>(undefined);
   const [visibleCount, setVisibleCount] = useState<number>(PAGE_SIZE);
@@ -47,9 +61,11 @@ export function HeroExplorerView({
 
   // Keep parent callbacks stable so IconGrid memo isn't busted every render
   const inspectRef = useRef(onInspect);
-  inspectRef.current = onInspect;
   const copyNoticeRef = useRef(onCopyNotice);
-  copyNoticeRef.current = onCopyNotice;
+  useEffect(() => {
+    inspectRef.current = onInspect;
+    copyNoticeRef.current = onCopyNotice;
+  });
   const stableInspect = useCallback((name: string, category: string) => {
     inspectRef.current(name, category);
   }, []);
@@ -59,6 +75,13 @@ export function HeroExplorerView({
 
   // Deferred search keeps typing smooth — input stays instant, filtering yields
   const deferredSearch = useDeferredValue(search);
+
+  // Reset visible count on search or category filter change during render
+  const [prevFilter, setPrevFilter] = useState({ search, selectedCategory });
+  if (prevFilter.search !== search || prevFilter.selectedCategory !== selectedCategory) {
+    setPrevFilter({ search, selectedCategory });
+    setVisibleCount(PAGE_SIZE);
+  }
 
   // Keyboard shortcut '/' focus search
   useEffect(() => {
@@ -99,10 +122,10 @@ export function HeroExplorerView({
 
   const hasMoreToLoad = visibleCount < filteredIcons.length;
 
-  // Reset visible count on search or category filter change
+  // Pre-convert the first page during idle so glass is ready before scroll
   useEffect(() => {
-    setVisibleCount(PAGE_SIZE);
-  }, [search, selectedCategory]);
+    warmGlassCache(icons, color, size);
+  }, [icons, color, size]);
 
   // Infinite Scroll Observer — throttled via rAF, re-attaches when sentinel remounts
   useEffect(() => {
@@ -168,16 +191,28 @@ export function HeroExplorerView({
         />
 
         {/* Icon Cards Wall — infinite scroll preserved via sentinel */}
-        <IconGridWall
-          displayedIcons={displayedIcons}
-          size={size}
-          color={color}
-          strokeWidth={strokeWidth}
-          onInspect={stableInspect}
-          onCopyNotice={stableCopyNotice}
-          loadMoreRef={loadMoreRef}
-          hasMoreToLoad={hasMoreToLoad}
-        />
+        {dataReady ? (
+          <IconGridWall
+            displayedIcons={displayedIcons}
+            size={size}
+            color={color}
+            strokeWidth={strokeWidth}
+            onInspect={stableInspect}
+            loadMoreRef={loadMoreRef}
+            hasMoreToLoad={hasMoreToLoad}
+          />
+        ) : (
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2.5 w-full" aria-hidden="true">
+            {Array.from({ length: 24 }).map((_, i) => (
+              <div
+                key={i}
+                className="aspect-square rounded-[18px] bg-[var(--bg-card)] flex items-center justify-center"
+              >
+                <span className="animate-pulse rounded-full bg-[var(--bg-card-hover)] size-10" />
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

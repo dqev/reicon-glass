@@ -51,3 +51,33 @@ export function getGlassSvg(
 export function clearGlassCache(): void {
   cache.clear();
 }
+
+let warmGen = 0;
+
+// Pre-convert the first icons during idle time so scrolling shows glass
+// immediately instead of converting on intersection. Stale schedules
+// (e.g. rapid color drags) cancel themselves via the generation guard.
+export function warmGlassCache(
+  items: Array<{ code: string; kebab: string }>,
+  color: string | undefined,
+  size: number,
+  limit = 120,
+): void {
+  if (typeof window === "undefined") return;
+  const gen = ++warmGen;
+  const queue = items.slice(0, limit);
+  const schedule = (fn: () => void) => {
+    if (typeof window.requestIdleCallback === "function") window.requestIdleCallback(() => fn());
+    else setTimeout(fn, 0);
+  };
+  const step = () => {
+    if (gen !== warmGen) return;
+    const start = performance.now();
+    while (queue.length > 0 && performance.now() - start < 8) {
+      const item = queue.shift();
+      if (item && item.code) getGlassSvg(item.code, item.kebab, color, size);
+    }
+    if (queue.length > 0) schedule(step);
+  };
+  schedule(step);
+}

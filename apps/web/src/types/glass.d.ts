@@ -24,3 +24,8 @@ declare module "../vendor/glass/glass.js" {
   const Glass: GlassConverter;
   export default Glass;
 }
+
+declare module "../../vendor/glass/glass.js" {
+  const Glass: GlassConverter;
+  export default Glass;
+}
