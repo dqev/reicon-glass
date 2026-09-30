@@ -162,19 +162,21 @@ function convert(input, options = {}) {
 
   const uid = options.id || generateId('glass');
   const size = options.size || 240;
-  const shadowColor = options.shadow || palette.shadow;
   const colors = palette.gradient;
 
+  // NOTE: no outer drop-shadow on purpose — all shading stays clipped to the
+  // glyph alpha via the outer mask, so nothing bleeds onto card backgrounds.
+  // Depth comes from the engrave filter (inner cavity + edge light) only.
   return `<svg width="${size}" height="${size}" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" class="glass-icon-glyph">
-  <g style="filter: drop-shadow(${shadowColor} 0px 9px 8px);">
+  <mask id="glyph_${uid}" maskUnits="userSpaceOnUse" x="0" y="0" width="240" height="240" style="mask-type: alpha;">
+    <g transform="translate(24 24) scale(8)">
+      <g fill="white" color="white">
+        <g>${cleanPath}</g>
+      </g>
+    </g>
+  </mask>
+  <g mask="url(#glyph_${uid})">
     <g filter="url(#engrave_${uid})">
-      <mask id="glyph_${uid}" maskUnits="userSpaceOnUse" x="0" y="0" width="240" height="240" style="mask-type: alpha;">
-        <g transform="translate(24 24) scale(8)">
-          <g fill="white" color="white">
-            <g>${cleanPath}</g>
-          </g>
-        </g>
-      </mask>
       <g mask="url(#glyph_${uid})">
         <rect x="0" y="0" width="240" height="240" fill="url(#ink_${uid})"></rect>
       </g>
